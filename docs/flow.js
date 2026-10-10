@@ -10,7 +10,7 @@ const STEPS = {
 };
 
 const QUESTIONS = [
-  { id: "1.1", step: 1, text: "Kas oled käinud koloskoopias?", yes: 5 },
+  { id: "1.1", step: 1, text: "Kas sul on viimase 5 aasta jooksul tehtud koloskoopia?", yes: 5 },
 
   { id: "2.1", step: 2, text: "Kas sul on aneemia?", yes: 2,
     intro: "Ei ole? Uurime siis edasi." },
