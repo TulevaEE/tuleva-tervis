@@ -47,7 +47,7 @@ Use Vaarik's Estonian clear-writing principles as the **voice layer** for all me
 - **Plain Estonian over loan-words**; **cut everything unnecessary** (leave out what the reader already knows or can infer).
 - **Someone owns each outcome's copy** — avoid "komiteekirjutamine".
 
-Reference: Daniel Vaarik, *Sõnumiseadja käsiraamat* (Memokraat, 2014), the "Kirjutamine" chapter.
+Reference: Daniel Vaarik, *Sõnumiseadja käsiraamat* (Memokraat, 2014) — [free PDF](https://memokraat.ee/memokraat.ee/wp-content/uploads/2014/07/s%C3%B5numiseadjak%C3%A4siraamat.pdf), the "Kirjutamine" chapter.
 
 ## UX patterns
 - One question per screen; Enter advances; visible progress; back navigation; non-critical fields skippable.
