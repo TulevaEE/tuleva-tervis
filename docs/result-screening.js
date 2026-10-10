@@ -1,4 +1,5 @@
-// Option 2 ja 3: küsib sünniaasta, ütleb, kas inimene kuulub sõeluuringu sihtrühma, ja näitab pakkujaid.
+// Option 2: näitab koloskoopia teid (perearsti saatekiri, tasulised kliinikud) kohe, ilma sünniaastata.
+// Option 3: küsib sünniaasta, ütleb, kas inimene kuulub sõeluuringu sihtrühma, ja näitab pakkujaid.
 // Lehe kaardil `data-screening="colonoscopy"` (Option 2) või `"fit"` (Option 3).
 const $ = (id) => document.getElementById(id);
 
@@ -62,26 +63,13 @@ const verdictNo = () => el("p", "verdict no",
   `Sinu sünniaasta ei kuulu ${SCREENING_YEAR}. aasta jämesoolevähi sõeluuringu sihtrühma.`);
 
 const PAGES = {
-  colonoscopy(eligible) {
-    const clinics = [
-      el("p", "", "Tasulisse koloskoopiasse saad ilma saatekirjata:"),
-      list(PAID_CLINICS, "Broneeri →", true),
-    ];
-    if (!eligible) {
-      return [verdictNo(), ...clinics,
-        el("p", "muted", "Perearst võib anda saatekirja koloskoopiale ka väljaspool sõeluuringut (nt maakonnahaiglasse).")];
-    }
+  // Option 2-le jõuavad sümptomite või kõrge riskiga inimesed, seega sõeluuringust (peitvere testist) siin ei räägi.
+  colonoscopy() {
     return [
-      verdictYes(),
-      steps([
-        "Pöördu oma perearstikeskuse pereõe poole – saad tasuta peitveretesti (FIT) komplekti.",
-        "Tee test kodus ja saada proov postiga või pakiautomaadiga laborisse. Vastus tuleb umbes 10 tööpäevaga.",
-        "Kui tulemus on positiivne, annab perearst saatekirja tasuta sõelkoloskoopiale ühes neist haiglatest:",
-      ]),
-      list(SCREENING_HOSPITALS, "Loe lähemalt →"),
-      portal(),
-      el("h3", "", "Soovid kohe koloskoopiasse?"),
-      ...clinics,
+      el("h3", "", "Perearsti saatekirjaga"),
+      el("p", "", "Räägi perearstiga, miks sa koloskoopiasse tahad minna. Perearst annab saatekirja ja suunab sind haiglasse."),
+      el("h3", "", "Tasulises kliinikus ilma saatekirjata"),
+      list(PAID_CLINICS, "Broneeri →", true),
     ];
   },
 
@@ -114,17 +102,19 @@ const card = document.querySelector("[data-screening]");
 function show(year) {
   const result = $("result");
   result.innerHTML = "";
-  result.append(...PAGES[card.dataset.screening](isEligible(year)),
+  result.append(...PAGES[card.dataset.screening](year && isEligible(year)),
     el("p", "muted small", "Andmed kogutud 10.10.2026 – kontrolli hinnad ja tingimused enne pöördumist."));
   result.hidden = false;
 }
 
+if (card.dataset.screening === "colonoscopy") show();
+
 // Väljale saab kirjutada ainult numbreid, kõige rohkem 4.
-$("year").addEventListener("input", (e) => {
+if ($("year")) $("year").addEventListener("input", (e) => {
   e.target.value = e.target.value.replace(/\D/g, "").slice(0, 4);
 });
 
-$("year-form").addEventListener("submit", (e) => {
+if ($("year-form")) $("year-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const { year, error } = parseBirthYear($("year").value);
   $("year-error").textContent = error || "";

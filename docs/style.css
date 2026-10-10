@@ -99,3 +99,5 @@ details.why[open] summary{margin-bottom:0.6rem;}
 details.why p{max-width:62ch;}
 .safety{border-left:6px solid var(--accent); background:var(--bg-soft); padding:0.9rem 1.1rem; border-radius:0 0.5rem 0.5rem 0; margin:1.25rem 0; max-width:66ch;}
 @media print{ details.why{display:none;} }
+.result:first-child{margin-top:0;}
+.result > h3:first-child{margin-top:0;}

@@ -28,6 +28,8 @@ Leiud on järjestatud raskuse järgi: 🔴 võib suunata inimese valele teele ·
 
 ### 🔴 L1. Option 2 saadab sümptomitega inimese peitvere testile
 
+> **Parandatud 10.10.2026:** Option 2 lehel pole enam sünniaasta kontrolli ega sõeluuringu juttu, ainult perearsti saatekiri ja tasulised kliinikud.
+
 **Mis meil on.** Option 2 („Tee koloskoopia“) lehele jõuavad inimesed, kellel on aneemia, veri väljaheites, kõik kolm sümptomit või kõrge perekondlik risk. Kui selline inimene sisestab sünniaasta kontrolli plokki sünniaasta, mis kuulub sihtrühma (nt 1964), on esimene samm „Pöördu oma perearstikeskuse pereõe poole – saad tasuta peitveretesti (FIT) komplekti“ (`docs/result-screening.js`, `colonoscopy(eligible)`).
 
 **Mida allikad ütlevad.** USPSTF soovitus kehtib ainult inimestele, „who do not have signs or symptoms of colorectal cancer“, ja välistab kõrge riskiga inimesed (lk 1, 4). Dr Seth kirjutab, et sümptomite korral tuleb rääkida arstiga. Meie enda leht ütleb samuti: „Sümptomite või suguvõsast tuleva kõrgema riski korral peitvere testist ei piisa.“
@@ -171,7 +173,7 @@ Praegustest allikatest ei saa kontrollida mitut meie reeglit. Ettepanek lisada:
 
 | # | Mis | Kes otsustab | Kiirus |
 |---|---|---|---|
-| L1 | Option 2 sünniaasta ploki parandus | tiim, kohe | 🔴 kohe |
+| L1 | Option 2 sünniaasta ploki parandus | tiim | ✅ parandatud |
 | L2 | Koloskoopia küsimuse järjekord ja aeg | dr Seth | 🔴 |
 | L4 | Põletikuline soolehaigus, polüübid, Lynch/FAP | dr Seth | 🟠 |
 | L3 | FIT-i intervall 1 või 2 aastat | dr Seth | 🟠 |
