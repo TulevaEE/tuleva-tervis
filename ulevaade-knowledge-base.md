@@ -47,6 +47,8 @@ Leiud on järjestatud raskuse järgi: 🔴 võib suunata inimese valele teele ·
 
 **Risk.** Kui inimesel oli 15 aastat tagasi normaalne koloskoopia ja nüüd on tal veri väljaheites, saab ta praegu vastuse „järgi oma raviarsti juhiseid“.
 
+> **Osaliselt lahendatud 10.10.2026:** küsimus on nüüd „Kas sul on viimase 5 aasta jooksul tehtud koloskoopia?“. Kes tegi koloskoopia üle 5 aasta tagasi, läheb edasi tavalisele teele. Lahtine on veel: sümptomeid ei küsita neilt, kes vastavad „jah“, ja 5 aastat on lühem kui USPSTF-i 10 aastat (dr Seth kinnitab).
+
 **Ettepanek (dr Sethi otsustada).**
 1. Küsi sümptomid enne koloskoopia küsimust.
 2. Küsi, millal koloskoopia tehti: kui üle 10 aasta tagasi ja leid oli normaalne, suuna tagasi tavalisele teele (vanus ja peitvere test).
