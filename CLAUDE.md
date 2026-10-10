@@ -30,6 +30,7 @@ Tuleva is member-owned — we're on the member's side, not selling services. So:
 
 ## Dev conventions
 - Vanilla HTML/CSS/JS in `docs/` (served via GitHub Pages). No heavy framework — small and legible.
+- GitHub Pages caches JS/CSS for 10 minutes. When you change a `.js` or `.css` file, bump its `?v=` number in every HTML page that loads it, or members will run old code against new pages.
 - Triage logic in `docs/flow.js`; **update `tests/flow.test.js` for every routing change**; keep `node --test tests/*.test.js` green.
 - One question per screen (yes/no or tick-boxes); "no" moves to the next question, the first "yes" ends on an outcome page; visible progress; back button, also from the outcome page back to the last question.
 - Member-facing copy is plain Estonian: **peitvere test** (write "peitvere test (FIT)" where the page still says FIT), **koloskoopia** *(sooleuuring)*, **sõeluuring**, **perearst / pereõde**, **saatekiri**. Warm, reassuring — no jargon, no fear words, never "diagnosis".
