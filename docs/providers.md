@@ -4,11 +4,11 @@ _Andmed kogutud 10.10.2026. Kontrolli hinnad ja tingimused enne pöördumist._
 
 _Seda faili loevad Option 2 ja 3 lehed otse (iga kontrolli ajal värskelt). Muudatus siin jõuab lehele kohe – ära muuda veergude nimesid ega `## FIT` / `## Koloskoopia` pealkirju (vt `parseProviders` failis `screening.js`)._
 
-_**Tuleva kupongid on näidised (häkatoni demo)** – kokkuleppeid pakkujatega veel ei ole ja koode ei saa kasutada. Tulemuslehtedel näidatakse kupongiga pakkujaid nimekirja eespool._
+_**Tuleva sooduskoodid on näidised (häkatoni demo)** – kokkuleppeid pakkujatega veel ei ole ja koode ei saa kasutada. Tulemuslehtedel näidatakse sooduskoodiga pakkujaid nimekirja eespool._
 
 ## FIT (peitveretest)
 
-| Teenusepakkuja | Asukoht | Teenuse tüüp | Kuidas saada | Hind (€) | Hinna märkus | Registreerimine / tellimine | Telefon | Märkused | Tuleva kupong |
+| Teenusepakkuja | Asukoht | Teenuse tüüp | Kuidas saada | Hind (€) | Hinna märkus | Registreerimine / tellimine | Telefon | Märkused | Tuleva sooduskood |
 |---|---|---|---|---|---|---|---|---|---|
 | Perearstikeskused | Üle Eesti | Sõeluuring | Pereõe vastuvõtult saad testikomplekti; proov postiga või pakiautomaadiga laborisse | tasuta | Tasuta sihtrühmale | [Terviseportaal](https://www.terviseportaal.ee) | Oma perearstikeskus | 2026 sihtrühm: sünniaastad 1958, 1960, 1962, 1964, 1966, 1968, 1970. Vastus ~10 tööpäeva | — (tasuta) |
 | Ida-Tallinna Keskhaigla | Tallinn | Sõeluuringu labor* + tasuline analüüs | Tasuline ilma saatekirjata; proov Ravi tn, Magdaleena või Tõnismäe verevõtukabinetti ilma broneeringuta |  | Haigla labori hinnakiri | [Tasulised laboriuuringud](https://www.itk.ee/patsiendile/analuusid/tasulised-laboripaketid) | 666 1900 | iPatsient lõpetab 01.12.2026 | — |
@@ -25,7 +25,7 @@ _**Tuleva kupongid on näidised (häkatoni demo)** – kokkuleppeid pakkujatega 
 
 ## Koloskoopia
 
-| Teenusepakkuja | Asukoht | Tüüp | Saatekiri vajalik | Koloskoopia (€) | Narkoosis (€) | Hinna märkus | Registreerimine | Telefon | Märkused | Tuleva kupong |
+| Teenusepakkuja | Asukoht | Tüüp | Saatekiri vajalik | Koloskoopia (€) | Narkoosis (€) | Hinna märkus | Registreerimine | Telefon | Märkused | Tuleva sooduskood |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Põhja-Eesti Regionaalhaigla | Tallinn | Sõelkoloskoopia | Jah (perearst, pärast positiivset FIT-i) | tasuta |  | Tasuta sõeluuringus | [Terviseportaal](https://www.terviseportaal.ee) | 617 1049 / 617 2354 (E–R 8–16) |  | — (tasuta) |
 | Ida-Tallinna Keskhaigla | Tallinn | Sõelkoloskoopia + tasuline vastuvõtt | Sõelkoloskoopiaks jah; tasulisele vastuvõtule ei | tasuta |  | Tasuta sõeluuringus | [Sõeluuringu koloskoopia](https://www.itk.ee/patsiendile/kliinikud/gastroenteroloogiakeskus/jamesoolevahi-soeluuringu-koloskoopia) | 620 7077 (E–R 8–16) | Ravi tn 18, C-korpus | — (tasuta) |

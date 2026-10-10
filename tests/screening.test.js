@@ -61,7 +61,7 @@ test("providers.md: tasuline FIT (ilma ainult-sõeluuringu laborite ja perearsti
 });
 test("providers.md: andmete kuupäev", () => assert.match(updated, /^\d{1,2}\.\d{1,2}\.\d{4}$/));
 
-test("kupongiga pakkujad on eespool, muu järjekord ei muutu", () => {
+test("sooduskoodiga pakkujad on eespool, muu järjekord ei muutu", () => {
   assert.deepStrictEqual(names(byCoupon(paidClinics)), ["Medicum", "Confido"]);
   assert.deepStrictEqual(names(byCoupon(fitLabs)), ["SYNLAB Eesti", "Apteegid (Benu, Apotheka, Südameapteek jt)",
     "Ida-Tallinna Keskhaigla", "Tartu Ülikooli Kliinikum (ühendlabor)", "Lääne-Tallinna Keskhaigla"]);
