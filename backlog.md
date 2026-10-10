@@ -46,8 +46,8 @@ Allikad: `muudatusettepanekud` (B ja C osa), `ulevaade-knowledge-base.md` (leiud
 | 20 | Kui inimene tuleb Option 2 või 3 lehele otse vahelehelt (mitte küsimustikust), on põhjuse lause „Sinu vastuste põhjal…“ eksitav. Näita siis teistsugust lauset. | jamesoolevahk.html |
 | 21 | Dr Mari Sethi video vahelehele. | jamesoolevahk.html |
 | 22 | Nimeta `muudatusettepanekud` ümber `muudatusettepanekud.md`-ks, et GitHub seda vormindaks. | — |
-| 25 | Avaleht: tulevaste teemade kaardid (süda, emakakael, rind, „?“) tekitavad testijates tunde, et projekt ajab liiga paljut korraga taga. Vii need lehe lõppu või eemalda, kuni jämesoolevähi teekond on end tõestanud. | PR #20 persona-testid (Rauno, Enn) |
-| 26 | Avaleht: too usalduslubadused esiplaanile enne küsimusi. Need on praegu lahtikäivates plokkides peidus: pension jääb puutumata, terviseharu on fondidest lahus, andmed jäävad brauserisse. | PR #20 persona-testid (Enn) |
+| 25 | ✅ Tehtud (PR #21). Avaleht: tulevaste teemade kaardid (süda, emakakael, rind, „?“) tekitavad testijates tunde, et projekt ajab liiga paljut korraga taga. Vii need lehe lõppu või eemalda, kuni jämesoolevähi teekond on end tõestanud. | PR #20 persona-testid (Rauno, Enn) |
+| 26 | ✅ Tehtud (PR #21). Avaleht: too usalduslubadused esiplaanile enne küsimusi. Need on praegu lahtikäivates plokkides peidus: pension jääb puutumata, terviseharu on fondidest lahus, andmed jäävad brauserisse. | PR #20 persona-testid (Enn) |
 
 ## Knowledge base
 
