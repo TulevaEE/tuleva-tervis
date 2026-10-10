@@ -8,6 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=8">
+<style>
+  .cta-stacked{display:inline-flex;flex-direction:column;align-items:flex-start;gap:0.15rem;text-align:left;line-height:1.25;padding:0.9rem 1.5rem;}
+  .cta-stacked .cta-title{font-size:1.2rem;font-weight:700;}
+  .cta-stacked .cta-sub{font-size:0.9rem;font-weight:400;opacity:0.92;}
+</style>
 </head>
 <body>
 
@@ -22,7 +27,10 @@
     <h1>Kas ühistu võiks hoida ka su tervist — nii nagu su raha?</h1>
     <p class="lead"><strong>See on mõttekatse — tegime näidise valmis, et kuulda, mida sina arvad.</strong> Me ei taha sulle midagi pähe määrida: Tuleva ei müü uuringuid ega teeni sellelt, kui sa neid rohkem teed. Ühistuna saame olla hoopis <strong>sinu teejuht</strong> — ütleme ausalt, mis on tõesti vajalik ja mõistlik, ja millal sa ei vaja midagi.</p>
     <p class="muted">Proovi järele ja ütle meile, kas tasub edasi minna.</p>
-    <a class="btn primary" href="jamesoolevahk.html">Esimene asi: ennetame jämesoolevähki →</a>
+    <a class="btn primary cta-stacked" href="jamesoolevahk.html">
+      <span class="cta-title">Jämesoolevähi ennetus</span>
+      <span class="cta-sub">Leia enda jaoks õige samm →</span>
+    </a>
     <p class="muted"><strong>See ei puuduta su pensionit</strong> — sama strateegia, samad tasud, fondidest lahus. Su vastused jäävad sinu brauserisse; me ei salvesta neid kuhugi.</p>
 
     <details class="card why">
