@@ -127,9 +127,9 @@ details.why p{max-width:62ch;}
 #crc li + li{margin-top:0.4rem;}
 #crc > h2{margin-top:2.5rem;}
 #crc > p + p{margin-top:0.85rem;}
-.video-placeholder{aspect-ratio:16/9; background:var(--navy-blue); color:#fff; border-radius:0.5rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; margin:1.5rem 0 0.5rem;}
-.video-placeholder span{font-size:2.5rem; line-height:1;}
-.video-placeholder p{font-size:0.9375rem; opacity:0.85;}
+.video{max-width:360px; margin:1.5rem auto 0.5rem;}
+.video video{display:block; width:100%; height:auto; aspect-ratio:9/16; background:var(--navy-blue); border-radius:0.5rem;}
+.video figcaption{font-size:0.875rem; color:var(--text-secondary); text-align:center; margin-top:0.5rem;}
 .options, .choose{display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem;}
 @media(max-width:600px){.options, .choose{grid-template-columns:1fr;}}
 .option-card, .choose-card{background:var(--bg-soft); border-left:4px solid var(--blue); border-radius:0 0.5rem 0.5rem 0; padding:1.2rem 1.4rem;}
