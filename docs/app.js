@@ -94,7 +94,11 @@ function begin(index) {
   show(index);
 }
 
-$("begin").addEventListener("click", () => begin(0));
+// Jämesoolevähi vahelehelt (jamesoolevahk.html) tullakse aadressiga index.html#alusta.
+if (location.hash === "#alusta") {
+  begin(0);
+  history.replaceState(null, "", location.pathname);
+}
 
 // Optioni lehelt tagasi tulles (index.html#k=0,1,2&q=2.1) jätkame viimasest küsimusest.
 const path = (location.hash.match(/^#k=([\d,]+)(&q=[\d.]+)?$/) || [])[1];
