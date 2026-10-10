@@ -14,7 +14,7 @@
 - **Reduce friction above all.** Uptake is won by removing steps, not persuasion — fewest fields, clear progress, back button, skippable non-critical items, no dead ends. Keep assessment → recommendation → next step in one unbroken flow. (The Dutch FIT programme reaches ~70% participation mostly through logistics: kit arrives unrequested, prepaid return, no appointment, default-on + one reminder, biennial auto-reinvite.)
 - **Anti-fear framing.** Fear appeals backfire. Lead with hope + agency ("caught early, this is almost always treatable — here's your one next step"), never mortality-scare copy.
 - **Honest reassurance, including "no action needed."** When the evidence says no test is needed, say so plainly and warmly — and still add a safety-net. This anti-overtesting honesty is a feature.
-- **Bad news by a human, good news self-serve.** A potentially frightening result routes to a person (nurse/GP), not a cold screen.
+- **Bad news by a human, good news self-serve.** A potentially frightening result routes to a person (GP or the doctor doing the koloskoopia), not a cold screen.
 - **Numbers as natural frequencies + icon arrays** ("3 in 100", a 100-figure grid) — never bare percentages or relative-risk multipliers alone.
 - **Terminology lock:** "screening / detection / follow-up check" (sõeluuring / avastamine / täpsustav uuring). Never call the tool or a test a "diagnosis". Ban alarm words.
 - **Pre-answer the member's four worries:** should I take part · how it works · logistics · what happens if it's positive.
@@ -49,12 +49,15 @@ Use Vaarik's Estonian clear-writing principles as the **voice layer** for all me
 
 Reference: Daniel Vaarik, *Sõnumiseadja käsiraamat* (Memokraat, 2014) — [free PDF](https://memokraat.ee/memokraat.ee/wp-content/uploads/2014/07/s%C3%B5numiseadjak%C3%A4siraamat.pdf), the "Kirjutamine" chapter.
 
-## UX patterns
-- One question per screen; Enter advances; visible progress; back navigation; non-critical fields skippable.
-- Give every risk question an explicit **"ei tea"** option — it routes to the *more cautious* branch and never blocks progress.
-- An **eligibility gate up front** (asymptomatic + age + "any visible bleeding → see a doctor, not us") diverts people a screener shouldn't serve.
+## UX patterns (as implemented)
+- **One question per screen, yes/no.** "Ei" moves on; the first "jah" ends on an outcome page. The one multi-choice question (pain / bowel-habit change / weight loss) uses tick-boxes. There is **no "ei tea"** (team decision 10.10.2026) — so hint texts must make every question answerable.
+- **Visible progress** ("Samm 2/4" + bar), **back button**, and from every outcome page a link **back to the last question** and one to start over.
+- **Order:** previous koloskoopia → symptoms → family history → age and previous FIT. Known gap: "yes" to a previous koloskoopia skips the symptom questions (flagged for dr Seth, see `../CLAUDE.md`).
+- **Five outcome pages, one next step each:** 1 nothing now, redo in 2 years · 2 koloskoopia · 3 peitvere test (free via the pereõde for the 2026 cohort, otherwise pharmacy or lab) · 4 GP now · 5 follow your treating doctor.
+- **Option 2 sends the member straight to a koloskoopia** — via the GP's saatekiri or a private self-pay clinic. Team decision 10.10.2026, differs from the "GP as gatekeeper" finding in `clinical-background.md`.
+- **The member keeps their answers, we don't.** The outcome page shows "Sinu vastused" with **download as .md or PDF** (browser print). Answers live only in the tab's `sessionStorage` and disappear when it closes. No health data is sent anywhere; the only analytics is an anonymous page-view count per outcome page (GoatCounter).
 - **Handoff:** report-and-refer. Deliver any discount code/voucher **on the results screen, paired with the recommended action** (the code and the "what to do next" are the same moment).
-- Use the `kusimustik.md` ankeet as the questionnaire backbone (it already includes smoking/alcohol/BMI, IBD, Lynch/FAP, prior-test detail, "ei tea").
+- **Questionnaire source:** `kusimustik.md` documents the implemented flow with an "Alus" (clinical basis) line per question. The fuller Doc30 ankeet (smoking/alcohol/BMI, IBD, Lynch/FAP, prior-test detail) is in git history (`df4979e`) for future versions.
 
 ## Co-op framing
 Position screening as a **member benefit at a members' price** — cooperative purchasing power justifies the price and lowers the out-of-pocket barrier. This is the natural home for the voucher/code.

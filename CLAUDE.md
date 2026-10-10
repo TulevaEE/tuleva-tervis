@@ -10,21 +10,28 @@ Tuleva is member-owned — we're on the member's side, not selling services. So:
 
 ## 🔴 Never break these (patient safety · Estonian care pathway · legal)
 - **Decision support, not diagnosis** — every outcome says so and routes to a clinician.
-- **The GP (perearst) is the gatekeeper.** For symptoms or a positive result, the next step is *"pöördu oma perearsti poole"*. **Never tell a member to self-book a koloskoopia** (except an explicitly labelled private self-pay option).
-- **Symptoms are checked first and on every path.** Each alarm symptom (bleeding, anaemia, bowel-habit change, weight loss, pain) escalates **on its own** — never require a cluster. A new symptom overrides any prior test, scope, or age answer.
-- **"Ei tea" fails safe** — route toward *more* assessment, never silently treat it as "no".
-- **Eligible national-screening cohort (56–68, invited) → the FREE Tervisekassa peitvere test.** Never push an eligible member to a paid test. Our value-add is the people the state doesn't cover (e.g. 45–55, or symptomatic).
-- **High-risk categories route to a clinician/surveillance, never "do nothing":** IBD (UC/Crohn's), Lynch/FAP/polyposis, personal CRC/adenoma history, ≥2 first-degree relatives with CRC.
+- **Every alarm symptom escalates on its own — never "do nothing".** Anaemia or blood in stool → koloskoopia (option 2). Abdominal pain, bowel-habit change or weight loss: any one → GP now (option 4); all three → koloskoopia (option 2). Symptoms are asked before family history, age and prior tests.
+- **Option 2 tells the member to get a koloskoopia directly** — through the GP's *saatekiri* or a private self-pay clinic (providers in `landing_page.md`). Team decision 10.10.2026; the "GP as gatekeeper" alternative is in `docs/clinical-background.md` for dr Seth to weigh.
+- **Answers are yes/no; there is no "ei tea".** Team decision 10.10.2026. Hint texts must make the question answerable (e.g. who counts as *lähisugulane*).
+- **Eligible national-screening cohort (2026: born 1958, 1960 … 1970) → the FREE Tervisekassa peitvere test via the pereõde.** Never push an eligible member to a paid test. Option 3 says this first; the paid route (pharmacy, lab) is for everyone else. Our value-add is the people the state doesn't cover (e.g. 45–55, or symptomatic).
+- **High-risk answers never land on "do nothing" or a plain FIT:** relative with CRC before 50, Lynch-pattern cancers on one side of the family, or a positive genetic test → koloskoopia (option 2). A previous koloskoopia → follow your treating doctor (option 5).
 - **Speak positive/negative, not numbers** — no FIT thresholds, no wait-time promises (neither is published).
+- **Health answers never leave the browser.** They live only in the tab's `sessionStorage` so the member can download them (.md / PDF) on the outcome page, and vanish when the tab closes. The only analytics allowed is an anonymous page-view counter (GoatCounter, `docs/counter.js`).
 - **Every "do nothing" outcome carries a safety-net** ("come back if you develop bleeding, bowel-habit change, weight loss, pain, or are told you're anaemic").
 
 ## Clinical content is clinician-owned
-**Do not invent, change, or "improve" clinical thresholds, age cuts, symptom lists, or routing.** They are owned and signed off by the project gastroenterologist. If logic looks wrong or guidelines conflict, **flag it for a human — don't silently decide.** Keep triage deterministic in `docs/flow.js`; an LLM may parse input or word output, but **never makes the clinical call**. Note: `kusimustik.md` is the fuller intended questionnaire — the code should catch up to it *safely*, not diverge from it.
+**Do not invent, change, or "improve" clinical thresholds, age cuts, symptom lists, or routing.** They are owned and signed off by the project gastroenterologist. If logic looks wrong or guidelines conflict, **flag it for a human — don't silently decide.** Keep triage deterministic in `docs/flow.js`; an LLM may parse input or word output, but **never makes the clinical call**. `kusimustik.md` documents the flow exactly as implemented, with an **"Alus"** line per question for its clinical basis — keep it in sync with `flow.js`. The fuller original ankeet (Doc30) is in git history (`df4979e`) as a source for future questions.
+
+## Known gaps (flagged for dr Seth, not yet decided)
+- A member who answers "yes" to a previous koloskoopia goes straight to option 5 and is **not asked about symptoms**. Research (`docs/clinical-background.md`, NICE NG12) says symptoms should be checked on every path.
+- Not asked yet: IBD (Crohn's, UC), Lynch/FAP/polyposis in relatives, when and what the previous koloskoopia found. ≥2 relatives with CRC at 50+ currently routes to FIT.
+- Age 75+ is not separated (team decision 10.10.2026). FIT within 2 years → option 1; the interval is dr Seth's call.
+- Open questions list: `plaan.md`.
 
 ## Dev conventions
 - Vanilla HTML/CSS/JS in `docs/` (served via GitHub Pages). No heavy framework — small and legible.
 - Triage logic in `docs/flow.js`; **update `tests/flow.test.js` for every routing change**; keep `node --test tests/*.test.js` green.
-- One question per screen; visible progress; back button; "don't know"/skip never blocks.
-- Member-facing copy is plain Estonian: **peitvere test** (not "FIT"), **koloskoopia** *(sooleuuring)*, **sõeluuring**, **perearst / pereõde**, **saatekiri**. Warm, reassuring — no jargon, no fear words, never "diagnosis".
+- One question per screen (yes/no or tick-boxes); "no" moves to the next question, the first "yes" ends on an outcome page; visible progress; back button, also from the outcome page back to the last question.
+- Member-facing copy is plain Estonian: **peitvere test** (write "peitvere test (FIT)" where the page still says FIT), **koloskoopia** *(sooleuuring)*, **sõeluuring**, **perearst / pereõde**, **saatekiri**. Warm, reassuring — no jargon, no fear words, never "diagnosis".
 - **Every outcome (option 1–5) explains *why* — per person, in plain language.** Show the one-line reason it's the right next step for *this* person (drawn from their answers), with an expandable **"Miks see on sinu jaoks õige?"** for the fuller rationale. Never a black box, never "because the system said so".
 - **Voice follows Daniel Vaarik's plain-Estonian principles** (*Sõnumiseadja käsiraamat*): logic over cleverness, short sentences, active verbs, few adjectives, no euphemisms or evasion ("keerutamisest ei sünni usaldust"). Detail in `docs/design-principles.md`.
