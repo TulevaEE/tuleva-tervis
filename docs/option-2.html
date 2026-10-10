@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tee koloskoopia · Tuleva</title>
+<title>Kaalu koloskoopiat · Tuleva</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=9">
@@ -11,18 +11,18 @@
 <body>
 
 <header><div class="wrap topbar">
-  <a class="brand" href="https://tuleva.ee" target="_blank" rel="noopener"><img src="https://tuleva.ee/wp-content/themes/tuleva/img/tuleva-logo.svg" alt="Tuleva" class="brand-logo"></a>
+  <a class="brand" href="index.html" aria-label="Tuleva tervis avaleht"><img src="https://tuleva.ee/wp-content/themes/tuleva/img/tuleva-logo.svg" alt="Tuleva" class="brand-logo"></a>
 </div></header>
 
 <main>
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 2 · sinu järgmine samm</span>
-  <h1>Tee koloskoopia</h1>
-  <p class="lead reason" id="pohjus">Sinu vastuste põhjal on koloskoopia sinu jaoks sobivaim järgmine samm.</p>
-  <p class="next"><strong>Järgmine samm. Tee koloskoopia (sooleuuring).</strong> Saatekirja saad oma perearstilt; soovi korral saad uuringu teha ka erakliinikus erateenusena.</p>
+  <h1>Sul tasuks kaaluda koloskoopiat</h1>
+  <p class="lead reason" id="pohjus">Sinu vastuste põhjal võiks koloskoopia (sooleuuring) olla sinu jaoks mõistlik järgmine samm.</p>
+  <p class="next"><strong>Järgmine samm.</strong> Räägi oma perearstiga koloskoopiast (sooleuuringust)<button type="button" class="info-dot" data-info="koloskoopia" aria-label="Mis on koloskoopia?">i</button> — tema saab sulle saatekirja kirjutada. Soovi korral saad uuringu teha ka erakliinikus erateenusena. <strong>Otsus jääb sinule</strong> — meie anname sulle info, et saaksid selle rahulikult ja teadlikult teha.</p>
   <details class="card why">
     <summary>Miks see on sinu jaoks õige?</summary>
-    <p>Aneemial ja soolesümptomitel on sageli healoomuline põhjus — näiteks rauavaegus, menstruatsioon või rasedus. Just seepärast tasub täpsema uuringuga veenduda, et midagi tõsisemat ei jääks märkamata. Koloskoopia on täpseim viis jämesoolt kontrollida. Õhuke painduv kaamera vaatab soole seest üle ja arst saab vajadusel polüübid — vähieelsed muutused — kohe eemaldada. Sümptomite või suguvõsast tuleva kõrgema riski korral peitvere testist ei piisa, seega on mõistlik minna kohe täpsema uuringu juurde. Kui su kõrgem risk tuleb suguvõsast, võib perearst suunata su ka geneetilisele nõustamisele ja korralisele jälgimisele.</p>
+    <p>Aneemial ja soolesümptomitel on sageli healoomuline põhjus — näiteks rauavaegus, menstruatsioon või rasedus. Just seepärast tasub täpsema uuringuga veenduda, et midagi tõsisemat ei jääks märkamata. Koloskoopia on täpseim viis jämesoolt kontrollida. Õhuke painduv kaamera vaatab soole seest üle ja arst saab vajadusel polüübid — vähieelsed muutused — kohe eemaldada. Sümptomite või suguvõsast tuleva kõrgema riski korral peitvere testist ei piisa, seega on mõistlik minna kohe täpsema uuringu juurde. Kui su kõrgem risk tuleb suguvõsast, võib perearst suunata su ka geneetilisele nõustamisele ja korralisele jälgimisele. Otsustad sina — koloskoopia ei ole kohustus, vaid ettevaatusabinõu, et võimalikud muutused varakult leida. Enamasti saab leitud polüübi sama uuringu ajal kohe eemaldada ja asi ongi lahendatud.</p>
   </details>
   <div class="card screening" data-screening="colonoscopy">
     <div class="result" id="result"></div>
@@ -50,9 +50,9 @@
   "2.1": "Sa märkisid, et sul on rauavaegusaneemia. Aneemial on palju põhjuseid ja enamik neist on healoomulised — kuid et tõsisem põhjus kindlalt välistada, tasub teha täpsem uuring.",
   "2.2": "Sa märkisid, et oled näinud verd väljaheites. Kõige sagedam põhjus on healoomuline (näiteks hemorroidid) — kindluse mõttes tasub see siiski täpsema uuringuga üle vaadata.",
   "2.3": "Sa märkisid korraga mitu sümptomit, mida tasub koos põhjalikumalt uurida.",
-  "3.1": "Lähisugulasel oli jämesoolevähk enne 50. eluaastat. See tõstab sinu riski.",
-  "3.2": "Su suguvõsas on mitmel lähisugulasel esinenud vähke, mis võivad viidata päritavale kõrgemale riskile.",
-  "3.3": "Sulle tehtud geenitest näitas jämesoolevähi kõrgemat riski."
+  "3.1": "Su lähisugulasel oli jämesoolevähk enne 50. eluaastat, mis tõstab sinu riski selgelt. Just seepärast on sinu puhul mõistlik alustada sooleuuringut varem ja kohe koloskoopiaga — see on ettevaatus, mitte halb uudis.",
+  "3.2": "Su suguvõsas on mitmel lähisugulasel esinenud vähke, mis võib viidata pärilikule kõrgemale riskile. Sellisel juhul on mõistlik põhjalikum uuring ja sageli ka geneetiline nõustamine — nii saad oma riski selgeks.",
+  "3.3": "Sulle tehtud geenitest näitas jämesoolevähi kõrgemat riski. Hea on see, et kui risk on teada, saad selle ees olla: regulaarne koloskoopia on just selleks, et võimalikud muutused varakult leida ja eemaldada, enne kui neist probleem saab."
 };</script>
 <script src="reason.js?v=3"></script>
 <script src="flow.js?v=10"></script>
@@ -60,5 +60,6 @@
 <script src="screening.js?v=8"></script>
 <script src="result-screening.js?v=9"></script>
 <script src="counter.js?v=3"></script>
+<script src="info.js?v=1"></script>
 </body>
 </html>
