@@ -19,8 +19,8 @@ Siin on küsimustik täpselt sellisena, nagu see on rakendatud aadressil https:/
 |---|---|---|
 | 1 | Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast | `option-1.html` |
 | 2 | Tee koloskoopia | `option-2.html` |
-| 3 | Tee FIT-test. Lehel: 2026 sihtrühm (sündinud 1958, 1960 … 1970) saab peitvere testi tasuta pereõelt; teised ostavad testi apteegist või teevad laboris (nt SYNLAB) | `option-3.html` |
-| 4 | Mine kiiresti perearsti juurde | `option-4.html` |
+| 3 | Tee väljaheite peitvere test (FIT). Lehel: 2026 sihtrühm (sündinud 1958, 1960 … 1970) saab peitvere testi tasuta pereõelt; teised ostavad testi apteegist või teevad laboris (nt SYNLAB) | `option-3.html` |
+| 4 | Tasub sellest perearstiga rääkida | `option-4.html` |
 | 5 | Järgi oma koloskoopia teinud raviarsti juhiseid (link Option 2-le, kui soovid koloskoopia broneerida meie kaudu) | `option-5.html` |
 
 Kõigil Optioni lehtedel saab inimene oma vastused alla laadida .md või PDF failina. Vastused on ainult tema brauseri vahekaardis ja kaovad selle sulgemisel.
@@ -44,12 +44,16 @@ Enne küsimust 2.1 näidatakse teksti „Ei ole? Uurime siis edasi.“
 
 ### 2.1 Kas sul on aneemia?
 
+Abitekst: „Aneemia tähendab, et veres on vähe punaliblesid või hemoglobiini — selle näitab vereanalüüs. Märgi „jah“ vaid siis, kui arst on sinu puhul aneemia tuvastanud.“
+
 - Jah → **Option 2**
 - Ei → 2.2
 
 **Alus:**
 
-### 2.2 Kas sul on veri väljaheites?
+### 2.2 Kas oled märganud verd väljaheites?
+
+Abitekst: „Nähtav veri väljaheites või tualettpaberil.“
 
 - Jah → **Option 2**
 - Ei → 2.3
@@ -58,7 +62,7 @@ Enne küsimust 2.1 näidatakse teksti „Ei ole? Uurime siis edasi.“
 
 ### 2.3 Kas sul on mõni neist sümptomitest?
 
-Abitekst: „Märgi kõik, mis sobivad.“ Märkeruudud: kõhuvalu, seedetegevuse muutus, kaalulangus.
+Abitekst: „Märgi vaid need, millele sa ei tea kindlat põhjust — mitte neid, mille põhjust sa tead (nt menstruatsioon või teadaolev haigus).“ Märkeruudud: seletamatu kõhuvalu (mitte menstruatsiooni ajal), seedetegevuse muutus üle 4 nädala, seletamatu kaalulangus.
 
 - Kõik kolm märgitud → **Option 2**
 - Üks või kaks märgitud → **Option 4**
@@ -111,7 +115,7 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
 **Alus:**
 
-### 4.2 Kas oled viimase 2 aasta jooksul teinud FIT-testi?
+### 4.2 Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?
 
 - Jah → **Option 1**
 - Ei → **Option 3**
@@ -120,4 +124,4 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
 ---
 
-Lehe jaluses on kõigil lehtedel tekst: „See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga.“
+Lehe jaluses on kõigil lehtedel tekst: „See küsimustik ei pane diagnoosi ega asenda arsti hinnangut. Kui sul on muresid tervisega, räägi perearstiga.“

@@ -13,11 +13,13 @@ const QUESTIONS = [
   { id: "1.1", step: 1, text: "Kas sul on viimase 5 aasta jooksul tehtud koloskoopia?", yes: 5 },
 
   { id: "2.1", step: 2, text: "Kas sul on aneemia?", yes: 2,
-    intro: "Ei ole? Uurime siis edasi." },
-  { id: "2.2", step: 2, text: "Kas sul on veri väljaheites?", yes: 2 },
+    intro: "Ei ole? Uurime siis edasi.",
+    hint: "Aneemia tähendab, et veres on vähe punaliblesid või hemoglobiini — selle näitab vereanalüüs. Märgi „jah“ vaid siis, kui arst on sinu puhul aneemia tuvastanud." },
+  { id: "2.2", step: 2, text: "Kas oled märganud verd väljaheites?", yes: 2,
+    hint: "Nähtav veri väljaheites või tualettpaberil." },
   { id: "2.3", step: 2, text: "Kas sul on mõni neist sümptomitest?", type: "multi",
-    hint: "Märgi kõik, mis sobivad.",
-    options: ["Kõhuvalu", "Seedetegevuse muutus", "Kaalulangus"],
+    hint: "Märgi vaid need, millele sa ei tea kindlat põhjust — mitte neid, mille põhjust sa tead (nt menstruatsioon või teadaolev haigus).",
+    options: ["Seletamatu kõhuvalu (mitte menstruatsiooni ajal)", "Seedetegevuse muutus üle 4 nädala", "Seletamatu kaalulangus"],
     // Kõik kolm koos: koloskoopia. Mõni neist: perearsti juurde.
     pick: (n) => (n === 3 ? 2 : n > 0 ? 4 : null) },
 
@@ -28,7 +30,7 @@ const QUESTIONS = [
   { id: "3.4", step: 3, text: "Kas lähisugulasel on olnud jämesoolevähk 50. eluaastal või hiljem?", yes: 3 },
 
   { id: "4.1", step: 4, text: "Kas oled noorem kui 45 aastat?", yes: 1 },
-  { id: "4.2", step: 4, text: "Kas oled viimase 2 aasta jooksul teinud FIT-testi?", yes: 1, no: 3 },
+  { id: "4.2", step: 4, text: "Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?", yes: 1, no: 3 },
 ];
 
 // Tagastab { option } kui vastus viib tulemuseni, muidu { next } järgmise küsimuse indeksiga.

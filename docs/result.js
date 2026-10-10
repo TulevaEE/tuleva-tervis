@@ -35,7 +35,7 @@
       "",
       ...data.rows.map(({ q, a }) => `- **${q}** ${a}`),
       "",
-      "_See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga._",
+      "_See küsimustik ei pane diagnoosi ega asenda arsti hinnangut. Kui sul on muresid tervisega, räägi perearstiga._",
       "",
     ].join("\n");
     const a = document.createElement("a");

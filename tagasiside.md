@@ -51,3 +51,6 @@ Tagasiside rakenduse kohta (https://tulevaee.github.io/tuleva-tervis/). Iga punk
 - **Kasu inimesele ühe lausega,** avalehe nupu kõrval ja küsimustiku alguses, nt „2 minutiga saad teada, kas sul on vaja midagi teha, ja kui on, siis mida.“
 - **Ühine ostujõud konkreetseks,** kui see on päriselt plaanis. Näiteks Option 2 ja 3 lehel tasuliste kliinikute ja laborite juures: „Kui piisavalt liikmeid on huvitatud, läbirääkime Tuleva liikmetele soodsama hinna.“ Kuni soodustust pole, ei tohi seda lubada. Kirjuta see kui eesmärk või küsimus.
 - **Tagasiside küsimine,** mis on ka avalehel kirjas: tulemuse lehel üks küsimus „Kas kasutaksid sellist teenust, kui Tuleva liikmetele oleks uuring soodsam?“ See ühendab punkti 3 ja avalehe „sinu tagasiside on meile teejuhiks“. Tagasiside kogumine vajab lahendust, mis ei salvesta terviseandmeid.
+
+## 4. mäng saab liiga kiirelt läbi
+kasutaja ei ole rahul et sai soovituse liige kiiresti. peaks äkki laskma kogu küsimustiku ära teha

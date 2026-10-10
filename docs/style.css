@@ -120,3 +120,27 @@ details.why p{max-width:62ch;}
 .soon-card.unknown h3{font-size:1.75rem; line-height:1; margin-bottom:0.3rem;}
 #start details.why ul{padding-left:1.2rem; margin-top:0.6rem;}
 #start details.why summary{font-size:1.0625rem;}
+
+/* Jämesoolevähi vaheleht (jamesoolevahk.html) */
+#crc > p, #crc > ul{max-width:62ch;}
+#crc > ul{padding-left:1.2rem;}
+#crc li + li{margin-top:0.4rem;}
+#crc > h2{margin-top:2.5rem;}
+#crc > p + p{margin-top:0.85rem;}
+.video-placeholder{aspect-ratio:16/9; background:var(--navy-blue); color:#fff; border-radius:0.5rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; margin:1.5rem 0 0.5rem;}
+.video-placeholder span{font-size:2.5rem; line-height:1;}
+.video-placeholder p{font-size:0.9375rem; opacity:0.85;}
+.options, .choose{display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem;}
+@media(max-width:600px){.options, .choose{grid-template-columns:1fr;}}
+.option-card, .choose-card{background:var(--bg-soft); border-left:4px solid var(--blue); border-radius:0 0.5rem 0.5rem 0; padding:1.2rem 1.4rem;}
+.option-card h3, .choose-card h3{margin-bottom:0.4rem;}
+.option-card p + p, .choose-card p{margin-top:0.5rem;}
+.choose{margin-top:1.5rem;}
+.choose-card.primary{border-left-color:var(--accent);}
+.choose-card .btn{margin-top:1rem;}
+.choose-actions{display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;}
+.choose-actions .btn{margin-top:0;}
+#crc > .nav{margin-top:2rem;}
+#crc > .quiz-btn{margin-top:1.25rem;}
+#crc > .choose-card{margin-top:2rem; max-width:62ch;}
+#crc .choose-actions{flex-direction:row; flex-wrap:wrap;}
