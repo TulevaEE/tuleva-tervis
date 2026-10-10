@@ -18,6 +18,19 @@
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 2 · sinu järgmine samm</span>
   <h1>Tee koloskoopia</h1>
+
+  <div class="card" data-screening="colonoscopy">
+    <form id="year-form" class="year-form" novalidate>
+      <label for="year">Mis aastal oled sündinud?</label>
+      <div class="year-row">
+        <input id="year" type="number" inputmode="numeric" min="1900" max="2026" placeholder="nt 1964" required>
+        <button class="btn primary" type="submit">Kontrolli</button>
+      </div>
+      <p class="hint error" id="year-error" hidden>Sisesta sünniaasta neljakohalise numbrina, nt 1964.</p>
+    </form>
+    <div class="result" id="result" hidden></div>
+  </div>
+
   <div class="card vastused" id="vastused" hidden>
     <span class="eyebrow">Sinu vastused · <span id="vastused-date"></span></span>
     <dl id="vastused-list"></dl>
@@ -37,6 +50,8 @@
 
 <script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
 <script src="result.js"></script>
+<script src="screening.js"></script>
+<script src="result-screening.js"></script>
 <script src="counter.js"></script>
 </body>
 </html>
