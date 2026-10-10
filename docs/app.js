@@ -62,7 +62,7 @@ function saveAnswers(label) {
   const rows = [...visited, current].map((i) => {
     const q = QUESTIONS[i];
     // Mitmikvaliku juures näitame ka, milliseid valikuid küsiti.
-    const text = q.type === "multi" ? `${q.text} (${q.options.join(", ").toLowerCase()})` : q.text;
+    const text = q.type === "multi" ? `${q.text} Valikud: ${q.options.join("; ").toLowerCase()}` : q.text;
     return { q: text, a: i === current ? label : q.type === "multi" ? "Ei ühtegi" : "Ei" };
   });
   try {
