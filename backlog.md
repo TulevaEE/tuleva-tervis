@@ -8,7 +8,7 @@ author: Tõnu Pekk
 
 Siin on ideed ja parandused, mida me praegu ei tee, aga mida tasub hiljem kaaluda. Kliinilised muudatused kinnitab dr Seth. Kui midagi siit ära teed, märgi see tehtuks või kustuta rida.
 
-Allikad: `muudatusettepanekud.md` (B ja C osa), `ulevaade-knowledge-base.md` (leiud L2–L11, K1), `tagasiside.md`.
+Allikad: `ulevaade-knowledge-base.md` (leiud L2–L11, K1), `tagasiside.md` ning failid `muudatusettepanekud.md`, `kriitika.md` ja `plaan.md`, mis on kustutatud, sest nende sisu on siin ja ülevaates (vaata git ajalugu).
 
 ## Tekstid ja sisu (vajavad dr Sethi pilku)
 

@@ -16,9 +16,9 @@ Küsimustik asub kaustas `docs/` ja on avaldatud aadressil https://tulevaee.gith
 | `CLAUDE.md`, `AGENTS.md` | Reeglid kõigile, kes repos töötavad (inimesed ja AI), sh PR-i kontrollnimekiri |
 | `backlog.md` | Ideed ja lahtised asjad, mida hiljem kaaluda |
 | `ulevaade-knowledge-base.md` | Küsimustiku kriitiline ülevaade `knowledge base/` allikate põhjal (leiud L1–L11) |
-| `tagasiside.md`, `muudatusettepanekud.md`, `kriitika.md` | Kasutajate ja tiimi tagasiside |
+| `tagasiside.md` | Kasutajate tagasiside |
 | `knowledge base/` | Allikad: USPSTF 2021, dr Mari Sethi artikkel jt |
-| `kirjeldus.md`, `plaan.md` | Häkatoni algne kirjeldus ja plaan |
+| `kirjeldus.md` | Häkatoni algne kirjeldus: visioon, teekaart, keda on vaja |
 | `pitch/` | Esitluse näidised (ei ole veebis avaldatud) |
 | `screencast/` | Pitchi videod; uuesti salvestamiseks `scripts/record-screencast.js` |
 | `tests/` | `flow.test.js` (suunamine), `screening.test.js` (sihtrühm, pakkujad), `consistency.test.js` (versioonid ja `kusimustik.md`) |

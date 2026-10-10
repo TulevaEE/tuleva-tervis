@@ -1,4 +1,4 @@
-// Küsimustiku loogika (plaan.md). Iga küsimus on kas jah/ei või mitmikvalik.
+// Küsimustiku loogika (kirjeldus: kusimustik.md). Iga küsimus on kas jah/ei või mitmikvalik.
 // `yes` / `pick` tagastab Optioni numbri (1–5) või null, mis tähendab: liigu edasi.
 // `last` küsimuse "ei" viib `no` Optionile.
 // `unsure: true` küsimustel on ka vastus "Ei tea": see liigub edasi nagu "ei", aga tulemuse lehel
