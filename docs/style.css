@@ -115,3 +115,7 @@ details.why p{max-width:62ch;}
 #start > .btn.primary{margin-top:0.5rem; margin-bottom:0.5rem;}
 #start .card > p + p{margin-top:0.85rem;}
 #start .card > p strong{color:var(--navy-blue);}
+/* "?" kaart tulevikuplokis + lahtiklapitavate plokkide loetelu */
+.soon-card.unknown h3{font-size:1.75rem; line-height:1; margin-bottom:0.3rem;}
+#start details.why ul{padding-left:1.2rem; margin-top:0.6rem;}
+#start details.why summary{font-size:1.0625rem;}
