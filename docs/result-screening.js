@@ -41,8 +41,11 @@ function provider(p, linkText, priceFrom) {
   const slot = p.nextSlot;
   if (slot && new Date(`${slot.date}T${slot.time}`) > new Date()) {
     const [, m, d] = slot.date.split("-");
-    li.append(el("span", "slot", `Lähim vaba aeg: ${slot.label.toLowerCase()} ${Number(d)}.${Number(m)} kell ${slot.time}`),
-      el("span", "muted small", "See on arsti vastuvõtt, mitte koloskoopia aeg."));
+    li.append(el("span", "slot", `Lähim vaba aeg: ${slot.label.toLowerCase()} ${Number(d)}.${Number(m)} kell ${slot.time}`));
+    // Kui aeg on konsultatsioonile (nt Confido gastroenteroloog), ütleme selle välja.
+    if (!/koloskoopia/i.test(slot.label)) {
+      li.append(el("span", "muted small", "See on arsti vastuvõtt, mitte koloskoopia aeg."));
+    }
   }
   const actions = el("span", "actions");
   if (p.phone) actions.append(link(p.phone, `tel:${p.phone.replace(/\s/g, "")}`));
