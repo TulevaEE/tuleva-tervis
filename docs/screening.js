@@ -34,7 +34,7 @@ const phone = (s) => ((s || "").match(/\+?\d[\d ]{3,}\d/) || [])[0];
 const price = (s) => ((s || "").match(/^\d[\d,.]*/) || [])[0];
 const notes = (...xs) => xs.map(plain).filter(Boolean).join(" · ") || undefined;
 
-// Tuleva kupong kujul "`KOOD` 0%". Kupongid on häkatoni näidised – kokkuleppeid pakkujatega veel pole.
+// Tuleva sooduskood kujul "`KOOD` 0%". Sooduskoodid on häkatoni näidised – kokkuleppeid pakkujatega veel pole.
 function coupon(s) {
   const m = (s || "").match(/`([^`]+)`\s*(\S+%)/);
   return m ? { code: m[1], discount: m[2] } : undefined;
@@ -58,7 +58,7 @@ function parseProviders(md) {
       note: notes(r["Märkused"]),
       phone: phone(r["Telefon"]),
       url: linkUrl(r["Registreerimine / tellimine"]),
-      coupon: coupon(r["Tuleva kupong"]),
+      coupon: coupon(r["Tuleva sooduskood"]),
     })),
     // Sõelkoloskoopia haiglad (tasuta, perearsti saatekirjaga).
     screeningHospitals: colo.filter((r) => /sõelkoloskoopia/i.test(r["Tüüp"])).map((r) => ({
@@ -77,12 +77,12 @@ function parseProviders(md) {
       note: notes(r["Hinna märkus"], r["Märkused"]),
       phone: phone(r["Telefon"]),
       url: linkUrl(r["Registreerimine"]),
-      coupon: coupon(r["Tuleva kupong"]),
+      coupon: coupon(r["Tuleva sooduskood"]),
     })),
   };
 }
 
-// Kupongiga pakkujad ettepoole; muidu jääb järjekord samaks (sort on stabiilne).
+// Sooduskoodiga pakkujad ettepoole; muidu jääb järjekord samaks (sort on stabiilne).
 function byCoupon(items) {
   return [...items].sort((a, b) => Boolean(b.coupon) - Boolean(a.coupon));
 }
