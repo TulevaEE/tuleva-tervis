@@ -22,7 +22,7 @@ See dokument kirjeldab küsimustikku ja tulemuste lehti täpselt nii, nagu need 
    - nupp „Tee küsimustik (2 min)“;
    - „Kui juba tead, mida tahad“: otse Option 3 (peitvere test) või Option 2 (koloskoopia) lehele;
    - „Miks teha seda Tuleva kaudu?“.
-3. **Küsimustik** (`index.html#alusta`): küsimused tulevad ükshaaval allpool toodud järjekorras. Esimene „jah“ viib kohe tulemuse lehele. „Ei“ viib järgmise küsimuse juurde. Kes vastab kõigele „ei“, jõuab küsimuse 4.2 juurde. Edenemisriba näitab sammu (nt „Samm 2/4“) ja „← Eelmine küsimus“ viib tagasi.
+3. **Küsimustik** (`index.html#alusta`): küsimused tulevad ükshaaval allpool toodud järjekorras. Esimene „jah“ viib kohe tulemuse lehele. „Ei“ viib järgmise küsimuse juurde. Aneemia küsimusel (2.1) ja perekonna küsimustel 3.1, 3.2 ja 3.4 on ka vastus „Ei tea“, mis liigub edasi nagu „ei“. Kes vastab kõigele „ei“, jõuab küsimuse 4.2 juurde. Edenemisriba näitab sammu (nt „Samm 2/4“) ja „← Eelmine küsimus“ viib tagasi.
 4. **Tulemuse leht** (Option 1–5), vaata allpool.
 
 ---
@@ -47,7 +47,7 @@ Enne küsimust 2.1 näidatakse teksti „Ei ole? Uurime siis edasi.“
 Abitekst: „Siin mõtleme rauavaegusaneemiat ehk rauapuudusest tingitud kehvveresust. Selle tuvastab arst vereanalüüsi põhjal. Märgi „jah“, kui arst on selle sul tuvastanud.“
 
 - Jah → **Option 2**. Põhjuse lause: „Sa märkisid, et sul on rauavaegusaneemia. Aneemial on palju põhjuseid ja enamik neist on healoomulised — kuid et tõsisem põhjus kindlalt välistada, tasub teha täpsem uuring.“
-- Ei → 2.2
+- Ei või Ei tea → 2.2
 
 **Alus:**
 
@@ -83,7 +83,7 @@ Suunamine:
 Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
 - Jah → **Option 2**. Põhjuse lause: „Lähisugulasel oli jämesoolevähk enne 50. eluaastat. See tõstab sinu riski.“
-- Ei → 3.2
+- Ei või Ei tea → 3.2
 
 **Alus:**
 
@@ -92,7 +92,7 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel“ tähendab kas ema või isa suguvõsa. Märgi „jah“, kui mitmel su veresugulasel samal poolel on olnud mõni neist vähkidest.“
 
 - Jah → **Option 2**. Põhjuse lause: „Su suguvõsas on mitmel lähisugulasel esinenud vähke, mis võivad viidata päritavale kõrgemale riskile.“
-- Ei → 3.3
+- Ei või Ei tea → 3.3
 
 **Alus:**
 
@@ -106,7 +106,7 @@ Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel�
 #### 3.4 Kas lähisugulasel on olnud jämesoolevähk 50. eluaastal või hiljem?
 
 - Jah → **Option 3**. Põhjuse lause: „Lähisugulasel oli jämesoolevähk 50-aastaselt või hiljem. See tõstab su riski veidi — kuid mitte nii palju, et minna kohe koloskoopiasse.“
-- Ei → 4.1
+- Ei või Ei tea → 4.1
 
 **Alus:**
 
@@ -133,12 +133,13 @@ Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel�
 Iga lehe ülesehitus on sama:
 1. pealkiri;
 2. põhjuse lause: valitakse küsimuse järgi, mis lehele viis (vt küsimuste juures). Kui küsimust pole (nt otse vahelehelt tulles), näidatakse üldist lauset;
-3. järgmine samm, tegevus on paksus kirjas;
-4. lahtikäiv plokk „Miks see on sinu jaoks õige?“;
-5. lisaplokk (Option 2 ja 3);
-6. turvavõrgu tekst;
-7. „Sinu vastused“ koos allalaadimisega .md või PDF failina. Vastused on ainult brauseri vahekaardis ja kaovad selle sulgemisel;
-8. lingid „← Tagasi küsimuse juurde“ ja „Alusta küsimustikku uuesti“.
+3. „Ei tea“ märkus, kui inimene vastas mõnele neist küsimustest „Ei tea“ ja „jah“ oleks viinud teise tulemuseni: „Vastasid „Ei tea“: [küsimus]. Suunasime sind esialgu siia, aga „jah“ vastus oleks suunanud sind kohe koloskoopiasse / peitvere testi juurde. Uuri vastused järele ([küsi sugulastelt / küsi perearstilt vereanalüüsi kohta]) ja tee küsimustik uuesti.“ Märkus on ka allalaaditavas failis;
+4. järgmine samm, tegevus on paksus kirjas;
+5. lahtikäiv plokk „Miks see on sinu jaoks õige?“;
+6. lisaplokk (Option 1 jagamine, Option 2 ja 3 pakkujad);
+7. turvavõrgu tekst;
+8. „Sinu vastused“ koos allalaadimisega .md või PDF failina. Vastused on ainult brauseri vahekaardis ja kaovad selle sulgemisel;
+9. lingid „← Tagasi küsimuse juurde“ ja „Alusta küsimustikku uuesti“.
 
 ### Option 1. Praegu pole sul vaja midagi teha — ja see on hea uudis
 

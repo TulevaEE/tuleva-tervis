@@ -21,6 +21,17 @@
     list.append(dt, dd);
   });
   document.getElementById("vastused-date").textContent = date;
+
+  // "Ei tea" märkus: kuhu oleks "jah" viinud.
+  const option = Number((location.pathname.match(/option-(\d)/) || [])[1]);
+  const note = typeof unsureNote === "function" ? unsureNote(data.rows, option) : null;
+  const noteText = note && `Vastasid „Ei tea“: ${note.questions.join("; ")}. Suunasime sind esialgu siia, aga „jah“ vastus oleks suunanud sind ${note.target}. Uuri vastused järele (${note.findOut.join("; ") || "nt küsi sugulastelt"}) ja tee küsimustik uuesti.`;
+  if (noteText) {
+    const p = document.createElement("p");
+    p.className = "safety unsure-note";
+    p.textContent = noteText;
+    document.getElementById("pohjus").after(p);
+  }
   document.getElementById("vastused").hidden = false;
 
   document.getElementById("lae-md").addEventListener("click", () => {
@@ -31,6 +42,7 @@
       "",
       `**Tulemus:** ${title}`,
       "",
+      ...(noteText ? [`> ${noteText}`, ""] : []),
       "## Vastused",
       "",
       ...data.rows.map(({ q, a }) => `- **${q}** ${a}`),
