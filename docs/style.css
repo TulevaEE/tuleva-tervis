@@ -68,3 +68,13 @@ footer{padding:1.6rem 0; font-size:0.8125rem; color:var(--text-secondary); borde
   .card{border:none; background:none; padding:0;}
   body{min-height:0;}
 }
+
+/* Optioni lehe põhjus, järgmine samm, "Miks" plokk ja turvavõrk */
+.reason{font-weight:500; color:var(--navy-blue);}
+.next{margin-bottom:1.25rem; max-width:62ch;}
+details.why{margin:1.25rem 0; padding:1rem 1.25rem;}
+details.why summary{cursor:pointer; font-weight:600; color:var(--blue); list-style:revert;}
+details.why[open] summary{margin-bottom:0.6rem;}
+details.why p{max-width:62ch;}
+.safety{border-left:6px solid var(--accent); background:var(--bg-soft); padding:0.9rem 1.1rem; border-radius:0 0.5rem 0.5rem 0; margin:1.25rem 0; max-width:66ch;}
+@media print{ details.why{display:none;} }

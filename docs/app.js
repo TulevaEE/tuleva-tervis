@@ -48,7 +48,7 @@ function go(value, label) {
   if (r.option) {
     saveAnswers(label);
     // Läbitud tee läheb aadressi, et Optioni lehelt saaks viimase küsimuse juurde tagasi.
-    location.href = `option-${r.option}.html#k=${[...visited, current].join(",")}`;
+    location.href = `option-${r.option}.html#k=${[...visited, current].join(",")}&q=${QUESTIONS[current].id}`;
     return;
   }
   visited.push(current);
@@ -96,8 +96,8 @@ function begin(index) {
 
 $("begin").addEventListener("click", () => begin(0));
 
-// Optioni lehelt tagasi tulles (index.html#k=0,1,2) jätkame viimasest küsimusest.
-const path = (location.hash.match(/^#k=([\d,]+)$/) || [])[1];
+// Optioni lehelt tagasi tulles (index.html#k=0,1,2&q=2.1) jätkame viimasest küsimusest.
+const path = (location.hash.match(/^#k=([\d,]+)(&q=[\d.]+)?$/) || [])[1];
 if (path) {
   const steps = path.split(",").map(Number);
   if (steps.every((i) => i < QUESTIONS.length)) {
