@@ -21,11 +21,12 @@
   <p class="lead reason" id="pohjus">Sinu vastuste põhjal ei ole sul praegu sõeltesti vaja.</p>
   <p class="next"><strong>Järgmine samm.</strong> Praegu ei ole sul sõeltesti vaja. <strong>Tee see küsimustik uuesti umbes kahe aasta pärast</strong> — või varem, kui midagi muutub.</p>
 
-  <div class="card">
+  <!-- Näidatakse ainult alla 45-aastastele (küsimus 4.1), vt skripti lehe lõpus. -->
+  <div class="card" id="jaga" hidden>
     <h2>Kõige rohkem aitad sa praegu kedagi teist</h2>
-    <p>Sina oled heas seisus. Aga jämesoolevähi sõeluuring on kõige olulisem <strong>45-aastastele ja vanematele</strong> — tõenäoliselt su vanematele või vanavanematele. Eestis jääb sõeluuring paljudel tegemata lihtsalt sellepärast, et keegi pole meelde tuletanud.</p>
+    <p>Sina oled heas seisus. Aga jämesoolevähi sõeluuring on kõige olulisem <strong>45-aastastele ja vanematele</strong> — tõenäoliselt su vanematele või vanavanematele. Eestis jääb sõeluuring paljudel tegemata.</p>
     <p><strong>Üks sinu sõnum võib olla just see tõuge, mida kellelgi vaja on.</strong> Saada see link inimesele, kes on selles vanuses.</p>
-    <p><a class="btn primary" href="mailto:?subject=Tegin ära – äkki tasub sinulgi vaadata&body=Tegin Tuleva jämesoolevähi enesekontrolli. Sina oled vanuses, kus see loeb – äkki tasub sul ka paar minutit vaadata:%0D%0Ahttps://tulevaee.github.io/tuleva-tervis/">Saada link edasi →</a></p>
+    <p><a class="btn primary" href="mailto:?subject=Tegin%20%C3%A4ra%20%E2%80%93%20%C3%A4kki%20tasub%20sinulgi%20vaadata&amp;body=Tegin%20Tuleva%20j%C3%A4mesoolev%C3%A4hi%20enesekontrolli.%20Sina%20oled%20vanuses%2C%20kus%20see%20loeb%20%E2%80%93%20%C3%A4kki%20tasub%20sul%20ka%20paar%20minutit%20vaadata%3A%0D%0Ahttps%3A//tulevaee.github.io/tuleva-tervis/">Saada link edasi →</a></p>
   </div>
   <details class="card why">
     <summary>Miks see on sinu jaoks õige?</summary>
@@ -56,6 +57,7 @@
   "4.2": "Tubli, et kontrollisid! Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
 };</script>
 <script src="reason.js?v=3"></script>
+<script>if (/[#&]q=4\.1(&|$)/.test(location.hash)) document.getElementById("jaga").hidden = false;</script>
 <script src="result.js?v=4"></script>
 <script src="counter.js?v=3"></script>
 </body>

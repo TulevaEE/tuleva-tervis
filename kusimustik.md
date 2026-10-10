@@ -112,14 +112,14 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
 #### 4.1 Kas oled noorem kui 45 aastat?
 
-- Jah → **Option 1**. Põhjuse lause: „Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski. Sinu eas on jämesoolevähk harv.“
+- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski — sinu eas on jämesoolevähk harv.“
 - Ei → 4.2
 
 **Alus:**
 
 #### 4.2 Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?
 
-- Jah → **Option 1**. Põhjuse lause: „Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid.“
+- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid.“
 - Ei → **Option 3**. Põhjuse lause: „Oled 45-aastane või vanem ega ole viimase kahe aasta jooksul peitvere testi teinud.“
 
 **Alus:**
@@ -138,10 +138,11 @@ Iga lehe ülesehitus on sama:
 7. „Sinu vastused“ koos allalaadimisega .md või PDF failina. Vastused on ainult brauseri vahekaardis ja kaovad selle sulgemisel;
 8. lingid „← Tagasi küsimuse juurde“ ja „Alusta küsimustikku uuesti“.
 
-### Option 1. Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast
+### Option 1. Praegu pole sul vaja midagi teha — ja see on hea uudis
 
 - **Üldine põhjuse lause:** „Sinu vastuste põhjal ei ole sul praegu sõeltesti vaja.“
 - **Järgmine samm:** „Praegu ei ole sul sõeltesti vaja. **Tee see küsimustik uuesti umbes kahe aasta pärast** — või varem, kui midagi muutub.“
+- **Lisaplokk (ainult küsimuse 4.1 kaudu tulnutele):** „Kõige rohkem aitad sa praegu kedagi teist“. Kutsub saatma lingi 45-aastasele või vanemale lähedasele, nupp „Saada link edasi →“ avab e-kirja.
 - **Turvavõrk:** „Pöördu perearsti poole varem, kui tekib veri väljaheites, seedetegevuse muutus, seletamatu kaalulangus, püsiv kõhuvalu või kui sulle öeldakse, et oled aneemias. Siis ära oota küsimustikku.“
 
 <details><summary>„Miks“ tekst</summary>
