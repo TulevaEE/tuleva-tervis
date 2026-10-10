@@ -34,6 +34,12 @@ const phone = (s) => ((s || "").match(/\+?\d[\d ]{3,}\d/) || [])[0];
 const price = (s) => ((s || "").match(/^\d[\d,.]*/) || [])[0];
 const notes = (...xs) => xs.map(plain).filter(Boolean).join(" · ") || undefined;
 
+// Lähim vaba aeg kujul "2026-10-12 13:30 · Gastroenteroloogi vastuvõtt" (täidab scripts/update-free-times.js).
+function nextSlot(s) {
+  const m = (s || "").match(/^(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) · (.+)$/);
+  return m ? { date: m[1], time: m[2], label: m[3] } : undefined;
+}
+
 // Tuleva sooduskood kujul "`KOOD` 0%". Sooduskoodid on häkatoni näidised – kokkuleppeid pakkujatega veel pole.
 function coupon(s) {
   const m = (s || "").match(/`([^`]+)`\s*(\S+%)/);
@@ -78,6 +84,7 @@ function parseProviders(md) {
       phone: phone(r["Telefon"]),
       url: linkUrl(r["Registreerimine"]),
       coupon: coupon(r["Tuleva sooduskood"]),
+      nextSlot: nextSlot(r["Järgmine vaba aeg"]),
     })),
   };
 }
