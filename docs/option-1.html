@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=8">
+<style>
+  .risk-badge{display:inline-flex;align-items:center;gap:0.45rem;font-weight:600;font-size:1.0625rem;padding:0.55rem 1.1rem;border-radius:999px;margin-bottom:1rem;line-height:1.3;}
+  .risk-badge.risk-low{background:#e3f6e8;color:#1b7a3d;border:1px solid #9fd9b2;}
+</style>
 </head>
 <body>
 
@@ -17,6 +21,7 @@
 <main>
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 1 · sinu järgmine samm</span>
+  <p class="risk-badge risk-low">✓ Praeguse info põhjal oled madalas riskirühmas</p>
   <h1>Praegu pole sul vaja midagi teha — ja see on hea uudis</h1>
   <p class="lead reason" id="pohjus">Sinu vastuste põhjal ei ole sul praegu sõeltesti vaja.</p>
   <p class="next"><strong>Järgmine samm.</strong> Praegu ei ole sul sõeltesti vaja. <strong>Tee see küsimustik uuesti umbes kahe aasta pärast</strong> — või varem, kui midagi muutub.</p>
@@ -53,12 +58,12 @@
 <script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
 <script src="flow.js?v=10"></script>
 <script>window.REASONS = {
-  "4.1": "Tubli, et kontrollisid! Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski — sinu eas on jämesoolevähk harv.",
-  "4.2": "Tubli, et kontrollisid! Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
+  "4.1": "Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski, ja sinu eas on jämesoolevähk harv.",
+  "4.2": "Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
 };</script>
 <script src="reason.js?v=3"></script>
 <script>if (/[#&]q=4\.1(&|$)/.test(location.hash)) document.getElementById("jaga").hidden = false;</script>
-<script src="result.js?v=6"></script>
+<script src="result.js?v=7"></script>
 <script src="counter.js?v=3"></script>
 </body>
 </html>

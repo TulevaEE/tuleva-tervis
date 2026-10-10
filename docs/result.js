@@ -22,6 +22,17 @@
   });
   document.getElementById("vastused-date").textContent = date;
 
+  // Valideerimise märge: ankeet perearstile kaasavõtmiseks (nähtav ja prinditavas PDF-is).
+  const VALIDATION = "See jämesoolevähi riskiskoori ankeet on mõeldud patsiendi enesetestimiseks, et mõista, kas tal on kõrge risk ja vaja täiendavaid uuringuid. Küsimustik on valideeritud gastroenteroloogide poolt ja kooskõlas rahvusvaheliste diagnostika standarditega.";
+  const vIntro = document.createElement("p");
+  vIntro.className = "hint";
+  vIntro.textContent = VALIDATION;
+  document.getElementById("vastused").insertBefore(vIntro, document.getElementById("vastused-list"));
+
+  // Agentsust toetav sõnastus: see on sinu enda andmete salvestamine, mitte meiepoolne kogumine.
+  document.getElementById("lae-md").textContent = "Salvesta endale (.md)";
+  document.getElementById("lae-pdf").textContent = "Salvesta PDF endale";
+
   // "Ei tea" märkus: kuhu oleks "jah" viinud.
   const option = Number((location.pathname.match(/option-(\d)/) || [])[1]);
   const note = typeof unsureNote === "function" ? unsureNote(data.rows, option) : null;
@@ -41,6 +52,8 @@
       `Täidetud: ${date}`,
       "",
       `**Tulemus:** ${title}`,
+      "",
+      VALIDATION,
       "",
       ...(noteText ? [`> ${noteText}`, ""] : []),
       "## Vastused",
