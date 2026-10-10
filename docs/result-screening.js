@@ -1,4 +1,5 @@
-// Option 2 ja 3: küsib sünniaasta, ütleb, kas inimene kuulub sõeluuringu sihtrühma, ja näitab pakkujaid.
+// Option 2: näitab koloskoopia teid (perearsti saatekiri, tasulised kliinikud) kohe, ilma sünniaastata.
+// Option 3: küsib sünniaasta, ütleb, kas inimene kuulub sõeluuringu sihtrühma, ja näitab pakkujaid.
 // Lehe kaardil `data-screening="colonoscopy"` (Option 2) või `"fit"` (Option 3).
 // Pakkujad loetakse igal kontrollimisel värskelt failist providers.md (vt parseProviders failis screening.js).
 const $ = (id) => document.getElementById(id);
@@ -68,26 +69,13 @@ const verdictNo = () => el("p", "verdict no",
   `Sinu sünniaasta ei kuulu ${SCREENING_YEAR}. aasta jämesoolevähi sõeluuringu sihtrühma.`);
 
 const PAGES = {
+  // Option 2-le jõuavad sümptomite või kõrge riskiga inimesed, seega sõeluuringust (peitvere testist) siin ei räägi.
   colonoscopy(eligible, data) {
-    const clinics = [
-      el("p", "", "Tasulisse koloskoopiasse saad ilma saatekirjata:"),
-      list(data.paidClinics, "Broneeri →", true),
-    ];
-    if (!eligible) {
-      return [verdictNo(), ...clinics,
-        el("p", "muted", "Perearst võib anda saatekirja koloskoopiale ka väljaspool sõeluuringut (nt maakonnahaiglasse).")];
-    }
     return [
-      verdictYes(),
-      steps([
-        "Pöördu oma perearstikeskuse pereõe poole – saad tasuta peitveretesti (FIT) komplekti.",
-        "Tee test kodus ja saada proov postiga või pakiautomaadiga laborisse. Vastus tuleb umbes 10 tööpäevaga.",
-        "Kui tulemus on positiivne, annab perearst saatekirja tasuta sõelkoloskoopiale ühes neist haiglatest:",
-      ]),
-      list(data.screeningHospitals, "Loe lähemalt →"),
-      portal(),
-      el("h3", "", "Soovid kohe koloskoopiasse?"),
-      ...clinics,
+      el("h3", "", "Perearsti saatekirjaga"),
+      el("p", "", "Räägi perearstiga, miks sa koloskoopiasse tahad minna. Perearst annab saatekirja ja suunab sind haiglasse."),
+      el("h3", "", "Tasulises kliinikus ilma saatekirjata"),
+      list(data.paidClinics, "Broneeri →", true),
     ];
   },
 
@@ -134,19 +122,22 @@ async function show(year) {
   try {
     const data = await loadProviders();
     if (mine !== request) return;
-    result.replaceChildren(...PAGES[card.dataset.screening](isEligible(year), data),
+    result.replaceChildren(...PAGES[card.dataset.screening](year && isEligible(year), data),
       el("p", "muted small", `Andmed kogutud ${data.updated || "–"} – kontrolli hinnad ja tingimused enne pöördumist.`));
   } catch (err) {
     console.error("Pakkujate laadimine ebaõnnestus:", err);
     if (mine !== request) return;
     // Otse kettalt avatud lehel (file://) ei luba brauser providers.md faili laadida.
     result.replaceChildren(el("p", "hint error", location.protocol === "file:"
-      ? "Pakkujate nimekiri laeb ainult veebiserveri kaudu. Käivita: python3 -m http.server -d docs ja ava http://localhost:8000/"
+      ? "Pakkujate nimekiri laeb ainult veebiserveri kaudu. Ava leht VS Code'i Live Serveriga (Open with Live Server)."
       : "Pakkujate nimekirja ei õnnestunud laadida. Proovi hetke pärast uuesti."));
   }
 }
 
-$("year-form").addEventListener("submit", (e) => {
+// Option 2 näitab pakkujaid kohe, ilma sünniaastata.
+if (card.dataset.screening === "colonoscopy") show();
+
+if ($("year-form")) $("year-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const { year, error } = parseBirthYear($("year").value);
   $("year-error").textContent = error || "";

@@ -29,7 +29,7 @@ Kõigil Optioni lehtedel saab inimene oma vastused alla laadida .md või PDF fai
 
 ## Samm 1. Vaatame, kas juba tegutsed
 
-### 1.1 Kas oled käinud koloskoopias?
+### 1.1 Kas sul on viimase 5 aasta jooksul tehtud koloskoopia?
 
 - Jah → **Option 5**
 - Ei → 2.1
