@@ -37,6 +37,13 @@ function provider(p, linkText, priceFrom) {
     c.append(el("code", "", p.coupon.code), ` · ${p.coupon.discount} (näidis)`);
     li.append(c);
   }
+  // Lähim vaba aeg tuleb providers.md-st (uuenda: node scripts/update-free-times.js); möödunud aega ei näita.
+  const slot = p.nextSlot;
+  if (slot && new Date(`${slot.date}T${slot.time}`) > new Date()) {
+    const [, m, d] = slot.date.split("-");
+    li.append(el("span", "slot", `Lähim vaba aeg: ${slot.label.toLowerCase()} ${Number(d)}.${Number(m)} kell ${slot.time}`),
+      el("span", "muted small", "See on arsti vastuvõtt, mitte koloskoopia aeg."));
+  }
   const actions = el("span", "actions");
   if (p.phone) actions.append(link(p.phone, `tel:${p.phone.replace(/\s/g, "")}`));
   if (p.url) actions.append(link(linkText, p.url));

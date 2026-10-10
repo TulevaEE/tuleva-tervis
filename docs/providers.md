@@ -4,6 +4,8 @@ _Andmed kogutud 10.10.2026. Kontrolli hinnad ja tingimused enne pöördumist._
 
 _Seda faili loevad Option 2 ja 3 lehed otse (iga kontrolli ajal värskelt). Muudatus siin jõuab lehele kohe – ära muuda veergude nimesid ega `## FIT` / `## Koloskoopia` pealkirju (vt `parseProviders` failis `screening.js`)._
 
+_Veergu **Järgmine vaba aeg** uuendab käsitsi `node scripts/update-free-times.js` (seejärel commit ja push). Möödunud aega leht ei näita. Confido puhul on see **gastroenteroloogi vastuvõtu** (teenus C0002) lähim vaba aeg, mitte koloskoopia aeg._
+
 _**Tuleva sooduskoodid on näidised (häkatoni demo)** – kokkuleppeid pakkujatega veel ei ole ja koode ei saa kasutada. Tulemuslehtedel näidatakse sooduskoodiga pakkujaid nimekirja eespool._
 
 ## FIT (peitveretest)
@@ -25,15 +27,15 @@ _**Tuleva sooduskoodid on näidised (häkatoni demo)** – kokkuleppeid pakkujat
 
 ## Koloskoopia
 
-| Teenusepakkuja | Asukoht | Tüüp | Saatekiri vajalik | Koloskoopia (€) | Narkoosis (€) | Hinna märkus | Registreerimine | Telefon | Märkused | Tuleva sooduskood |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Põhja-Eesti Regionaalhaigla | Tallinn | Sõelkoloskoopia | Jah (perearst, pärast positiivset FIT-i) | tasuta |  | Tasuta sõeluuringus | [Terviseportaal](https://www.terviseportaal.ee) | 617 1049 / 617 2354 (E–R 8–16) |  | — (tasuta) |
-| Ida-Tallinna Keskhaigla | Tallinn | Sõelkoloskoopia + tasuline vastuvõtt | Sõelkoloskoopiaks jah; tasulisele vastuvõtule ei | tasuta |  | Tasuta sõeluuringus | [Sõeluuringu koloskoopia](https://www.itk.ee/patsiendile/kliinikud/gastroenteroloogiakeskus/jamesoolevahi-soeluuringu-koloskoopia) | 620 7077 (E–R 8–16) | Ravi tn 18, C-korpus | — (tasuta) |
-| Tartu Ülikooli Kliinikum | Tartu | Sõelkoloskoopia | Jah (perearst) | tasuta |  | Tasuta sõeluuringus | [Gastroenteroloogia](https://www.kliinikum.ee/valdkond/gastroenteroloogia/) | 731 9871 (endoskoopiakeskus) |  | — (tasuta) |
-| Pärnu Haigla | Pärnu | Sõelkoloskoopia | Jah (perearst) | tasuta |  | Tasuta sõeluuringus | [Sõeluuringu koloskoopia](https://www.ph.ee/et/patsiendile-ja-kulastajale/patsiendi-infomaterjalid/protseduurid/soeluuringu-koloskoopia) | 447 3300 | Ristiku 1, II korrus, A-tiib, kab A217 | — (tasuta) |
-| Confido | Tallinn (Veerenni 51), Tartu (Raatuse 21) | Tasuline | Ei | 300 € | 900 € | Alates-hinnad; Tartus narkoosis alates 750 € | [Broneeri koloskoopia](https://minu.confido.ee/services?lang=et&serviceCodes=C0002,C0401,C01108) |  | Ettevalmistuse nõustamine hinnas | — |
-| Medicum | Tallinn | Tasuline | Ei | 450 € |  | Varasemast hinnakirjast** | [Broneeri mao- ja sooleuuring](https://www.medicum.ee/mao-ja-sooleuuringud/broneeri-vastuvott/) | 605 0601 | Ka narkoosis | `TULEVADISCOUNT` 0% (näidis) |
-| Med4U | Tallinn (Narva mnt 7), Narva | ⚠️ Kinnitamata | — |  |  | Koloskoopiat praegu kodulehel pole | [Kontaktid](https://med4u.ee/en/kontaktid/) | 5883 0007 | Helista ja küsi enne pöördumist | — |
+| Teenusepakkuja | Asukoht | Tüüp | Saatekiri vajalik | Koloskoopia (€) | Narkoosis (€) | Hinna märkus | Registreerimine | Telefon | Märkused | Tuleva sooduskood | Järgmine vaba aeg |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Põhja-Eesti Regionaalhaigla | Tallinn | Sõelkoloskoopia | Jah (perearst, pärast positiivset FIT-i) | tasuta |  | Tasuta sõeluuringus | [Terviseportaal](https://www.terviseportaal.ee) | 617 1049 / 617 2354 (E–R 8–16) |  | — (tasuta) | — |
+| Ida-Tallinna Keskhaigla | Tallinn | Sõelkoloskoopia + tasuline vastuvõtt | Sõelkoloskoopiaks jah; tasulisele vastuvõtule ei | tasuta |  | Tasuta sõeluuringus | [Sõeluuringu koloskoopia](https://www.itk.ee/patsiendile/kliinikud/gastroenteroloogiakeskus/jamesoolevahi-soeluuringu-koloskoopia) | 620 7077 (E–R 8–16) | Ravi tn 18, C-korpus | — (tasuta) | — |
+| Tartu Ülikooli Kliinikum | Tartu | Sõelkoloskoopia | Jah (perearst) | tasuta |  | Tasuta sõeluuringus | [Gastroenteroloogia](https://www.kliinikum.ee/valdkond/gastroenteroloogia/) | 731 9871 (endoskoopiakeskus) |  | — (tasuta) | — |
+| Pärnu Haigla | Pärnu | Sõelkoloskoopia | Jah (perearst) | tasuta |  | Tasuta sõeluuringus | [Sõeluuringu koloskoopia](https://www.ph.ee/et/patsiendile-ja-kulastajale/patsiendi-infomaterjalid/protseduurid/soeluuringu-koloskoopia) | 447 3300 | Ristiku 1, II korrus, A-tiib, kab A217 | — (tasuta) | — |
+| Confido | Tallinn (Veerenni 51), Tartu (Raatuse 21) | Tasuline | Ei | 300 € | 900 € | Alates-hinnad; Tartus narkoosis alates 750 € | [Broneeri koloskoopia](https://minu.confido.ee/services?lang=et&serviceCodes=C0002,C0401,C01108) |  | Ettevalmistuse nõustamine hinnas | — | 2026-10-12 13:30 · Gastroenteroloogi vastuvõtt |
+| Medicum | Tallinn | Tasuline | Ei | 450 € |  | Varasemast hinnakirjast** | [Broneeri mao- ja sooleuuring](https://www.medicum.ee/mao-ja-sooleuuringud/broneeri-vastuvott/) | 605 0601 | Ka narkoosis | `TULEVADISCOUNT` 0% (näidis) | — |
+| Med4U | Tallinn (Narva mnt 7), Narva | ⚠️ Kinnitamata | — |  |  | Koloskoopiat praegu kodulehel pole | [Kontaktid](https://med4u.ee/en/kontaktid/) | 5883 0007 | Helista ja küsi enne pöördumist | — | — |
 
 - Sõelkoloskoopiat teevad ainult need 4 haiglat (Tervisekassa nimekiri). Tasuta sihtrühmale.
 - \*\* Medicumi hind varasemast hinnakirjast; praegune veebihinnakiri ei olnud kättesaadav.
