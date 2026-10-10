@@ -76,7 +76,7 @@ Suunamine:
 
 **Alus:**
 
-### Samm 3. Perekonna anamnees
+### Samm 3. Su suguvõsa tervis
 
 #### 3.1 Kas lähisugulasel on olnud jämesoolevähk enne 50. eluaastat?
 
@@ -88,6 +88,8 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 **Alus:**
 
 #### 3.2 Kas samal poolel suguvõsast on kahel või enamal lähisugulasel esinenud endomeetriumi-, munasarja-, mao-, peensoole-, kuseteede-, kõhunäärme- või sapiteedevähki või ajukasvajat (glioblastoom)?
+
+Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel“ tähendab kas ema või isa suguvõsa. Märgi „jah“, kui mitmel su veresugulasel samal poolel on olnud mõni neist vähkidest.“
 
 - Jah → **Option 2**. Põhjuse lause: „Su suguvõsas on mitmel lähisugulasel esinenud vähke, mis võivad viidata päritavale kõrgemale riskile.“
 - Ei → 3.3

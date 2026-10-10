@@ -5,7 +5,7 @@
 const STEPS = {
   1: "Vaatame, kas juba tegutsed",
   2: "Kas sul on sümptomeid?",
-  3: "Perekonna anamnees",
+  3: "Su suguvõsa tervis",
   4: "Vanus ja varasemad testid",
 };
 
@@ -25,7 +25,8 @@ const QUESTIONS = [
 
   { id: "3.1", step: 3, text: "Kas lähisugulasel on olnud jämesoolevähk enne 50. eluaastat?", yes: 2,
     hint: "Lähisugulane on vanem, laps, õde või vend." },
-  { id: "3.2", step: 3, text: "Kas samal poolel suguvõsast on kahel või enamal lähisugulasel esinenud endomeetriumi-, munasarja-, mao-, peensoole-, kuseteede-, kõhunäärme- või sapiteedevähki või ajukasvajat (glioblastoom)?", yes: 2 },
+  { id: "3.2", step: 3, text: "Kas samal poolel suguvõsast on kahel või enamal lähisugulasel esinenud endomeetriumi-, munasarja-, mao-, peensoole-, kuseteede-, kõhunäärme- või sapiteedevähki või ajukasvajat (glioblastoom)?", yes: 2,
+    hint: "See loetelu aitab märgata pärilikku vähiriski. „Samal poolel“ tähendab kas ema või isa suguvõsa. Märgi „jah“, kui mitmel su veresugulasel samal poolel on olnud mõni neist vähkidest." },
   { id: "3.3", step: 3, text: "Kas sul on tehtud geenitest jämesoolevähi tõusnud riski kohta ja see oli positiivne?", yes: 2 },
   { id: "3.4", step: 3, text: "Kas lähisugulasel on olnud jämesoolevähk 50. eluaastal või hiljem?", yes: 3 },
 
