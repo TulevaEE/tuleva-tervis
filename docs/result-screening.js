@@ -1,5 +1,6 @@
 // Option 2 ja 3: küsib sünniaasta, ütleb, kas inimene kuulub sõeluuringu sihtrühma, ja näitab pakkujaid.
 // Lehe kaardil `data-screening="colonoscopy"` (Option 2) või `"fit"` (Option 3).
+// Pakkujad loetakse igal kontrollimisel värskelt failist providers.md (vt parseProviders failis screening.js).
 const $ = (id) => document.getElementById(id);
 
 function el(tag, className, text) {
@@ -30,6 +31,11 @@ function provider(p, linkText, priceFrom) {
   }
   if (p.how) li.append(el("span", "", p.how));
   if (p.note) li.append(el("span", "muted", p.note));
+  if (p.coupon) {
+    const c = el("span", "coupon", "Tuleva kupong ");
+    c.append(el("code", "", p.coupon.code), ` · ${p.coupon.discount} (näidis)`);
+    li.append(c);
+  }
   const actions = el("span", "actions");
   if (p.phone) actions.append(link(p.phone, `tel:${p.phone.replace(/\s/g, "")}`));
   if (p.url) actions.append(link(linkText, p.url));
@@ -39,7 +45,7 @@ function provider(p, linkText, priceFrom) {
 
 function list(items, linkText, priceFrom) {
   const ul = el("ul", "providers");
-  items.forEach((p) => ul.append(provider(p, linkText, priceFrom)));
+  byCoupon(items).forEach((p) => ul.append(provider(p, linkText, priceFrom)));
   return ul;
 }
 
@@ -62,10 +68,10 @@ const verdictNo = () => el("p", "verdict no",
   `Sinu sünniaasta ei kuulu ${SCREENING_YEAR}. aasta jämesoolevähi sõeluuringu sihtrühma.`);
 
 const PAGES = {
-  colonoscopy(eligible) {
+  colonoscopy(eligible, data) {
     const clinics = [
       el("p", "", "Tasulisse koloskoopiasse saad ilma saatekirjata:"),
-      list(PAID_CLINICS, "Broneeri →", true),
+      list(data.paidClinics, "Broneeri →", true),
     ];
     if (!eligible) {
       return [verdictNo(), ...clinics,
@@ -78,15 +84,15 @@ const PAGES = {
         "Tee test kodus ja saada proov postiga või pakiautomaadiga laborisse. Vastus tuleb umbes 10 tööpäevaga.",
         "Kui tulemus on positiivne, annab perearst saatekirja tasuta sõelkoloskoopiale ühes neist haiglatest:",
       ]),
-      list(SCREENING_HOSPITALS, "Loe lähemalt →"),
+      list(data.screeningHospitals, "Loe lähemalt →"),
       portal(),
       el("h3", "", "Soovid kohe koloskoopiasse?"),
       ...clinics,
     ];
   },
 
-  fit(eligible) {
-    const labs = list(FIT_LABS, "Vaata lähemalt →");
+  fit(eligible, data) {
+    const labs = list(data.fitLabs, "Vaata lähemalt →");
     if (!eligible) {
       return [verdictNo(),
         el("p", "", "FIT-testi saad teha tasulisena:"),
@@ -111,24 +117,41 @@ const PAGES = {
 
 const card = document.querySelector("[data-screening]");
 
-function show(year) {
-  const result = $("result");
-  result.innerHTML = "";
-  result.append(...PAGES[card.dataset.screening](isEligible(year)),
-    el("p", "muted small", "Andmed kogutud 10.10.2026 – kontrolli hinnad ja tingimused enne pöördumist."));
-  result.hidden = false;
+// Laeb providers.md iga kord uuesti (ilma vahemäluta), et muudatused oleksid kohe näha.
+async function loadProviders() {
+  const res = await fetch("providers.md", { cache: "no-store" });
+  if (!res.ok) throw new Error(`providers.md: ${res.status}`);
+  return parseProviders(await res.text());
 }
 
-// Väljale saab kirjutada ainult numbreid, kõige rohkem 4.
-$("year").addEventListener("input", (e) => {
-  e.target.value = e.target.value.replace(/\D/g, "").slice(0, 4);
-});
+let request = 0; // kui inimene vajutab mitu korda, näitame ainult viimast vastust
+
+async function show(year) {
+  const result = $("result");
+  const mine = ++request;
+  result.replaceChildren(el("p", "muted", "Laen pakkujaid…"));
+  result.hidden = false;
+  try {
+    const data = await loadProviders();
+    if (mine !== request) return;
+    result.replaceChildren(...PAGES[card.dataset.screening](isEligible(year), data),
+      el("p", "muted small", `Andmed kogutud ${data.updated || "–"} – kontrolli hinnad ja tingimused enne pöördumist.`));
+  } catch (err) {
+    console.error("Pakkujate laadimine ebaõnnestus:", err);
+    if (mine !== request) return;
+    // Otse kettalt avatud lehel (file://) ei luba brauser providers.md faili laadida.
+    result.replaceChildren(el("p", "hint error", location.protocol === "file:"
+      ? "Pakkujate nimekiri laeb ainult veebiserveri kaudu. Käivita: python3 -m http.server -d docs ja ava http://localhost:8000/"
+      : "Pakkujate nimekirja ei õnnestunud laadida. Proovi hetke pärast uuesti."));
+  }
+}
 
 $("year-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const { year, error } = parseBirthYear($("year").value);
   $("year-error").textContent = error || "";
   $("year-error").hidden = !error;
+  $("year").classList.toggle("invalid", Boolean(error));
   if (error) $("result").hidden = true;
   else show(year);
 });
