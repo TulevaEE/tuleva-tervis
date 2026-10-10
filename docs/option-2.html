@@ -28,7 +28,7 @@
     <form id="year-form" class="year-form" novalidate>
       <label for="year">Mis aastal oled sündinud?</label>
       <div class="year-row">
-        <input id="year" type="number" inputmode="numeric" min="1900" max="2026" placeholder="nt 1964" required>
+        <input id="year" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="bday-year" placeholder="nt 1964" required>
         <button class="btn primary" type="submit">Kontrolli</button>
       </div>
       <p class="hint error" id="year-error" hidden>Sisesta sünniaasta neljakohalise numbrina, nt 1964.</p>
