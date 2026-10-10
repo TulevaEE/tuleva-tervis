@@ -176,7 +176,7 @@ Praegustest allikatest ei saa kontrollida mitut meie reeglit. Ettepanek lisada:
 | # | Mis | Kes otsustab | Kiirus |
 |---|---|---|---|
 | L1 | Option 2 sünniaasta ploki parandus | tiim | ✅ parandatud |
-| L2 | Koloskoopia küsimuse järjekord ja aeg | dr Seth | 🔴 |
+| L2 | Koloskoopia küsimuse järjekord ja aeg | dr Seth | 🟠 osaliselt (küsimus on nüüd „viimase 5 aasta jooksul“) |
 | L4 | Põletikuline soolehaigus, polüübid, Lynch/FAP | dr Seth | 🟠 |
 | L3 | FIT-i intervall 1 või 2 aastat | dr Seth | 🟠 |
 | L5 | Vanus küsimuse 3.4 juures, 2+ sugulast | dr Seth | 🟠 |
