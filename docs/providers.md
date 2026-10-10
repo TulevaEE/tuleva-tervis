@@ -4,7 +4,7 @@ _Andmed kogutud 10.10.2026. Kontrolli hinnad ja tingimused enne pöördumist._
 
 _Seda faili loevad Option 2 ja 3 lehed otse (iga kontrolli ajal värskelt). Muudatus siin jõuab lehele kohe – ära muuda veergude nimesid ega `## FIT` / `## Koloskoopia` pealkirju (vt `parseProviders` failis `screening.js`)._
 
-_Veergu **Järgmine vaba aeg** uuendab käsitsi `node scripts/update-free-times.js` (seejärel commit ja push). Möödunud aega leht ei näita. Confido puhul on see **gastroenteroloogi vastuvõtu** (teenus C0002) lähim vaba aeg, mitte koloskoopia aeg._
+_Veergu **Järgmine vaba aeg** uuendab käsitsi `node scripts/update-free-times.js` (seejärel commit ja push). Möödunud aega leht ei näita. Confido puhul on see **gastroenteroloogi vastuvõtu** (teenus C0002) lähim vaba aeg, mitte koloskoopia aeg; Medicumi puhul koloskoopia aeg (registratuur.ee teenus 4893)._
 
 _**Tuleva sooduskoodid on näidised (häkatoni demo)** – kokkuleppeid pakkujatega veel ei ole ja koode ei saa kasutada. Tulemuslehtedel näidatakse sooduskoodiga pakkujaid nimekirja eespool._
 
@@ -34,7 +34,7 @@ _**Tuleva sooduskoodid on näidised (häkatoni demo)** – kokkuleppeid pakkujat
 | Tartu Ülikooli Kliinikum | Tartu | Sõelkoloskoopia | Jah (perearst) | tasuta |  | Tasuta sõeluuringus | [Gastroenteroloogia](https://www.kliinikum.ee/valdkond/gastroenteroloogia/) | 731 9871 (endoskoopiakeskus) |  | — (tasuta) | — |
 | Pärnu Haigla | Pärnu | Sõelkoloskoopia | Jah (perearst) | tasuta |  | Tasuta sõeluuringus | [Sõeluuringu koloskoopia](https://www.ph.ee/et/patsiendile-ja-kulastajale/patsiendi-infomaterjalid/protseduurid/soeluuringu-koloskoopia) | 447 3300 | Ristiku 1, II korrus, A-tiib, kab A217 | — (tasuta) | — |
 | Confido | Tallinn (Veerenni 51), Tartu (Raatuse 21) | Tasuline | Ei | 300 € | 900 € | Alates-hinnad; Tartus narkoosis alates 750 € | [Broneeri koloskoopia](https://minu.confido.ee/services?lang=et&serviceCodes=C0002,C0401,C01108) |  | Ettevalmistuse nõustamine hinnas | — | 2026-10-12 13:30 · Gastroenteroloogi vastuvõtt |
-| Medicum | Tallinn | Tasuline | Ei | 450 € |  | Varasemast hinnakirjast** | [Broneeri mao- ja sooleuuring](https://www.medicum.ee/mao-ja-sooleuuringud/broneeri-vastuvott/) | 605 0601 | Ka narkoosis | `TULEVADISCOUNT` 0% (näidis) | — |
+| Medicum | Tallinn | Tasuline | Ei | 450 € |  | Varasemast hinnakirjast** | [Broneeri koloskoopia](https://www.registratuur.ee/et/services?fieldgroup=973&serviceid=4893) | 605 0601 | Ka narkoosis | `TULEVADISCOUNT` 0% (näidis) | 2026-10-13 13:50 · Koloskoopia |
 | Med4U | Tallinn (Narva mnt 7), Narva | ⚠️ Kinnitamata | — |  |  | Koloskoopiat praegu kodulehel pole | [Kontaktid](https://med4u.ee/en/kontaktid/) | 5883 0007 | Helista ja küsi enne pöördumist | — | — |
 
 - Sõelkoloskoopiat teevad ainult need 4 haiglat (Tervisekassa nimekiri). Tasuta sihtrühmale.
@@ -58,6 +58,7 @@ _**Tuleva sooduskoodid on näidised (häkatoni demo)** – kokkuleppeid pakkujat
 | SYNLAB akrediteeringu lisa 2026 | [https://synlab.ee/wp-content/uploads/2026/05/2026-05-18-akrediteerimistunnistuse-lisa.pdf](https://synlab.ee/wp-content/uploads/2026/05/2026-05-18-akrediteerimistunnistuse-lisa.pdf) |
 | Confido – Koloskoopia | [https://www.confido.ee/paevakirurgia/gastroskoopia-ja-kolonoskoopia-narkooris/koloskoopia-infoleht-patsiendile/](https://www.confido.ee/paevakirurgia/gastroskoopia-ja-kolonoskoopia-narkooris/koloskoopia-infoleht-patsiendile/) |
 | Medicum – Mao- ja sooleuuringud | [https://www.medicum.ee/mao-ja-sooleuuringud/](https://www.medicum.ee/mao-ja-sooleuuringud/) |
+| Medicum – koloskoopia broneerimine (registratuur.ee) | [https://www.registratuur.ee/et/services?fieldgroup=973&serviceid=4893](https://www.registratuur.ee/et/services?fieldgroup=973&serviceid=4893) |
 | Med4U | [https://med4u.ee/en/](https://med4u.ee/en/) | — |
 | Viljandi Haigla – Jämesoolevähi sõeluuring | [https://www.viljandihaigla.ee/jamesoolevahi-soeluuring/](https://www.viljandihaigla.ee/jamesoolevahi-soeluuring/) |
 | ERR – tervisetestid apteekides | [https://www.err.ee/1609715829/erinevate-tervisetestide-valik-on-poodides-markimisvaarselt-kasvanud](https://www.err.ee/1609715829/erinevate-tervisetestide-valik-on-poodides-markimisvaarselt-kasvanud) |

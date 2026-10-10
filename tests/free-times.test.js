@@ -1,7 +1,7 @@
 // Käivita: node --test tests/*.test.js
 const test = require("node:test");
 const assert = require("node:assert");
-const { cellText, setCell } = require("../scripts/update-free-times.js");
+const { cellText, setCell, firstRegistratuurTime } = require("../scripts/update-free-times.js");
 const { parseProviders } = require("../docs/screening.js");
 
 const md = `## Koloskoopia
@@ -36,4 +36,14 @@ test("leht loeb vaba aja providers.md-st", () => {
   const [confido, medicum] = parseProviders(filled).paidClinics;
   assert.deepStrictEqual(confido.nextSlot, { date: "2026-10-12", time: "13:30", label: "Gastroenteroloogi vastuvõtt" });
   assert.strictEqual(medicum.nextSlot, undefined);
+});
+
+test("registratuur.ee: valitakse kõige varasem aeg", () => {
+  const body = { Dates: [
+    { Date: "2026-10-14T00:00:00", ServiceName: "Koloskoopia", Times: [{ TimeFrom: "10:20:00", ServiceName: "Koloskoopia" }] },
+    { Date: "2026-10-13T00:00:00", ServiceName: "Koloskoopia", Times: [
+      { TimeFrom: "15:00:00", ServiceName: "Koloskoopia" }, { TimeFrom: "13:50:00", ServiceName: "Koloskoopia" }] },
+  ] };
+  assert.deepStrictEqual(firstRegistratuurTime(body), { name: "Koloskoopia", at: "2026-10-13T13:50:00" });
+  assert.strictEqual(firstRegistratuurTime({ Dates: [] }), null);
 });
