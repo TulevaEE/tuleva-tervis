@@ -14,7 +14,7 @@ const QUESTIONS = [
 
   { id: "2.1", step: 2, text: "Kas sul on aneemia?", yes: 2,
     intro: "Ei ole? Uurime siis edasi.",
-    hint: "Aneemia tähendab, et veres on vähe punaliblesid või hemoglobiini — selle näitab vereanalüüs. Märgi „jah“ vaid siis, kui arst on sinu puhul aneemia tuvastanud." },
+    hint: "Siin mõtleme rauavaegusaneemiat ehk rauapuudusest tingitud kehvveresust. Selle tuvastab arst vereanalüüsi põhjal. Märgi „jah“, kui arst on selle sul tuvastanud." },
   { id: "2.2", step: 2, text: "Kas oled märganud verd väljaheites?", yes: 2,
     hint: "Nähtav veri väljaheites või tualettpaberil." },
   { id: "2.3", step: 2, text: "Kas sul on mõni neist sümptomitest?", type: "multi",

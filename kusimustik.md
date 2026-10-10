@@ -44,7 +44,7 @@ Enne küsimust 2.1 näidatakse teksti „Ei ole? Uurime siis edasi.“
 
 ### 2.1 Kas sul on aneemia?
 
-Abitekst: „Aneemia tähendab, et veres on vähe punaliblesid või hemoglobiini — selle näitab vereanalüüs. Märgi „jah“ vaid siis, kui arst on sinu puhul aneemia tuvastanud.“
+Abitekst: „Siin mõtleme rauavaegusaneemiat ehk rauapuudusest tingitud kehvveresust. Selle tuvastab arst vereanalüüsi põhjal. Märgi „jah“, kui arst on selle sul tuvastanud.“
 
 - Jah → **Option 2**
 - Ei → 2.2
