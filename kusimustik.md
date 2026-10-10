@@ -42,9 +42,9 @@ See dokument kirjeldab küsimustikku ja tulemuste lehti täpselt nii, nagu need 
 
 Enne küsimust 2.1 näidatakse teksti „Ei ole? Uurime siis edasi.“
 
-#### 2.1 Kas sul on aneemia?
+#### 2.1 Kas arst on sinu vereanalüüsis leidnud rauavaegusaneemia (kehvveresuse)?
 
-Abitekst: „Siin mõtleme rauavaegusaneemiat ehk rauapuudusest tingitud kehvveresust. Selle tuvastab arst vereanalüüsi põhjal. Märgi „jah“, kui arst on selle sul tuvastanud.“
+Abitekst: „Rauavaegusaneemia tähendab, et rauapuuduse tõttu on veres vähe hemoglobiini. Selle näitab vereanalüüs — kui sa pole kindel, vali „Ei tea“.“
 
 - Jah → **Option 2**. Põhjuse lause: „Sa märkisid, et sul on rauavaegusaneemia. Aneemial on palju põhjuseid ja enamik neist on healoomulised — kuid et tõsisem põhjus kindlalt välistada, tasub teha täpsem uuring.“
 - Ei või Ei tea → 2.2

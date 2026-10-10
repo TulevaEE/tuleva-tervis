@@ -15,10 +15,10 @@ const STEPS = {
 const QUESTIONS = [
   { id: "1.1", step: 1, text: "Kas sul on viimase 5 aasta jooksul tehtud koloskoopia?", yes: 5 },
 
-  { id: "2.1", step: 2, text: "Kas sul on aneemia?", yes: 2, unsure: true,
+  { id: "2.1", step: 2, text: "Kas arst on sinu vereanalüüsis leidnud rauavaegusaneemia (kehvveresuse)?", yes: 2, unsure: true,
     short: "rauavaegusaneemia", findOut: "küsi perearstilt vereanalüüsi kohta",
     intro: "Ei ole? Uurime siis edasi.",
-    hint: "Siin mõtleme rauavaegusaneemiat ehk rauapuudusest tingitud kehvveresust. Selle tuvastab arst vereanalüüsi põhjal. Märgi „jah“, kui arst on selle sul tuvastanud." },
+    hint: "Rauavaegusaneemia tähendab, et rauapuuduse tõttu on veres vähe hemoglobiini. Selle näitab vereanalüüs — kui sa pole kindel, vali „Ei tea“." },
   { id: "2.2", step: 2, text: "Kas oled märganud verd väljaheites?", yes: 2,
     hint: "Nähtav veri väljaheites või tualettpaberil." },
   { id: "2.3", step: 2, text: "Kas sul on mõni neist sümptomitest?", type: "multi",
