@@ -6,7 +6,7 @@
 <title>Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast · Tuleva</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -17,6 +17,7 @@
 <main>
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 1 · sinu järgmine samm</span>
+  <p class="risk-badge risk-low">✓ Praeguste vastuste põhjal ei ole sul praegu sõeltesti vaja</p>
   <h1>Praegu pole sul vaja midagi teha — ja see on hea uudis</h1>
   <p class="lead reason" id="pohjus">Sinu vastuste põhjal ei ole sul praegu sõeltesti vaja.</p>
   <p class="next"><strong>Järgmine samm.</strong> Praegu ei ole sul sõeltesti vaja. <strong>Tee see küsimustik uuesti umbes kahe aasta pärast</strong> — või varem, kui midagi muutub.</p>
@@ -53,12 +54,12 @@
 <script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
 <script src="flow.js?v=10"></script>
 <script>window.REASONS = {
-  "4.1": "Tubli, et kontrollisid! Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski — sinu eas on jämesoolevähk harv.",
-  "4.2": "Tubli, et kontrollisid! Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
+  "4.1": "Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski, ja sinu eas on jämesoolevähk harv.",
+  "4.2": "Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
 };</script>
 <script src="reason.js?v=3"></script>
 <script>if (/[#&]q=4\.1(&|$)/.test(location.hash)) document.getElementById("jaga").hidden = false;</script>
-<script src="result.js?v=6"></script>
+<script src="result.js?v=8"></script>
 <script src="counter.js?v=3"></script>
 </body>
 </html>
