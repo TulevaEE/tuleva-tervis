@@ -8,7 +8,7 @@
     koloskoopia: {
       title: "Mis on koloskoopia?",
       html: `
-        <p><strong>Koloskoopia on pärasoole kaudu tehtav sooleuuring.</strong> Arst vaatab õhukese painduva kaameraga kogu su jämesoole üle. See on kõige täpsem viis soolt kontrollida.</p>
+        <p><strong>Koloskoopia on pärasoole kaudu tehtav uuring.</strong> Arst vaatab õhukese painduva kaameraga kogu su jämesoole üle. See on kõige täpsem viis soolt kontrollida.</p>
         <p><strong>Kuidas see käib?</strong></p>
         <ul>
           <li><strong>Ettevalmistus.</strong> Päev enne uuringut tuleb soolestik spetsiaalse joogiga (lahtistiga) tühjaks puhastada — seda teed kodus. Kui broneerid, antakse sulle täpsed juhised; midagi keerulist selles pole.</li>
