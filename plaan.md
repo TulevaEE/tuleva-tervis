@@ -2,12 +2,12 @@
 
 Veebipõhine küsimustik mis elab github pages (https://tulevaee.github.io/) lehel. pane, disain sarnane tuleva-reporting Laura rikkaks kalkulaatorile. Küsimused ilmuvad ükshaaval, EI viib järgmise küsimuseni.
 
-Viis outcome-i on igaüks eraldi veebileht (tee tühi leht ära pealkirjaga optsion ...)
+Viis outcome-i on igaüks eraldi veebileht (tee tühi leht ära pealkirjaga option ...)
 Option 1: Do nothing now, tee küsimustik uuesti 2 a pärast
 Option 2: tee koloskoopia
 Option 3: tee FIT test
 Option 4: mine ruttu perearstile
-Option 5: järgi oma koloskoopia teinud raviarsti tehtud juhist (lisaks link, kui soovid meie kaudu koloskoopia broneerida Optsion 2 all)
+Option 5: järgi oma koloskoopia teinud raviarsti tehtud juhist (lisaks link, kui soovid meie kaudu koloskoopia broneerida Option 2 all)
 
 
 Küsimustik:
@@ -15,7 +15,7 @@ Küsimustik:
 Samm 1:Vaatame, kas juba tegutsed
 1.1 Kas oled käinud koloskoopias? - jah - Option 5
 Ei ole: No uurime siis edasi:
-Samm 2: Kas sul on sümptomed?
+Samm 2: Kas sul on sümptomeid?
 2.1 Kas sul on aneemia? - jah - Option 2
 2.2 Kas sul on veri väljaheites - jah - Option 2
 2.3 Kas on muid sümptomeid: - kõhuvalu + seedetegevuse muutus + kaalulangus - jah - Option 2. On mõni neist - Option 4
