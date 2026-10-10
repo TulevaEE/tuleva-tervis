@@ -6,7 +6,7 @@
 <title>Tee FIT-test · Tuleva</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -21,6 +21,17 @@
   <p class="lead reason" id="pohjus">Sinu vastuste põhjal on peitvere test sinu jaoks sobiv järgmine samm.</p>
   <p class="lead">Kui oled sündinud 1958, 1960, 1962, 1964, 1966, 1968 või 1970, kuulud 2026. aastal riiklikku sõeluuringu sihtrühma. Siis saad peitvere testi (FIT) tasuta. Registreeru oma perearstikeskuses pereõe vastuvõtule.</p>
   <p class="lead">Kui sa sihtrühma ei kuulu, saad testi osta apteegist või teha laboris, näiteks SYNLAB-is.</p>
+  <div class="card screening" data-screening="fit">
+    <form id="year-form" class="year-form" novalidate>
+      <label for="year">Mis aastal oled sündinud?</label>
+      <div class="year-row">
+        <input id="year" type="number" inputmode="numeric" min="1900" max="2026" placeholder="nt 1964" required>
+        <button class="btn primary" type="submit">Kontrolli</button>
+      </div>
+      <p class="hint error" id="year-error" hidden>Sisesta sünniaasta neljakohalise numbrina, nt 1964.</p>
+    </form>
+    <div class="result" id="result" hidden></div>
+  </div>
   <details class="card why">
     <summary>Miks see on sinu jaoks õige?</summary>
     <p>Peitvere test on hea esimene samm: see on lihtne, odav ega tee haiget. Kui verd ei leita, on jämesoolevähk ebatõenäoline. Kui verd leitakse, ei tähenda see veel vähki — enamasti on põhjus mujal —, kuid siis on vaja täpsemat uuringut, koloskoopiat. Riik pakub 56–68-aastastele testi tasuta iga kahe aasta tagant. Tulemus on lihtsalt „leiti" või „ei leitud".</p>
@@ -50,6 +61,8 @@
 };</script>
 <script src="reason.js"></script>
 <script src="result.js"></script>
+<script src="screening.js"></script>
+<script src="result-screening.js"></script>
 <script src="counter.js"></script>
 </body>
 </html>
