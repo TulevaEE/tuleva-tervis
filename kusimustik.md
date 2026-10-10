@@ -13,7 +13,7 @@ See dokument kirjeldab küsimustikku ja tulemuste lehti täpselt nii, nagu need 
 
 ## Teekond
 
-1. **Avaleht** (`index.html`) tutvustab mõttekatset. Nupp „Esimene asi: ennetame jämesoolevähki →“ viib vahelehele.
+1. **Avaleht** (`index.html`) tutvustab mõttekatset. Kaheastmeline nupp „Jämesoolevähi ennetus / Leia enda jaoks õige samm →“ viib vahelehele.
 2. **Vaheleht** (`jamesoolevahk.html`), „Jämesoolevähi varajane avastamine“, sisaldab:
    - koht dr Mari Sethi videole;
    - „Miks see on oluline“;
