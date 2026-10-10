@@ -31,6 +31,24 @@ Adapt to Estonian; keep warm and short.
 - **Symptoms present → GP now:** direct, calm, urgent, no fear spiral; name the single action ("pöördu oma perearsti poole — ära oota sõeluuringut").
 - Every outcome carries the safety-net line and a "decision support, not a diagnosis" disclaimer.
 
+## Explain the "why" — per person, with progressive disclosure
+Every outcome page (option 1–5) tells the person, in **one plain sentence**, why this is the right next step **for them**, drawn from what they answered — then offers the fuller reasoning behind an expandable / modal **"Miks see on sinu jaoks õige?"**. This is both our transparency ethos ("never a black box") and established decision-aid practice (IPDAS *layered information*): keep the main message clean, give anyone who wants it the full honest rationale.
+- Headline reason = one sentence, in terms of the person's own answers, no jargon. E.g. *"Kuna lähisugulasel oli soolevähk enne 50. eluaastat, on sinu risk kõrgem — seepärast soovitame koloskoopiat (sooleuuringut), mitte peitvere testi."*
+- The expandable can also hold: what the step involves, what positive/negative means, the guideline basis in lay terms, and "arutasi seda alati oma perearstiga".
+- Never "because the system said so"; never hide the reasoning.
+
+## Voice & plain language — Daniel Vaarik, *Sõnumiseadja käsiraamat*
+Use Vaarik's Estonian clear-writing principles as the **voice layer** for all member-facing copy. They sit *on top of* the health-specific structure above (three-beat result scripts, risk framing, safety routing) — the structure comes from the clinical/behavioural evidence; Vaarik governs the voice. The rules that matter most here:
+- **Logic and comprehensibility beat cleverness** — the goal is to be understood, not to impress.
+- **Write for the member, not the clinician** — switch out of medical register (*"peitvere test"*, not "FIT").
+- **Short sentences, short words, active voice, strong verbs** — *"Majanduskasv peatus"*, not *"Majanduskasvu negatiivsed väljavaated realiseerusid"*. (~¼ of Estonians have secondary education; long/complex text loses them.)
+- **Go easy on adjectives** — piling on reassuring or dramatic adjectives makes the reader distrust you; let the facts carry it.
+- **No euphemisms, no evasion** — *"Eufemismid külmutavad mõtte"*; *"keerutamisest ei sünni usaldust"*. Don't soften *vähk* into vague filler; say the true thing plainly and kindly. (This is our trust ethos, in his words.)
+- **Plain Estonian over loan-words**; **cut everything unnecessary** (leave out what the reader already knows or can infer).
+- **Someone owns each outcome's copy** — avoid "komiteekirjutamine".
+
+Reference: Daniel Vaarik, *Sõnumiseadja käsiraamat* (Memokraat, 2014), the "Kirjutamine" chapter.
+
 ## UX patterns
 - One question per screen; Enter advances; visible progress; back navigation; non-critical fields skippable.
 - Give every risk question an explicit **"ei tea"** option — it routes to the *more cautious* branch and never blocks progress.

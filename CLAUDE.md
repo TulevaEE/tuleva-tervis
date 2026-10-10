@@ -26,3 +26,5 @@ Tuleva is member-owned — we're on the member's side, not selling services. So:
 - Triage logic in `docs/flow.js`; **update `tests/flow.test.js` for every routing change**; keep `node --test tests/*.test.js` green.
 - One question per screen; visible progress; back button; "don't know"/skip never blocks.
 - Member-facing copy is plain Estonian: **peitvere test** (not "FIT"), **koloskoopia** *(sooleuuring)*, **sõeluuring**, **perearst / pereõde**, **saatekiri**. Warm, reassuring — no jargon, no fear words, never "diagnosis".
+- **Every outcome (option 1–5) explains *why* — per person, in plain language.** Show the one-line reason it's the right next step for *this* person (drawn from their answers), with an expandable **"Miks see on sinu jaoks õige?"** for the fuller rationale. Never a black box, never "because the system said so".
+- **Voice follows Daniel Vaarik's plain-Estonian principles** (*Sõnumiseadja käsiraamat*): logic over cleverness, short sentences, active verbs, few adjectives, no euphemisms or evasion ("keerutamisest ei sünni usaldust"). Detail in `docs/design-principles.md`.
