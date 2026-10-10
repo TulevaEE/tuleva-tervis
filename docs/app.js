@@ -61,7 +61,9 @@ function go(value, label) {
 function saveAnswers(label) {
   const rows = [...visited, current].map((i) => {
     const q = QUESTIONS[i];
-    return { q: q.text, a: i === current ? label : q.type === "multi" ? "Ei ühtegi" : "Ei" };
+    // Mitmikvaliku juures näitame ka, milliseid valikuid küsiti.
+    const text = q.type === "multi" ? `${q.text} (${q.options.join(", ").toLowerCase()})` : q.text;
+    return { q: text, a: i === current ? label : q.type === "multi" ? "Ei ühtegi" : "Ei" };
   });
   try {
     sessionStorage.setItem("tervis-vastused", JSON.stringify({ rows, date: new Date().toISOString() }));
