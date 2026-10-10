@@ -30,7 +30,7 @@ const QUESTIONS = [
   { id: "3.4", step: 3, text: "Kas lähisugulasel on olnud jämesoolevähk 50. eluaastal või hiljem?", yes: 3 },
 
   { id: "4.1", step: 4, text: "Kas oled noorem kui 45 aastat?", yes: 1 },
-  { id: "4.2", step: 4, text: "Kas oled viimase 2 aasta jooksul teinud FIT-testi?", yes: 1, no: 3 },
+  { id: "4.2", step: 4, text: "Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?", yes: 1, no: 3 },
 ];
 
 // Tagastab { option } kui vastus viib tulemuseni, muidu { next } järgmise küsimuse indeksiga.

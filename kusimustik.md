@@ -19,7 +19,7 @@ Siin on küsimustik täpselt sellisena, nagu see on rakendatud aadressil https:/
 |---|---|---|
 | 1 | Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast | `option-1.html` |
 | 2 | Tee koloskoopia | `option-2.html` |
-| 3 | Tee FIT-test. Lehel: 2026 sihtrühm (sündinud 1958, 1960 … 1970) saab peitvere testi tasuta pereõelt; teised ostavad testi apteegist või teevad laboris (nt SYNLAB) | `option-3.html` |
+| 3 | Tee väljaheite peitvere test (FIT). Lehel: 2026 sihtrühm (sündinud 1958, 1960 … 1970) saab peitvere testi tasuta pereõelt; teised ostavad testi apteegist või teevad laboris (nt SYNLAB) | `option-3.html` |
 | 4 | Tasub sellest perearstiga rääkida | `option-4.html` |
 | 5 | Järgi oma koloskoopia teinud raviarsti juhiseid (link Option 2-le, kui soovid koloskoopia broneerida meie kaudu) | `option-5.html` |
 
@@ -115,7 +115,7 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
 **Alus:**
 
-### 4.2 Kas oled viimase 2 aasta jooksul teinud FIT-testi?
+### 4.2 Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?
 
 - Jah → **Option 1**
 - Ei → **Option 3**
@@ -124,4 +124,4 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
 ---
 
-Lehe jaluses on kõigil lehtedel tekst: „See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga.“
+Lehe jaluses on kõigil lehtedel tekst: „See küsimustik ei pane diagnoosi ega asenda arsti hinnangut. Kui sul on muresid tervisega, räägi perearstiga.“
