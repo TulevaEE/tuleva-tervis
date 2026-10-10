@@ -6,13 +6,14 @@ author: Tõnu Pekk
 
 # Kasutajate tagasiside
 
-Tagasiside rakenduse kohta (https://tulevaee.github.io/tuleva-tervis/). Iga punkti juures on kirjas, mida kasutaja ütles, kus see rakenduses on ja mis võiks olla lahendus. Lahendusi pole veel tehtud. Kliinilised muudatused (sümptomite sõnastus) kinnitab dr Seth.
+Tagasiside rakenduse kohta (https://tulevaee.github.io/tuleva-tervis/). Iga punkti juures on kirjas, mida kasutaja ütles, kus see rakenduses on ja mis võiks olla lahendus. Staatus on uuendatud 10.10.2026 õhtul. Kliinilised muudatused (sümptomite sõnastus) kinnitab dr Seth.
 
 | # | Teema | Staatus |
 |---|---|---|
-| 1 | Kõhuvalu küsimus on liiga lai | lahtine |
-| 2 | Koloskoopia „jah“ lõpetab küsimustiku ootamatult kiiresti | lahtine |
-| 3 | Pole selge, miks küsimustikku teha ja miks Tuleva seda teeb | lahtine |
+| 1 | Kõhuvalu küsimus on liiga lai | ✅ lahendatud (PR #16): „Seletamatu kõhuvalu (mitte menstruatsiooni ajal)“, sõnastus ootab dr Sethi kinnitust |
+| 2 | Koloskoopia „jah“ lõpetab küsimustiku ootamatult kiiresti | 🟡 osaliselt (PR #16): Option 5 ütleb „Küsimustik lõppes siin meelega…“. Küsimus on nüüd viimase 5 aasta kohta |
+| 3 | Pole selge, miks küsimustikku teha ja miks Tuleva seda teeb | 🟡 osaliselt: vaheleht `jamesoolevahk.html` („Miks teha seda Tuleva kaudu?“) ja usalduslause avalehel (PR #21). Tagasiside küsimine tulemuse lehel on backlogis (#19) |
+| 4 | Küsimustik saab liiga kiiresti läbi | lahtine |
 
 ---
 
