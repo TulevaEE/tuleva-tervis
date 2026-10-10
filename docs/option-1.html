@@ -17,9 +17,17 @@
 <main>
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 1 · sinu järgmine samm</span>
-  <h1>Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast</h1>
+  <h1>Praegu pole sul vaja midagi teha — ja see on hea uudis</h1>
   <p class="lead reason" id="pohjus">Sinu vastuste põhjal ei ole sul praegu sõeltesti vaja.</p>
   <p class="next"><strong>Järgmine samm.</strong> Praegu ei ole sul sõeltesti vaja. <strong>Tee see küsimustik uuesti umbes kahe aasta pärast</strong> — või varem, kui midagi muutub.</p>
+
+  <!-- Näidatakse ainult alla 45-aastastele (küsimus 4.1), vt skripti lehe lõpus. -->
+  <div class="card" id="jaga" hidden>
+    <h2>Kõige rohkem aitad sa praegu kedagi teist</h2>
+    <p>Sina oled heas seisus. Aga jämesoolevähi sõeluuring on kõige olulisem <strong>45-aastastele ja vanematele</strong> — tõenäoliselt su vanematele või vanavanematele. Eestis jääb sõeluuring paljudel tegemata.</p>
+    <p><strong>Üks sinu sõnum võib olla just see tõuge, mida kellelgi vaja on.</strong> Saada see link inimesele, kes on selles vanuses.</p>
+    <p><a class="btn primary" href="mailto:?subject=Tegin%20%C3%A4ra%20%E2%80%93%20%C3%A4kki%20tasub%20sinulgi%20vaadata&amp;body=Tegin%20Tuleva%20j%C3%A4mesoolev%C3%A4hi%20enesekontrolli.%20Sina%20oled%20vanuses%2C%20kus%20see%20loeb%20%E2%80%93%20%C3%A4kki%20tasub%20sul%20ka%20paar%20minutit%20vaadata%3A%0D%0Ahttps%3A//tulevaee.github.io/tuleva-tervis/">Saada link edasi →</a></p>
+  </div>
   <details class="card why">
     <summary>Miks see on sinu jaoks õige?</summary>
     <p>Sõeluuringu mõte on leida muutused enne, kui need vaevusi tekitavad. Sinu vastuste põhjal on su risk praegu madal. Test ei annaks sulle praegu kasu, vaid tooks pigem asjatut muret ja kulu. Me ütleme ausalt, kui midagi pole vaja teha. Vaata olukord üle, kui tekivad sümptomid või kui jõuad sõeluuringu vanusesse — Eestis kutsutakse 56–68-aastaseid iga kahe aasta tagant tasuta peitvere testile.</p>
@@ -45,10 +53,11 @@
 <script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
 <script src="flow.js?v=8"></script>
 <script>window.REASONS = {
-  "4.1": "Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski. Sinu eas on jämesoolevähk harv.",
-  "4.2": "Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
+  "4.1": "Tubli, et kontrollisid! Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski — sinu eas on jämesoolevähk harv.",
+  "4.2": "Tubli, et kontrollisid! Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
 };</script>
 <script src="reason.js?v=3"></script>
+<script>if (/[#&]q=4\.1(&|$)/.test(location.hash)) document.getElementById("jaga").hidden = false;</script>
 <script src="result.js?v=4"></script>
 <script src="counter.js?v=3"></script>
 </body>
