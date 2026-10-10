@@ -1,6 +1,7 @@
 // Näitab küsimusi ükshaaval ja suunab tulemuse korral Optioni lehele.
 const $ = (id) => document.getElementById(id);
 const visited = []; // läbitud küsimuste indeksid, et saaks tagasi minna
+const labels = {}; // küsimuse indeks → antud vastus ("Jah", "Ei", "Ei tea" …)
 let current = 0;
 
 function show(index) {
@@ -39,11 +40,13 @@ function show(index) {
     controls.append(wrap(
       button("Jah", "primary", () => go(true, "Jah")),
       button("Ei", "ghost", () => go(false, "Ei")),
+      ...(q.unsure ? [button("Ei tea", "ghost", () => go(false, "Ei tea"))] : []),
     ));
   }
 }
 
 function go(value, label) {
+  labels[current] = label;
   const r = answer(current, value);
   if (r.option) {
     saveAnswers(label);
@@ -57,13 +60,14 @@ function go(value, label) {
 
 // Vastused jäävad ainult selle brauseri vahekaardi sessionStorage'isse, et Optioni lehel
 // saaks need alla laadida. Vahekaardi sulgemisel need kustuvad.
-// Edasi viib ainult "ei" (või ükski märgitud), seega on varasemad vastused teada.
+// Edasi viib "ei", "ei tea" või ükski märgitud; vastus on `labels`-is (vaikimisi "ei").
 function saveAnswers(label) {
   const rows = [...visited, current].map((i) => {
     const q = QUESTIONS[i];
     // Mitmikvaliku juures näitame ka, milliseid valikuid küsiti.
     const text = q.type === "multi" ? `${q.text} Valikud: ${q.options.join("; ").toLowerCase()}` : q.text;
-    return { q: text, a: i === current ? label : q.type === "multi" ? "Ei ühtegi" : "Ei" };
+    const a = i === current ? label : labels[i] || (q.type === "multi" ? "Ei ühtegi" : "Ei");
+    return { id: q.id, q: text, a, yes: q.yes, short: q.short, findOut: q.findOut };
   });
   try {
     sessionStorage.setItem("tervis-vastused", JSON.stringify({ rows, date: new Date().toISOString() }));
@@ -107,6 +111,14 @@ if (path) {
   if (steps.every((i) => i < QUESTIONS.length)) {
     const last = steps.pop();
     visited.push(...steps);
+    // Taasta varasemad vastused (nt "Ei tea") sessionStorage'ist küsimuse id järgi.
+    try {
+      const saved = JSON.parse(sessionStorage.getItem("tervis-vastused"));
+      (saved?.rows || []).forEach((r) => {
+        const i = QUESTIONS.findIndex((q) => q.id === r.id);
+        if (i >= 0) labels[i] = r.a;
+      });
+    } catch {}
     begin(last);
   }
   history.replaceState(null, "", location.pathname);

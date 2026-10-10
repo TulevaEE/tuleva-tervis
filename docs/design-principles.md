@@ -50,7 +50,7 @@ Use Vaarik's Estonian clear-writing principles as the **voice layer** for all me
 Reference: Daniel Vaarik, *Sõnumiseadja käsiraamat* (Memokraat, 2014) — [free PDF](https://memokraat.ee/memokraat.ee/wp-content/uploads/2014/07/s%C3%B5numiseadjak%C3%A4siraamat.pdf), the "Kirjutamine" chapter.
 
 ## UX patterns (as implemented)
-- **One question per screen, yes/no.** "Ei" moves on; the first "jah" ends on an outcome page. The one multi-choice question (pain / bowel-habit change / weight loss) uses tick-boxes. There is **no "ei tea"** (team decision 10.10.2026) — so hint texts must make every question answerable.
+- **One question per screen, yes/no.** "Ei" moves on; the first "jah" ends on an outcome page. The one multi-choice question (pain / bowel-habit change / weight loss) uses tick-boxes. The anaemia question (2.1) and the family-history questions (3.1, 3.2, 3.4) also offer **"Ei tea"**: it moves on like "ei", and the outcome page adds a note on where "jah" would have led, asking the member to find out and redo the questionnaire.
 - **Visible progress** ("Samm 2/4" + bar), **back button**, and from every outcome page a link **back to the last question** and one to start over.
 - **Order:** previous koloskoopia → symptoms → family history → age and previous FIT. Known gap: "yes" to a previous koloskoopia skips the symptom questions (flagged for dr Seth, see `../CLAUDE.md`).
 - **Five outcome pages, one next step each:** 1 nothing now, redo in 2 years · 2 koloskoopia · 3 peitvere test (free via the pereõde for the 2026 cohort, otherwise pharmacy or lab) · 4 GP now · 5 follow your treating doctor.
