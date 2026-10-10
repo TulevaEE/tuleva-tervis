@@ -54,6 +54,17 @@ function isEligible(birthYear) {
   return SCREENING_BIRTH_YEARS.includes(birthYear);
 }
 
+// Sünniaasta sisend: täpselt 4 numbrit, 1900 kuni käesolev aasta (tulevikku ei luba).
+// Tagastab { year } või { error } veateatega.
+function parseBirthYear(value, currentYear = new Date().getFullYear()) {
+  const text = String(value).trim();
+  if (!/^\d{4}$/.test(text)) return { error: "Sisesta sünniaasta neljakohalise numbrina, nt 1964." };
+  const year = Number(text);
+  if (year > currentYear) return { error: "Sünniaasta ei saa olla tulevikus." };
+  if (year < 1900) return { error: "Kontrolli sünniaastat – see tundub liiga varajane." };
+  return { year };
+}
+
 if (typeof module !== "undefined") {
-  module.exports = { SCREENING_YEAR, SCREENING_BIRTH_YEARS, SCREENING_HOSPITALS, PAID_CLINICS, FIT_LABS, isEligible };
+  module.exports = { SCREENING_YEAR, SCREENING_BIRTH_YEARS, SCREENING_HOSPITALS, PAID_CLINICS, FIT_LABS, isEligible, parseBirthYear };
 }

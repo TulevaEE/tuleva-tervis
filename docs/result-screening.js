@@ -119,11 +119,16 @@ function show(year) {
   result.hidden = false;
 }
 
+// Väljale saab kirjutada ainult numbreid, kõige rohkem 4.
+$("year").addEventListener("input", (e) => {
+  e.target.value = e.target.value.replace(/\D/g, "").slice(0, 4);
+});
+
 $("year-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const year = Number($("year").value);
-  const valid = Number.isInteger(year) && year >= 1900 && year <= SCREENING_YEAR;
-  $("year-error").hidden = valid;
-  if (valid) show(year);
-  else $("result").hidden = true;
+  const { year, error } = parseBirthYear($("year").value);
+  $("year-error").textContent = error || "";
+  $("year-error").hidden = !error;
+  if (error) $("result").hidden = true;
+  else show(year);
 });
