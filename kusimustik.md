@@ -19,7 +19,7 @@ Siin on küsimustik täpselt sellisena, nagu see on rakendatud aadressil https:/
 |---|---|---|
 | 1 | Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast | `option-1.html` |
 | 2 | Tee koloskoopia | `option-2.html` |
-| 3 | Tee FIT-test | `option-3.html` |
+| 3 | Tee FIT-test. Lehel: 2026 sihtrühm (sündinud 1958, 1960 … 1970) saab peitvere testi tasuta pereõelt; teised ostavad testi apteegist või teevad laboris (nt SYNLAB) | `option-3.html` |
 | 4 | Mine kiiresti perearsti juurde | `option-4.html` |
 | 5 | Järgi oma koloskoopia teinud raviarsti juhiseid (link Option 2-le, kui soovid koloskoopia broneerida meie kaudu) | `option-5.html` |
 
