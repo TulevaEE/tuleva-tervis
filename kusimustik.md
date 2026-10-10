@@ -114,14 +114,14 @@ Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel�
 
 #### 4.1 Kas oled noorem kui 45 aastat?
 
-- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski — sinu eas on jämesoolevähk harv.“
+- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski, ja sinu eas on jämesoolevähk harv.“
 - Ei → 4.2
 
 **Alus:**
 
 #### 4.2 Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?
 
-- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid.“
+- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid.“
 - Ei → **Option 3**. Põhjuse lause: „Oled 45-aastane või vanem ega ole viimase kahe aasta jooksul peitvere testi teinud.“
 
 **Alus:**
@@ -138,11 +138,12 @@ Iga lehe ülesehitus on sama:
 5. lahtikäiv plokk „Miks see on sinu jaoks õige?“;
 6. lisaplokk (Option 1 jagamine, Option 2 ja 3 pakkujad);
 7. turvavõrgu tekst;
-8. „Sinu vastused“ koos allalaadimisega .md või PDF failina. Vastused on ainult brauseri vahekaardis ja kaovad selle sulgemisel;
+8. „Sinu vastused“: algab ankeedi kirjeldusega (mõeldud ka perearstile kaasa võtmiseks), siis vastused ja nupud „Salvesta endale (.md)“ ning „Salvesta PDF endale“. Vastused on ainult brauseri vahekaardis ja kaovad selle sulgemisel;
 9. lingid „← Tagasi küsimuse juurde“ ja „Alusta küsimustikku uuesti“.
 
 ### Option 1. Praegu pole sul vaja midagi teha — ja see on hea uudis
 
+- **Roheline märge pealkirja kohal:** „✓ Praeguste vastuste põhjal ei ole sul praegu sõeltesti vaja“. Kui lehel on „Ei tea“ märkus, rohelist märget ei näidata.
 - **Üldine põhjuse lause:** „Sinu vastuste põhjal ei ole sul praegu sõeltesti vaja.“
 - **Järgmine samm:** „Praegu ei ole sul sõeltesti vaja. **Tee see küsimustik uuesti umbes kahe aasta pärast** — või varem, kui midagi muutub.“
 - **Lisaplokk (ainult küsimuse 4.1 kaudu tulnutele):** „Kõige rohkem aitad sa praegu kedagi teist“. Kutsub saatma lingi 45-aastasele või vanemale lähedasele, nupp „Saada link edasi →“ avab e-kirja.

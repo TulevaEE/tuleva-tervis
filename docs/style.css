@@ -144,3 +144,7 @@ details.why p{max-width:62ch;}
 #crc > .quiz-btn{margin-top:1.25rem;}
 #crc > .choose-card{margin-top:2rem; max-width:62ch;}
 #crc .choose-actions{flex-direction:row; flex-wrap:wrap;}
+
+/* Option 1 roheline märge (PR #23) */
+.risk-badge{display:inline-flex;align-items:center;gap:0.45rem;font-weight:600;font-size:1.0625rem;padding:0.55rem 1.1rem;border-radius:999px;margin-bottom:1rem;line-height:1.3;}
+.risk-badge.risk-low{background:#e3f6e8;color:#1b7a3d;border:1px solid #9fd9b2;}

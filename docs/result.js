@@ -42,6 +42,8 @@
     p.className = "safety unsure-note";
     p.textContent = noteText;
     document.getElementById("pohjus").after(p);
+    // "Ei tea" korral ei näita rohelist "pole vaja" märget, et teated ei läheks vastuollu.
+    document.querySelector(".risk-badge")?.remove();
   }
   document.getElementById("vastused").hidden = false;
 
