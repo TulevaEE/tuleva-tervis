@@ -82,7 +82,7 @@ Suunamine:
 
 Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
-- Jah → **Option 2**. Põhjuse lause: „Lähisugulasel oli jämesoolevähk enne 50. eluaastat. See tõstab sinu riski.“
+- Jah → **Option 2**. Põhjuse lause: „Su lähisugulasel oli jämesoolevähk enne 50. eluaastat, mis tõstab sinu riski selgelt. Just seepärast on sinu puhul mõistlik alustada sooleuuringut varem ja kohe koloskoopiaga — see on ettevaatus, mitte halb uudis.“
 - Ei või Ei tea → 3.2
 
 **Alus:**
@@ -91,14 +91,14 @@ Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
 
 Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel“ tähendab kas ema või isa suguvõsa. Märgi „jah“, kui mitmel su veresugulasel samal poolel on olnud mõni neist vähkidest.“
 
-- Jah → **Option 2**. Põhjuse lause: „Su suguvõsas on mitmel lähisugulasel esinenud vähke, mis võivad viidata päritavale kõrgemale riskile.“
+- Jah → **Option 2**. Põhjuse lause: „Su suguvõsas on mitmel lähisugulasel esinenud vähke, mis võib viidata pärilikule kõrgemale riskile. Sellisel juhul on mõistlik põhjalikum uuring ja sageli ka geneetiline nõustamine — nii saad oma riski selgeks.“
 - Ei või Ei tea → 3.3
 
 **Alus:**
 
 #### 3.3 Kas sul on tehtud geenitest jämesoolevähi tõusnud riski kohta ja see oli positiivne?
 
-- Jah → **Option 2**. Põhjuse lause: „Sulle tehtud geenitest näitas jämesoolevähi kõrgemat riski.“
+- Jah → **Option 2**. Põhjuse lause: „Sulle tehtud geenitest näitas jämesoolevähi kõrgemat riski. Hea on see, et kui risk on teada, saad selle ees olla: regulaarne koloskoopia on just selleks, et võimalikud muutused varakult leida ja eemaldada, enne kui neist probleem saab.“
 - Ei → 3.4
 
 **Alus:**
@@ -154,10 +154,10 @@ Sõeluuringu mõte on leida muutused enne, kui need vaevusi tekitavad. Sinu vast
 
 </details>
 
-### Option 2. Tee koloskoopia
+### Option 2. Sul tasuks kaaluda koloskoopiat
 
-- **Üldine põhjuse lause:** „Sinu vastuste põhjal on koloskoopia sinu jaoks sobivaim järgmine samm.“
-- **Järgmine samm:** „**Tee koloskoopia (sooleuuring).** Saatekirja saad oma perearstilt; soovi korral saad uuringu teha ka erakliinikus erateenusena.“
+- **Üldine põhjuse lause:** „Sinu vastuste põhjal võiks koloskoopia (sooleuuring) olla sinu jaoks mõistlik järgmine samm.“
+- **Järgmine samm:** „Räägi oma perearstiga koloskoopiast (sooleuuringust) — tema saab sulle saatekirja kirjutada. Soovi korral saad uuringu teha ka erakliinikus erateenusena. **Otsus jääb sinule** — meie anname sulle info, et saaksid selle rahulikult ja teadlikult teha.“ Sõna „koloskoopia“ juures on „i“-nupp, mis avab selgituse „Mis on koloskoopia?“ (ettevalmistus, uuring, vastus).
 - **Lisaplokk:** sõeluuringust ega sünniaastast juttu pole. Näidatakse kahte teed:
   - perearsti saatekirjaga;
   - tasulises kliinikus ilma saatekirjata: Confido, Medicum, Seirekliinik, Sooleravi kliinik, hindade ja broneerimislinkidega (`docs/screening.js`).
@@ -165,7 +165,7 @@ Sõeluuringu mõte on leida muutused enne, kui need vaevusi tekitavad. Sinu vast
 
 <details><summary>„Miks“ tekst</summary>
 
-Aneemial ja soolesümptomitel on sageli healoomuline põhjus — näiteks rauavaegus, menstruatsioon või rasedus. Just seepärast tasub täpsema uuringuga veenduda, et midagi tõsisemat ei jääks märkamata. Koloskoopia on täpseim viis jämesoolt kontrollida. Õhuke painduv kaamera vaatab soole seest üle ja arst saab vajadusel polüübid — vähieelsed muutused — kohe eemaldada. Sümptomite või suguvõsast tuleva kõrgema riski korral peitvere testist ei piisa, seega on mõistlik minna kohe täpsema uuringu juurde. Kui su kõrgem risk tuleb suguvõsast, võib perearst suunata su ka geneetilisele nõustamisele ja korralisele jälgimisele.
+Aneemial ja soolesümptomitel on sageli healoomuline põhjus — näiteks rauavaegus, menstruatsioon või rasedus. Just seepärast tasub täpsema uuringuga veenduda, et midagi tõsisemat ei jääks märkamata. Koloskoopia on täpseim viis jämesoolt kontrollida. Õhuke painduv kaamera vaatab soole seest üle ja arst saab vajadusel polüübid — vähieelsed muutused — kohe eemaldada. Sümptomite või suguvõsast tuleva kõrgema riski korral peitvere testist ei piisa, seega on mõistlik minna kohe täpsema uuringu juurde. Kui su kõrgem risk tuleb suguvõsast, võib perearst suunata su ka geneetilisele nõustamisele ja korralisele jälgimisele. Otsustad sina — koloskoopia ei ole kohustus, vaid ettevaatusabinõu, et võimalikud muutused varakult leida. Enamasti saab leitud polüübi sama uuringu ajal kohe eemaldada ja asi ongi lahendatud.
 
 </details>
 
