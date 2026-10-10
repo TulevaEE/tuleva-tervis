@@ -44,7 +44,8 @@ function show(index) {
 function go(value) {
   const r = answer(current, value);
   if (r.option) {
-    location.href = `option-${r.option}.html`;
+    // Läbitud tee läheb aadressi, et Optioni lehelt saaks viimase küsimuse juurde tagasi.
+    location.href = `option-${r.option}.html#k=${[...visited, current].join(",")}`;
     return;
   }
   visited.push(current);
@@ -67,11 +68,25 @@ function wrap(...children) {
   return d;
 }
 
-$("begin").addEventListener("click", () => {
+function begin(index) {
   $("start").hidden = true;
   $("quiz").hidden = false;
-  show(0);
-});
+  show(index);
+}
+
+$("begin").addEventListener("click", () => begin(0));
+
+// Optioni lehelt tagasi tulles (index.html#k=0,1,2) jätkame viimasest küsimusest.
+const path = (location.hash.match(/^#k=([\d,]+)$/) || [])[1];
+if (path) {
+  const steps = path.split(",").map(Number);
+  if (steps.every((i) => i < QUESTIONS.length)) {
+    const last = steps.pop();
+    visited.push(...steps);
+    begin(last);
+  }
+  history.replaceState(null, "", location.pathname);
+}
 
 $("back").addEventListener("click", () => {
   if (visited.length) show(visited.pop());

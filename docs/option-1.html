@@ -18,12 +18,14 @@
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 1 · sinu järgmine samm</span>
   <h1>Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast</h1>
-  <p><a href="index.html">← Alusta küsimustikku uuesti</a></p>
+  <p><a id="tagasi" href="index.html">← Tagasi küsimuse juurde</a></p>
+  <p><a href="index.html">Alusta küsimustikku uuesti</a></p>
 </div></section>
 </main>
 
 <footer><div class="wrap">See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga.</div></footer>
 
+<script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
 <script src="counter.js"></script>
 </body>
 </html>
