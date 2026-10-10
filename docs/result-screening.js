@@ -33,7 +33,7 @@ function provider(p, linkText, priceFrom) {
   if (p.how) li.append(el("span", "", p.how));
   if (p.note) li.append(el("span", "muted", p.note));
   if (p.coupon) {
-    const c = el("span", "coupon", "Tuleva kupong ");
+    const c = el("span", "coupon", "Tuleva sooduskood ");
     c.append(el("code", "", p.coupon.code), ` · ${p.coupon.discount} (näidis)`);
     li.append(c);
   }
