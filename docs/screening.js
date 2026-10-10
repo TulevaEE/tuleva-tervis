@@ -1,54 +1,91 @@
-// Riikliku jämesoolevähi sõeluuringu sihtrühm ja koloskoopia pakkujad (landing_page.md, 10.10.2026).
+// Riikliku jämesoolevähi sõeluuringu sihtrühm ja pakkujate lugemine failist providers.md.
 // Sihtrühm on määratud sünniaastate järgi ja muutub igal aastal – uuenda aastavahetusel.
 
 const SCREENING_YEAR = 2026;
 const SCREENING_BIRTH_YEARS = [1958, 1960, 1962, 1964, 1966, 1968, 1970];
 
-// Sõelkoloskoopiat teevad ainult need 4 haiglat (Tervisekassa nimekiri), saatekirjaga perearstilt.
-const SCREENING_HOSPITALS = [
-  { name: "Põhja-Eesti Regionaalhaigla", place: "Tallinn", phone: "617 1049" },
-  { name: "Ida-Tallinna Keskhaigla", place: "Tallinn, Ravi tn 18, C-korpus", phone: "620 7077",
-    url: "https://www.itk.ee/patsiendile/kliinikud/gastroenteroloogiakeskus/jamesoolevahi-soeluuringu-koloskoopia" },
-  { name: "Tartu Ülikooli Kliinikum", place: "Tartu", phone: "731 9871",
-    url: "https://www.kliinikum.ee/valdkond/gastroenteroloogia/" },
-  { name: "Pärnu Haigla", place: "Pärnu, Ristiku 1", phone: "447 3300",
-    url: "https://www.ph.ee/et/patsiendile-ja-kulastajale/patsiendi-infomaterjalid/protseduurid/soeluuringu-koloskoopia" },
-];
+// --- providers.md lugemine ---
+// Option 2 ja 3 lehed laevad providers.md iga kord värskelt ja loevad tabelid veerunimede järgi.
+// Kui muudad tabelite veergude nimesid, muuda ka siin.
 
-// Tasulised, saatekirjata. Med4U on välja jäetud, sest koloskoopia pakkumine pole kinnitatud.
-const PAID_CLINICS = [
-  { name: "Confido", place: "Tallinn (Veerenni 51), Tartu (Raatuse 21)", price: 300, sedation: 900,
-    note: "Alates-hinnad; Tartus narkoosis alates 750 €",
-    url: "https://minu.confido.ee/services?lang=et&serviceCodes=C0002,C0401,C01108" },
-  { name: "Medicum", place: "Tallinn", price: 450, phone: "605 0601",
-    note: "Hind varasemast hinnakirjast; ka narkoosis",
-    url: "https://www.medicum.ee/mao-ja-sooleuuringud/broneeri-vastuvott/" },
-  { name: "Seirekliinik", place: "Viimsi, Ravi tee 4 (Haabneeme)", price: 450, sedation: 750, phone: "+372 50 49 375",
-    note: "Biopsia 70 €, polüpektoomia 110 €",
-    url: "https://seirekliinik.ee/broneering/" },
-  { name: "Sooleravi kliinik", place: "Tallinn, Vesivärava 50", price: 450, sedation: 800, phone: "619 0021",
-    note: "Polüpektoomia 110 €",
-    url: "https://sooleravikliinik.ee/kolonoskoopia/" },
-];
+// Tagastab { "<## pealkiri>": [ { veerunimi: lahter, ... } ] }.
+function markdownTables(md) {
+  const tables = {};
+  const cells = (line) => line.trim().slice(1, -1).split("|").map((c) => c.trim());
+  const lines = md.split("\n");
+  let heading = "";
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].startsWith("## ")) heading = lines[i].slice(3).trim();
+    if (!lines[i].startsWith("|") || !/^\|[-|\s]+\|$/.test((lines[i + 1] || "").trim())) continue;
+    const header = cells(lines[i]);
+    const rows = [];
+    for (i += 2; i < lines.length && lines[i].startsWith("|"); i++) {
+      const c = cells(lines[i]);
+      rows.push(Object.fromEntries(header.map((h, j) => [h, c[j] || ""])));
+    }
+    tables[heading] = rows;
+  }
+  return tables;
+}
 
-// Tasuline FIT-test eraisikule. Regionaalhaigla ja Pärnu Haigla on välja jäetud, sest müüki eraisikule ei kontrollitud.
-const FIT_LABS = [
-  { name: "Ida-Tallinna Keskhaigla", place: "Tallinn",
-    how: "Ilma saatekirjata; proov Ravi tn, Magdaleena või Tõnismäe verevõtukabinetti ilma broneeringuta",
-    phone: "666 1900", url: "https://www.itk.ee/patsiendile/analuusid/tasulised-laboripaketid" },
-  { name: "Tartu Ülikooli Kliinikum (ühendlabor)", place: "Tartu, L. Puusepa 8", price: "13,99",
-    how: "Tasuline analüüs ühendlaboris",
-    phone: "731 8316", url: "https://www.kliinikum.ee/yhendlabor/" },
-  { name: "Lääne-Tallinna Keskhaigla", place: "Tallinn",
-    how: "Telli e-poest või registratuurist, seejärel vii proov protseduurikabinetti",
-    phone: "626 1314", url: "https://www.keskhaigla.ee/en/labori-teenused" },
-  { name: "SYNLAB Eesti", place: "Üle Eesti",
-    how: "Telli patsiendiportaalist või proovivõtupunktis",
-    phone: "17123", url: "https://ee.minu.synlab.ee/peitveri-roojas/" },
-  { name: "Apteegid (Benu, Apotheka, Südameapteek jt)", place: "Üle Eesti",
-    how: "Kodune kiirtest apteegist või e-apteegist",
-    note: "Täpsus erineb tootjati (nt 86–99%). Positiivse tulemuse korral pöördu perearsti poole." },
-];
+const plain = (s) => (s || "").replace(/\\?\*+/g, "").replace(/`/g, "").trim();
+const linkUrl = (s) => ((s || "").match(/\]\(([^)]+)\)/) || [])[1];
+const phone = (s) => ((s || "").match(/\+?\d[\d ]{3,}\d/) || [])[0];
+const price = (s) => ((s || "").match(/^\d[\d,.]*/) || [])[0];
+const notes = (...xs) => xs.map(plain).filter(Boolean).join(" · ") || undefined;
+
+// Tuleva kupong kujul "`KOOD` 0%". Kupongid on häkatoni näidised – kokkuleppeid pakkujatega veel pole.
+function coupon(s) {
+  const m = (s || "").match(/`([^`]+)`\s*(\S+%)/);
+  return m ? { code: m[1], discount: m[2] } : undefined;
+}
+
+// Muudab providers.md kolmeks nimekirjaks, mida tulemuslehed näitavad.
+function parseProviders(md) {
+  const t = markdownTables(md);
+  const table = (re) => t[Object.keys(t).find((h) => re.test(h))] || [];
+  const fit = table(/FIT/);
+  const colo = table(/Koloskoopia/i);
+
+  return {
+    updated: (md.match(/Andmed kogutud ([\d.]+\d)/) || [])[1],
+    // Tasuline FIT eraisikule: "tasuline analüüs" või kodune kiirtest. Ainult sõeluuringu laborid jäävad välja.
+    fitLabs: fit.filter((r) => /tasuline|kodune/i.test(r["Teenuse tüüp"])).map((r) => ({
+      name: plain(r["Teenusepakkuja"]),
+      place: plain(r["Asukoht"]),
+      price: price(r["Hind (€)"]),
+      how: plain(r["Kuidas saada"]) || undefined,
+      note: notes(r["Märkused"]),
+      phone: phone(r["Telefon"]),
+      url: linkUrl(r["Registreerimine / tellimine"]),
+      coupon: coupon(r["Tuleva kupong"]),
+    })),
+    // Sõelkoloskoopia haiglad (tasuta, perearsti saatekirjaga).
+    screeningHospitals: colo.filter((r) => /sõelkoloskoopia/i.test(r["Tüüp"])).map((r) => ({
+      name: plain(r["Teenusepakkuja"]),
+      place: plain(r["Asukoht"]),
+      note: notes(r["Märkused"]),
+      phone: phone(r["Telefon"]),
+      url: linkUrl(r["Registreerimine"]),
+    })),
+    // Tasulised kliinikud ilma saatekirjata. "Kinnitamata" read jäävad välja.
+    paidClinics: colo.filter((r) => /^tasuline/i.test(r["Tüüp"])).map((r) => ({
+      name: plain(r["Teenusepakkuja"]),
+      place: plain(r["Asukoht"]),
+      price: price(r["Koloskoopia (€)"]),
+      sedation: price(r["Narkoosis (€)"]),
+      note: notes(r["Hinna märkus"], r["Märkused"]),
+      phone: phone(r["Telefon"]),
+      url: linkUrl(r["Registreerimine"]),
+      coupon: coupon(r["Tuleva kupong"]),
+    })),
+  };
+}
+
+// Kupongiga pakkujad ettepoole; muidu jääb järjekord samaks (sort on stabiilne).
+function byCoupon(items) {
+  return [...items].sort((a, b) => Boolean(b.coupon) - Boolean(a.coupon));
+}
 
 function isEligible(birthYear) {
   return SCREENING_BIRTH_YEARS.includes(birthYear);
@@ -58,13 +95,14 @@ function isEligible(birthYear) {
 // Tagastab { year } või { error } veateatega.
 function parseBirthYear(value, currentYear = new Date().getFullYear()) {
   const text = String(value).trim();
-  if (!/^\d{4}$/.test(text)) return { error: "Sisesta sünniaasta neljakohalise numbrina, nt 1964." };
+  if (!/^\d{4}$/.test(text)) return { error: "Sünniaastas peab olema 4 numbrit." };
   const year = Number(text);
-  if (year > currentYear) return { error: "Sünniaasta ei saa olla tulevikus." };
-  if (year < 1900) return { error: "Kontrolli sünniaastat – see tundub liiga varajane." };
+  if (year < 1900 || year > currentYear) {
+    return { error: `Sünniaasta peab olema vahemikus 1900–${currentYear}.` };
+  }
   return { year };
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { SCREENING_YEAR, SCREENING_BIRTH_YEARS, SCREENING_HOSPITALS, PAID_CLINICS, FIT_LABS, isEligible, parseBirthYear };
+  module.exports = { SCREENING_YEAR, SCREENING_BIRTH_YEARS, parseProviders, byCoupon, isEligible, parseBirthYear };
 }
