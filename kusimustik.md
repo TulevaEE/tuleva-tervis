@@ -1,90 +1,123 @@
 ---
-title: Soolevähi riskihinnangu ankeet (v1)
-source: Doc30.docx
-fetched: 2026-10-09
+title: Jämesoolevähi küsimustik (v2, rakendatud)
+updated: 2026-10-10
 author: Tõnu Pekk
+source: docs/flow.js
 ---
 
-**Soolevähi riskihinnangu ankeet**
+# Jämesoolevähi küsimustik
 
-Palun märkige sobiv vastus ☐ asemele (näiteks X) ja täitke tühjad kohad \_\_\_\_.
+Siin on küsimustik täpselt sellisena, nagu see on rakendatud aadressil https://tulevaee.github.io/tuleva-tervis/. Loogika asub failis `docs/flow.js`. Kui muudad siin reeglit, muuda seda ka seal. Esimene versioon (Doc30) on alles git'i ajaloos, commit `df4979e`.
 
-**1. Kaebused viimase kolme kuu jooksul**
+**Kuidas küsimustik töötab:** küsimused tulevad ükshaaval allpool toodud järjekorras. Esimene „jah“ viib kohe tulemuseni (Option). „Ei“ viib järgmise küsimuse juurde. Kui inimene vastab kõigele „ei“, jõuab ta küsimuse 4.2 juurde.
 
-|  | **Jah** | **Ei** | **Ei tea** |
-|----|----|----|----|
-| Veri väljaheites või pühkides paberil | ☐ | ☐ | ☐ |
-| Seedetegevuse muutus, mis on kestnud kauem kui 4 nädalat | ☐ | ☐ | ☐ |
-| Seletamatu kaalulangus | ☐ | ☐ | ☐ |
-| Aneemia | ☐ | ☐ | ☐ |
-| Kõhuvalu ja -puhitus | ☐ | ☐ | ☐ |
+**Alus** on iga teema juures koht, kuhu kirjutada, mille põhjal me soovituse anname: ravijuhend, allikas või arsti otsus.
 
-*Kui vastasite vähemalt ühele “jah”, soovitame pöörduda perearsti poole, ärge oodake sõeluuringut.*
+## Tulemused
 
-**2. Põhiandmed**
+| Option | Pealkiri lehel | Leht |
+|---|---|---|
+| 1 | Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast | `option-1.html` |
+| 2 | Tee koloskoopia | `option-2.html` |
+| 3 | Tee FIT-test | `option-3.html` |
+| 4 | Mine kiiresti perearsti juurde | `option-4.html` |
+| 5 | Järgi oma koloskoopia teinud raviarsti juhiseid (link Option 2-le, kui soovid koloskoopia broneerida meie kaudu) | `option-5.html` |
 
-Sünniaasta: \_\_\_\_\
-Sugu: ☐ mees ☐ naine\
-Pikkus (cm): \_\_\_\_\
-Kaal (kg): \_\_\_\_
+Kõigil Optioni lehtedel saab inimene oma vastused alla laadida .md või PDF failina. Vastused on ainult tema brauseri vahekaardis ja kaovad selle sulgemisel.
 
-**3. Kahjulikud harjumused**
+---
 
-Suitsetamine: ☐ jah ☐ ei ☐ varasem\
-Kui jah või varasem: kui pikalt (aastat) \_\_\_\_ ja mitu sigaretti päevas \_\_\_\_
+## Samm 1. Vaatame, kas juba tegutsed
 
-E-sigaretid: ☐ jah ☐ ei ☐ varasem\
-Kui jah või varasem: kui sageli ☐ iga päev ☐ mõned korda nädalas ☐ harvem; mitu aastat \_\_\_\_
+### 1.1 Kas oled käinud koloskoopias?
 
-Muud tubakatooted (nt huuletubakas): ☐ jah ☐ ei ☐ varasem\
-Kui jah või varasem: mis toode \_\_\_\_; kui sageli ☐ iga päev ☐ mõned korda nädalas ☐ harvem; mitu aastat \_\_\_\_
+- Jah → **Option 5**
+- Ei → 2.1
 
-Alkohol: mitu ühikut nädalas (ainult number, 0-100) \_\_\_\_\
-*1 ühik = 330 ml õlut (4,5-5%), 120 ml veini (12-13%) või 40 ml kanget alkoholi (40%). Üks ühik sisaldab ligikaudu 10 g puhast alkoholi.*
+**Alus:**
 
-**4. Diagnoosid ja ravimid**
+---
 
-Diagnoosid (võib märkida mitu): ☐ diabeet ☐ rasvmaks (MASLD) ☐ põletikuline soolehaigus (CD, UC) ☐ ei ühtegi\
-Kui põletikuline soolehaigus: mis aastal diagnoositi? \_\_\_\_
+## Samm 2. Kas sul on sümptomeid?
 
-Kas tarvitate verd vedeldavaid ravimeid? ☐ jah ☐ ei\
-*Näiteks: Marevan, Xarelto, Eliquis, Pradaxa, Plavix, aspiriin.*
+Enne küsimust 2.1 näidatakse teksti „Ei ole? Uurime siis edasi.“
 
-Kas tarvitate regulaarselt valuvaigisteid (NSAID-e)? ☐ jah ☐ ei\
-*Näiteks: ibuprofeen, diklofenak.*
+### 2.1 Kas sul on aneemia?
 
-**5. Perekonnaanamnees**
+- Jah → **Option 2**
+- Ei → 2.2
 
-*Lähisugulaste all mõtleme ainult vanemaid, lapsi, õdesid-vendi.*
+**Alus:**
 
-Kas teie lähisugulastel on esinenud soolevähki? ☐ ei ☐ jah, ühel ☐ jah, kahel või enamal ☐ ei tea\
-Kui jah: kas keegi neist haigestus enne 50. eluaastat? ☐ jah ☐ ei ☐ ei tea
+### 2.2 Kas sul on veri väljaheites?
 
-Kas samal poolel suguvõsast on kahel või enamal lähisugulasel esinenud endomeetriumi-, munasarja-, mao-, peensoole-, kuseteede-, kõhunäärme- või sapiteedevähki või ajukasvajat (glioblastoom)? ☐ ei ☐ jah ☐ ei tea
+- Jah → **Option 2**
+- Ei → 2.3
 
-Kas lähisugulastel on esinenud Lynchi sündroom, perekondlik adenomatoosne polüpoos (FAP) või muu polüpoosisündroom? (võib märkida mitu)\
-☐ Lynch ☐ FAP ☐ muu polüpoosisündroom ☐ ei ☐ ei tea
+**Alus:**
 
-Kas teile on tehtud geenitest jämesoolevähi tõusnud riski kohta?\
-☐ ei ☐ jah, tulemus negatiivne ☐ jah, tulemus positiivne ☐ ei tea
+### 2.3 Kas sul on mõni neist sümptomitest?
 
-**6. Varasemad uuringud**
+Abitekst: „Märgi kõik, mis sobivad.“ Märkeruudud: kõhuvalu, seedetegevuse muutus, kaalulangus.
 
-Varasem FIT-test: ☐ jah ☐ ei\
-Kui jah: mis aastal? \_\_\_\_\
-Kui jah: tulemus ☐ negatiivne ☐ positiivne ☐ ei tea\
-Kui positiivne: kas pärast seda tehti koloskoopia? ☐ jah ☐ ei
+- Kõik kolm märgitud → **Option 2**
+- Üks või kaks märgitud → **Option 4**
+- Ükski märkimata → 3.1
 
-Varasem koloskoopia: ☐ jah ☐ ei\
-Kui jah: mis aastal? \_\_\_\_\
-Kui jah: kas koloskoopial hinnati kogu jämesool? ☐ jah ☐ ei ☐ ei tea\
-Kui jah: leid (võib märkida mitu) ☐ normileid ☐ polüübid ☐ soolevähk ☐ ei tea\
-Kui leiuks polüübid ja/või soolevähk: kas need eemaldati? ☐ jah ☐ ei ☐ ei tea\
-Kui polüübid: polüüpide arv ☐ 1 ☐ 2-4 ☐ 5-9 ☐ 10 või rohkem ☐ ei tea\
-Kui polüübid: suurima polüübi suurus ☐ alla 10 mm ☐ 10 mm või suurem ☐ ei tea\
-Kui soolevähk: mis aastal soolevähk diagnoositi? \_\_\_\_
+**Alus:**
 
-**7. Meeldetuletused**
+---
 
-Kas soovite saada meeldetuletusi uuringute kohta? ☐ jah ☐ ei\
-Kui jah: kanal ☐ e-post ☐ SMS
+## Samm 3. Perekonna anamnees
+
+### 3.1 Kas lähisugulasel on olnud jämesoolevähk enne 50. eluaastat?
+
+Abitekst: „Lähisugulane on vanem, laps, õde või vend.“
+
+- Jah → **Option 2**
+- Ei → 3.2
+
+**Alus:**
+
+### 3.2 Kas samal poolel suguvõsast on kahel või enamal lähisugulasel esinenud endomeetriumi-, munasarja-, mao-, peensoole-, kuseteede-, kõhunäärme- või sapiteedevähki või ajukasvajat (glioblastoom)?
+
+- Jah → **Option 2**
+- Ei → 3.3
+
+**Alus:**
+
+### 3.3 Kas sul on tehtud geenitest jämesoolevähi tõusnud riski kohta ja see oli positiivne?
+
+- Jah → **Option 2**
+- Ei → 3.4
+
+**Alus:**
+
+### 3.4 Kas lähisugulasel on olnud jämesoolevähk 50. eluaastal või hiljem?
+
+- Jah → **Option 3**
+- Ei → 4.1
+
+**Alus:**
+
+---
+
+## Samm 4. Vanus ja varasemad testid
+
+### 4.1 Kas oled noorem kui 45 aastat?
+
+- Jah → **Option 1**
+- Ei → 4.2
+
+**Alus:**
+
+### 4.2 Kas oled viimase 2 aasta jooksul teinud FIT-testi?
+
+- Jah → **Option 1**
+- Ei → **Option 3**
+
+**Alus:**
+
+---
+
+Lehe jaluses on kõigil lehtedel tekst: „See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga.“
