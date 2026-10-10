@@ -29,3 +29,12 @@ Screen 4: vanus
 4.1 Kas oled noorem kui 45 aastat? Jah - Option 1
 4.2 Kas oled viimase 2 aasta jooksul teinud FIT testi - Jah - Option 1
 Ei: Option 3
+
+
+## Aruteluks dr Sethiga: lüngad küsimustikus
+
+1. Kas küsida põletikulise soolehaiguse (Crohn, haavandiline koliit) kohta? Praegu me seda ei küsi.
+2. Kas küsida Lynchi sündroomi, FAP-i või muu polüpoosisündroomi kohta lähisugulastel? Praegu küsib 3.2 ainult teiste vähkide kohta.
+3. Kaks või enam lähisugulast soolevähiga, kõik diagnoositud 50. eluaastal või hiljem: praegu viib see Option 3 (FIT). Kas see peaks olema hoopis kõrge risk (Option 2)?
+4. Varasem koloskoopia viib praegu alati Option 5 juurde. Kas peaksime küsima, millal see tehti ja mis leiti (suur polüüp, 5 või enam polüüpi, soolevähk)?
+5. Kas lisada vastusevariant „ei tea“? Praegu on ainult jah/ei, nii et kes ei tea, vastab tõenäoliselt „ei“.
