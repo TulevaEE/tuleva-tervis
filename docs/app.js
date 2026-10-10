@@ -30,26 +30,44 @@ function show(index) {
       row.append(box, label);
       checks.append(row);
     });
-    const next = button("Edasi", "primary", () =>
-      go(checks.querySelectorAll("input:checked").length));
+    const next = button("Edasi", "primary", () => {
+      const picked = [...checks.querySelectorAll("input:checked")].map((b) => b.parentElement.textContent);
+      go(picked.length, picked.join(", ") || "Ei ühtegi");
+    });
     controls.append(checks, wrap(next));
   } else {
     controls.append(wrap(
-      button("Jah", "primary", () => go(true)),
-      button("Ei", "ghost", () => go(false)),
+      button("Jah", "primary", () => go(true, "Jah")),
+      button("Ei", "ghost", () => go(false, "Ei")),
     ));
   }
 }
 
-function go(value) {
+function go(value, label) {
   const r = answer(current, value);
   if (r.option) {
+    saveAnswers(label);
     // Läbitud tee läheb aadressi, et Optioni lehelt saaks viimase küsimuse juurde tagasi.
     location.href = `option-${r.option}.html#k=${[...visited, current].join(",")}`;
     return;
   }
   visited.push(current);
   show(r.next);
+}
+
+// Vastused jäävad ainult selle brauseri vahekaardi sessionStorage'isse, et Optioni lehel
+// saaks need alla laadida. Vahekaardi sulgemisel need kustuvad.
+// Edasi viib ainult "ei" (või ükski märgitud), seega on varasemad vastused teada.
+function saveAnswers(label) {
+  const rows = [...visited, current].map((i) => {
+    const q = QUESTIONS[i];
+    return { q: q.text, a: i === current ? label : q.type === "multi" ? "Ei ühtegi" : "Ei" };
+  });
+  try {
+    sessionStorage.setItem("tervis-vastused", JSON.stringify({ rows, date: new Date().toISOString() }));
+  } catch {
+    // Privaatrežiimis võib salvestus ebaõnnestuda; siis allalaadimist lihtsalt ei pakuta.
+  }
 }
 
 function button(text, kind, onClick) {

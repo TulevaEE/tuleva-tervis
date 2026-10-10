@@ -18,14 +18,25 @@
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 3 · sinu järgmine samm</span>
   <h1>Tee FIT-test</h1>
-  <p><a id="tagasi" href="index.html">← Tagasi küsimuse juurde</a></p>
-  <p><a href="index.html">Alusta küsimustikku uuesti</a></p>
+  <div class="card vastused" id="vastused" hidden>
+    <span class="eyebrow">Sinu vastused · <span id="vastused-date"></span></span>
+    <dl id="vastused-list"></dl>
+    <div class="downloads">
+      <button class="btn ghost" id="lae-md" type="button">Lae alla .md</button>
+      <button class="btn ghost" id="lae-pdf" type="button">Salvesta PDF-ina</button>
+    </div>
+    <p class="hint">Me ei salvesta sinu vastuseid. Need kaovad, kui sulged selle vahekaardi.</p>
+  </div>
+
+  <p class="nav"><a id="tagasi" href="index.html">← Tagasi küsimuse juurde</a></p>
+  <p class="nav"><a href="index.html">Alusta küsimustikku uuesti</a></p>
 </div></section>
 </main>
 
 <footer><div class="wrap">See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga.</div></footer>
 
 <script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
+<script src="result.js"></script>
 <script src="counter.js"></script>
 </body>
 </html>
