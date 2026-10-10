@@ -18,6 +18,13 @@
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 2 · sinu järgmine samm</span>
   <h1>Tee koloskoopia</h1>
+  <p class="lead reason" id="pohjus">Sinu vastuste põhjal on koloskoopia sinu jaoks sobivaim järgmine samm.</p>
+  <p class="next"><strong>Järgmine samm.</strong> Tee koloskoopia (sooleuuring). Saatekirja saad oma perearstilt; soovi korral saad uuringu teha ka erakliinikus erateenusena.</p>
+  <details class="card why">
+    <summary>Miks see on sinu jaoks õige?</summary>
+    <p>Koloskoopia on täpseim viis jämesoolt kontrollida. Õhuke painduv kaamera vaatab soole seest üle ja arst saab vajadusel polüübid — vähieelsed muutused — kohe eemaldada. Sinu vastuste põhjal on su risk suurem kui tavalisel peitvere testil, nii et on mõistlik minna kohe täpsema uuringu juurde. Kui su kõrgem risk tuleb suguvõsast, võib perearst suunata su ka geneetilisele nõustamisele ja korralisele jälgimisele.</p>
+  </details>
+  <p class="safety"><strong>Kui sümptomid süvenevad</strong> või tekib tugev verejooks või äge kõhuvalu, pöördu kohe perearsti poole või EMO-sse — ära oota uuringut.</p>
   <div class="card vastused" id="vastused" hidden>
     <span class="eyebrow">Sinu vastused · <span id="vastused-date"></span></span>
     <dl id="vastused-list"></dl>
@@ -36,6 +43,16 @@
 <footer><div class="wrap">See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga.</div></footer>
 
 <script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
+<script src="flow.js"></script>
+<script>window.REASONS = {
+  "2.1": "Sa märkisid, et sul on aneemia — veres on vähe rauda. Ära viivita.",
+  "2.2": "Sa märkisid, et sul on verd väljaheites. Ära viivita.",
+  "2.3": "Sul on korraga kõhuvalu, seedetegevuse muutus ja kaalulangus.",
+  "3.1": "Lähisugulasel oli jämesoolevähk enne 50. eluaastat. See tõstab sinu riski.",
+  "3.2": "Su suguvõsas on mitmel lähisugulasel esinenud vähke, mis võivad viidata päritavale kõrgemale riskile.",
+  "3.3": "Sulle tehtud geenitest näitas jämesoolevähi kõrgemat riski."
+};</script>
+<script src="reason.js"></script>
 <script src="result.js"></script>
 <script src="counter.js"></script>
 </body>

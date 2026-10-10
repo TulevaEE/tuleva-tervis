@@ -18,6 +18,13 @@
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Option 1 · sinu järgmine samm</span>
   <h1>Praegu pole vaja midagi teha. Tee küsimustik uuesti 2 aasta pärast</h1>
+  <p class="lead reason" id="pohjus">Sinu vastuste põhjal ei ole sul praegu sõeltesti vaja.</p>
+  <p class="next"><strong>Järgmine samm.</strong> Praegu ei ole sul sõeltesti vaja. Tee see küsimustik uuesti umbes kahe aasta pärast — või varem, kui midagi muutub.</p>
+  <details class="card why">
+    <summary>Miks see on sinu jaoks õige?</summary>
+    <p>Sõeluuringu mõte on leida muutused enne, kui need vaevusi tekitavad. Sinu vastuste põhjal on su risk praegu madal. Test ei annaks sulle praegu kasu, vaid tooks pigem asjatut muret ja kulu. Me ütleme ausalt, kui midagi pole vaja teha. Vaata olukord üle, kui tekivad sümptomid või kui jõuad sõeluuringu vanusesse — Eestis kutsutakse 56–68-aastaseid iga kahe aasta tagant tasuta peitvere testile.</p>
+  </details>
+  <p class="safety"><strong>Pöördu perearsti poole varem,</strong> kui tekib veri väljaheites, seedetegevuse muutus, seletamatu kaalulangus, püsiv kõhuvalu või kui sulle öeldakse, et oled aneemias. Siis ära oota küsimustikku.</p>
   <div class="card vastused" id="vastused" hidden>
     <span class="eyebrow">Sinu vastused · <span id="vastused-date"></span></span>
     <dl id="vastused-list"></dl>
@@ -36,6 +43,12 @@
 <footer><div class="wrap">See ei ole meditsiiniline diagnoos. Kui sul on muresid tervisega, räägi perearstiga.</div></footer>
 
 <script>document.getElementById("tagasi").href = "index.html" + location.hash;</script>
+<script src="flow.js"></script>
+<script>window.REASONS = {
+  "4.1": "Oled alla 45-aastane ega märkinud sümptomeid ega teadaolevat kõrgemat riski. Sinu eas on jämesoolevähk harv.",
+  "4.2": "Tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid."
+};</script>
+<script src="reason.js"></script>
 <script src="result.js"></script>
 <script src="counter.js"></script>
 </body>
