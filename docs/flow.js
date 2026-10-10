@@ -18,7 +18,7 @@ const QUESTIONS = [
   { id: "2.1", step: 2, text: "Kas arst on sinu vereanalüüsis leidnud rauavaegusaneemia (kehvveresuse)?", yes: 2, unsure: true,
     short: "rauavaegusaneemia", findOut: "küsi perearstilt vereanalüüsi kohta",
     intro: "Ei ole? Uurime siis edasi.",
-    hint: "Rauavaegusaneemia tähendab, et rauapuuduse tõttu on veres vähe punaliblesid. Selle näitab vereanalüüs — kui sa pole kindel, vali „Ei tea“." },
+    hint: "Rauavaegusaneemia tähendab, et rauapuuduse tõttu on veres vähe hemoglobiini. Selle näitab vereanalüüs — kui sa pole kindel, vali „Ei tea“." },
   { id: "2.2", step: 2, text: "Kas oled märganud verd väljaheites?", yes: 2,
     hint: "Nähtav veri väljaheites või tualettpaberil." },
   { id: "2.3", step: 2, text: "Kas sul on mõni neist sümptomitest?", type: "multi",
