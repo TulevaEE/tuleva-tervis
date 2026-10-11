@@ -13,40 +13,38 @@
 ---
 
 ## ① IDEE · 15 s — *slaid 1*
-- „**Tervise-Tuleva. Sama põhimõte, mis pensionis — nüüd sinu tervise heaks.**“
-- „Keegi, kes on päriselt **sinu poolel**: aitab **olemasolevat süsteemi kasutades** teha õiged sammud õigel ajal — ja ütleb ausalt ka siis, kui sa ei vaja midagi.“
-- „Alustame suurimast välditavast riskist — **jämesoolevähist**. Edasi: süda-veresoonkond, emakakael, rind, diabeet.“
+Mis oleks kui meil oleks tervise eest hoolitsemisel abiks Tuleva-sarnane abimees? Kes nagu pikaajalisel rahakogumisel oleks päriselt sinu poolel, aitaks sul olemasolevat süsteemi ära kasutaded teha õiged sammud õigel ajal ja oleks aus ning ei meelitaks sind midagi ostma kui sulle seda päriselt vaja ei ole?
+
+tegime esimese proovi ja alustasime sealt kus mõju kõige suurem: jämesoolevähk. Kandidaatideks olid veel süda-veresoonkond, emakakaelavähk, kopsu- ja rinnavähk, diabeet.“
 
 > **Ära unusta:** ütle pensioniparalleel *välja* (seda on kerge vahele jätta). Väljakutse, millele vastame: **mõju + kordades parem standard.**
 
 ---
 
 ## ② PROBLEEM · 25 s — *slaid 2*
-- „Ennetus on nagu kogumine: väike tüütu samm täna, kauge tuleviku heaks — nii lükkame edasi. Perearstil pole aega; erakliinik tahab müüa.“
-- „Sa tunned, et peaksid midagi tegema, aga ei tea mida — **ärevus kasvab, aga signaalid jäävad märkamata.**“
-- „Jämesoolevähk on **2. vähisurma põhjus nii meestel kui naistel.** Varakult avastatuna on viie aasta pärast elus umbes **9 inimest 10-st** — hilja avastatuna **üks**.“
-- „Kulgeb kaua sümptomiteta. **Risk tõuseb juba 40ndates, aga riik kutsub sõeluuringule alles 56-st.** Ja pea pooled kutsutud meestest jätavad uuringu tegemata.“
-- „**Toomas, 51** — tunneb, et peaks midagi tegema, aga ei tea mida.“
+Jämesoolevähk on 1-2 vähisurma põhjus nii meestel kui naistel. Kui avastada 40selt ja kahtlane polüüp eemaldada, maksab see 300 eurot ja sa lähed samal õhtul trenni. kui avastada hilja, maksab see 100 000 ja üsna tõenäoselt ka elu.
 
-> **Ära unusta:** üks number (9 vs 1), mitte kolm. Ära hirmuta — lead with hope.
-
+Ennetus on lihtne: hiljemalt alates 45. eluaastast tuleb teha regulaarselt peitvere testi + kõrgendatud riski puhul koloskoopia. Me tegimegi tööriista, mis aitab sul valida, mis testi pead tegema ja leiab sulle kiire tee broneerimiseni. Me oleme väga seda usku, et mis täna tehtud, see homme hooleta.
 ---
 
 ## ③ DEMO · 65 s — *slaid 3 · KÕIGE TÄHTSAM · käivita video*
-Jutusta, mida ekraanil ei näe. Üks lugu algusest lõpuni:
 
-- „Lubage näidata. **Toomas, 51.** Ta vastab neljale lihtsale küsimusele — kaks minutit: vanus, pereanamnees, sümptomid, varasemad uuringud.“
-- **Näita kaht teed:**
-  1. „Madalam risk → tööriist ütleb: **telli koju peitvere test.** Tuleva liikmena saad selle soodsamalt kui üksi.“
-  2. „Aga kui vastasid, et sul on sümptom või lähisugulasel oli soolevähk noorelt → **ära oota, mine otse koloskoopiasse.**“
-- **Anti-sell (ÄRA UNUSTA):** „Ja kui su vastused näitaksid, et sul pole praegu midagi vaja — ütleks tööriist sulle *sedagi*. Ausalt. Meil pole põhjust sulle testi müüa.“
-- **Testimine (põimi siia):** „Testisime kolme eksperdi ja viie liikmega. Üks ütles: *viis inimest seitsmest ei usaldaks ühtegi panka selle infoga.* Seepärast jäävad kõik vastused **sinu enda brauserisse** — me ei salvesta midagi. Ebamugav tagasiside, aga see muutis toodet.“
+- „Lubage näidata. **Toomas, 51.** Ta vastab lihtsatele küsimustele, mis võtab vaid mõne minuti ja mis aitab välistada kõrgema riski
 
-> **Varuplaan:** kui video ei tööta, ära paranda kohapeal — jutusta edasi ja näita ekraanipilte.
+ta jõuab lehele, kus saab endale tellida koju peitvere testi grupisoodustusega.
+
+Aga, kui toomase esivanemal oleks olnud noorelt jämesoolevähk, ütleb leht talle lihtsalt: ära oota, mine otse koloskoopiasse. Ja siin võib päris kõva rahaline võit peidus olla inimese jaoks tehes seda meie kaudu.
+
+See tööriist ütleb sulle ka kui sa ei pea midagi teha. meil pole põhjust kellelegi testi müüa
+
+Testisime kolme eksperdi ja viie liikmega. Üks ütles: *viis inimest seitsmest ei usaldaks ühtegi panka selle infoga.* Seepärast jäävad kõik vastused **sinu enda brauserisse** — me ei salvesta midagi
 
 ---
 
 ## ④ MIKS TULEVA? · 30 s — *slaid 4*
+
+
+Tuleva-sugusel 
 - „Meil on eelis, mida erakliinikul kunagi ei ole: **liige on korraga omanik ja kasutaja.** Meie huvid ei lähe sinu omadega vastuollu.“
 - „Me ei teeni sellelt, kui sa teed rohkem analüüse — **seepärast võime ausalt öelda ka „ära tee“.**“
 - „Me ei ehita uut süsteemi — aitame sul **olemasolevat targalt kasutada**, ühise ostujõuga.“
