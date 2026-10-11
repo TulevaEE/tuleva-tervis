@@ -13,14 +13,14 @@ See dokument kirjeldab küsimustikku ja tulemuste lehti täpselt nii, nagu need 
 
 ## Teekond
 
-1. **Avaleht** (`index.html`) tutvustab mõttekatset. Kaheastmeline nupp „Jämesoolevähi ennetus / Leia enda jaoks õige samm →“ viib vahelehele.
+1. **Avaleht** (`index.html`) tutvustab mõttekatset. Kaheastmeline nupp „Jämesoolevähi ennetus / Leia enda jaoks õige lahendus →“ viib vahelehele.
 2. **Vaheleht** (`jamesoolevahk.html`), „Jämesoolevähi varajane avastamine“, sisaldab:
-   - koht dr Mari Sethi videole;
+   - dr Mari Sethi video;
    - „Miks see on oluline“;
-   - kaks peamist uuringut: väljaheite peitvere test (FIT) ja koloskoopia;
-   - „Kumb sulle sobib?“: 45+ ilma kaebusteta tavaliselt peitvere test, mõnel kohe koloskoopia;
-   - nupp „Tee küsimustik (2 min)“;
-   - „Kui juba tead, mida tahad“: otse Option 3 (peitvere test) või Option 2 (koloskoopia) lehele;
+   - „Kaks peamist sõeluuringu meetodit“: peitveretest (FIT) ja koloskoopia;
+   - „Milline lahendus sulle sobib?“: 45+ ilma kaebusteta tavaliselt peitveretest, mõnel kohe koloskoopia;
+   - nupp „Täida küsimustik (2 min)“;
+   - „Kui juba tead, mida vajad“: otse Option 3 (peitveretest) või Option 2 (koloskoopia) lehele;
    - „Miks teha seda Tuleva kaudu?“.
 3. **Küsimustik** (`index.html#alusta`): küsimused tulevad ükshaaval allpool toodud järjekorras. Esimene „jah“ viib kohe tulemuse lehele. „Ei“ viib järgmise küsimuse juurde. Aneemia küsimusel (2.1) ja perekonna küsimustel 3.1, 3.2 ja 3.4 on ka vastus „Ei tea“, mis liigub edasi nagu „ei“. Kes vastab kõigele „ei“, jõuab küsimuse 4.2 juurde. Edenemisriba näitab sammu (nt „Samm 2/4“) ja „← Eelmine küsimus“ viib tagasi.
 4. **Tulemuse leht** (Option 1–5), vaata allpool.
@@ -119,10 +119,10 @@ Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel�
 
 **Alus:**
 
-#### 4.2 Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?
+#### 4.2 Kas oled viimase 2 aasta jooksul teinud väljaheite peitveretesti (FIT)?
 
-- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — tegid viimase kahe aasta jooksul peitvere testi ega märkinud uusi sümptomeid.“
-- Ei → **Option 3**. Põhjuse lause: „Oled 45-aastane või vanem ega ole viimase kahe aasta jooksul peitvere testi teinud.“
+- Jah → **Option 1**. Põhjuse lause: „Tubli, et kontrollisid! Praeguse info põhjal pole sul hetkel põhjust muretsemiseks — tegid viimase kahe aasta jooksul peitveretesti ega märkinud uusi sümptomeid.“
+- Ei → **Option 3**. Põhjuse lause: „Oled 45-aastane või vanem ega ole viimase kahe aasta jooksul peitveretesti teinud.“
 
 **Alus:**
 
@@ -133,7 +133,7 @@ Abitekst: „See loetelu aitab märgata pärilikku vähiriski. „Samal poolel�
 Iga lehe ülesehitus on sama:
 1. pealkiri;
 2. põhjuse lause: valitakse küsimuse järgi, mis lehele viis (vt küsimuste juures). Kui küsimust pole (nt otse vahelehelt tulles), näidatakse üldist lauset;
-3. „Ei tea“ märkus, kui inimene vastas mõnele neist küsimustest „Ei tea“ ja „jah“ oleks viinud teise tulemuseni: „Vastasid „Ei tea“: [küsimus]. Suunasime sind esialgu siia, aga „jah“ vastus oleks suunanud sind kohe koloskoopiasse / peitvere testi juurde. Uuri vastused järele ([küsi sugulastelt / küsi perearstilt vereanalüüsi kohta]) ja tee küsimustik uuesti.“ Märkus on ka allalaaditavas failis;
+3. „Ei tea“ märkus, kui inimene vastas mõnele neist küsimustest „Ei tea“ ja „jah“ oleks viinud teise tulemuseni: „Vastasid „Ei tea“: [küsimus]. Suunasime sind esialgu siia, aga „jah“ vastus oleks suunanud sind kohe koloskoopiasse / peitveretesti juurde. Uuri vastused järele ([küsi sugulastelt / küsi perearstilt vereanalüüsi kohta]) ja tee küsimustik uuesti.“ Märkus on ka allalaaditavas failis;
 4. järgmine samm, tegevus on paksus kirjas;
 5. lahtikäiv plokk „Miks see on sinu jaoks õige?“;
 6. lisaplokk (Option 1 jagamine, Option 2 ja 3 pakkujad);
@@ -151,7 +151,7 @@ Iga lehe ülesehitus on sama:
 
 <details><summary>„Miks“ tekst</summary>
 
-Sõeluuringu mõte on leida muutused enne, kui need vaevusi tekitavad. Sinu vastuste põhjal on su risk praegu madal. Test ei annaks sulle praegu kasu, vaid tooks pigem asjatut muret ja kulu. Me ütleme ausalt, kui midagi pole vaja teha. Vaata olukord üle, kui tekivad sümptomid või kui jõuad sõeluuringu vanusesse — Eestis kutsutakse 56–68-aastaseid iga kahe aasta tagant tasuta peitvere testile.
+Sõeluuringu mõte on leida muutused enne, kui need vaevusi tekitavad. Sinu vastuste põhjal on su risk praegu madal. Test ei annaks sulle praegu kasu, vaid tooks pigem asjatut muret ja kulu. Me ütleme ausalt, kui midagi pole vaja teha. Vaata olukord üle, kui tekivad sümptomid või kui jõuad sõeluuringu vanusesse — Eestis kutsutakse 56–68-aastaseid iga kahe aasta tagant tasuta peitveretestile.
 
 </details>
 
@@ -166,31 +166,31 @@ Sõeluuringu mõte on leida muutused enne, kui need vaevusi tekitavad. Sinu vast
 
 <details><summary>„Miks“ tekst</summary>
 
-Aneemial ja soolesümptomitel on sageli healoomuline põhjus — näiteks rauavaegus, menstruatsioon või rasedus. Just seepärast tasub täpsema uuringuga veenduda, et midagi tõsisemat ei jääks märkamata. Koloskoopia on täpseim viis jämesoolt kontrollida. Õhuke painduv kaamera vaatab soole seest üle ja arst saab vajadusel polüübid — vähieelsed muutused — kohe eemaldada. Sümptomite või suguvõsast tuleva kõrgema riski korral peitvere testist ei piisa, seega on mõistlik minna kohe täpsema uuringu juurde. Kui su kõrgem risk tuleb suguvõsast, võib perearst suunata su ka geneetilisele nõustamisele ja korralisele jälgimisele. Otsustad sina — koloskoopia ei ole kohustus, vaid ettevaatusabinõu, et võimalikud muutused varakult leida. Enamasti saab leitud polüübi sama uuringu ajal kohe eemaldada ja asi ongi lahendatud.
+Aneemial ja soolesümptomitel on sageli healoomuline põhjus — näiteks rauavaegus, menstruatsioon või rasedus. Just seepärast tasub täpsema uuringuga veenduda, et midagi tõsisemat ei jääks märkamata. Koloskoopia on täpseim viis jämesoolt kontrollida. Õhuke painduv kaamera vaatab soole seest üle ja arst saab vajadusel polüübid — vähieelsed muutused — kohe eemaldada. Sümptomite või suguvõsast tuleva kõrgema riski korral peitveretestist ei piisa, seega on mõistlik minna kohe täpsema uuringu juurde. Kui su kõrgem risk tuleb suguvõsast, võib perearst suunata su ka geneetilisele nõustamisele ja korralisele jälgimisele. Otsustad sina — koloskoopia ei ole kohustus, vaid ettevaatusabinõu, et võimalikud muutused varakult leida. Enamasti saab leitud polüübi sama uuringu ajal kohe eemaldada ja asi ongi lahendatud.
 
 </details>
 
-### Option 3. Tee väljaheite peitvere test (FIT)
+### Option 3. Tee väljaheite peitveretest (FIT)
 
-- **Üldine põhjuse lause:** „Sinu vastuste põhjal on peitvere test sinu jaoks sobiv järgmine samm.“
+- **Üldine põhjuse lause:** „Sinu vastuste põhjal on peitveretest sinu jaoks sobiv järgmine samm.“
 - **Järgmine samm:**
-  - „Kui oled sündinud 1958, 1960, 1962, 1964, 1966, 1968 või 1970, kuulud 2026. aastal riiklikku sõeluuringu sihtrühma. Siis saad peitvere testi tasuta. **Registreeru oma perearstikeskuses pereõe vastuvõtule.**“
+  - „Kui oled sündinud 1958, 1960, 1962, 1964, 1966, 1968 või 1970, kuulud 2026. aastal riiklikku sõeluuringu sihtrühma. Siis saad peitveretesti tasuta. **Registreeru oma perearstikeskuses pereõe vastuvõtule.**“
   - „Kui sa sihtrühma ei kuulu, saad testi osta apteegist või teha laboris, näiteks SYNLAB-is.“
 - **Lisaplokk:** küsib sünniaastat.
   - Sihtrühmas: tasuta testi sammud pereõe kaudu ja tasulised laborid.
   - Muidu: tasulised laborid ja apteegid (`docs/screening.js`).
-- **Turvavõrk:** „Kui sul tekivad sümptomid — veri väljaheites, seedetegevuse muutus, kaalulangus, püsiv kõhuvalu — või kui sulle öeldakse, et oled aneemias, ära oota testi, vaid pöördu perearsti poole. Sümptomite korral peitvere testist ei piisa.“
+- **Turvavõrk:** „Kui sul tekivad sümptomid — veri väljaheites, seedetegevuse muutus, kaalulangus, püsiv kõhuvalu — või kui sulle öeldakse, et oled aneemias, ära oota testi, vaid pöördu perearsti poole. Sümptomite korral peitveretestist ei piisa.“
 
 <details><summary>„Miks“ tekst</summary>
 
-Peitvere test on hea esimene samm: see on lihtne, odav ega tee haiget. Kui verd ei leita, on jämesoolevähk ebatõenäoline. Kui verd leitakse, ei tähenda see veel vähki — enamasti on põhjus mujal —, kuid siis on vaja täpsemat uuringut, koloskoopiat. Riik pakub 56–68-aastastele testi tasuta iga kahe aasta tagant. Tulemus on lihtsalt „leiti“ või „ei leitud“.
+Peitveretest on hea esimene samm: see on lihtne, odav ega tee haiget. Kui verd ei leita, on jämesoolevähk ebatõenäoline. Kui verd leitakse, ei tähenda see veel vähki — enamasti on põhjus mujal —, kuid siis on vaja täpsemat uuringut, koloskoopiat. Riik pakub 56–68-aastastele testi tasuta iga kahe aasta tagant. Tulemus on lihtsalt „leiti“ või „ei leitud“.
 
 </details>
 
 ### Option 4. Tasub sellest perearstiga rääkida
 
 - **Põhjuse lause:** „Sa märkisid sümptomi, millele sa ei tea kindlat põhjust. Enamasti ei ole selle taga midagi tõsist — aga kui see püsib või kordub, tasub sellest perearstiga rääkida.“
-- **Järgmine samm:** „Kui sümptom püsib või kordub ja sa ei tea, mis seda põhjustab, **lepi lähiajal oma perearstiga aeg kokku** ja räägi sellest. Kiiret paanikat pole — aga kui sul on sümptom, ei ole peitvere test ega sõeluuring praegu õige tee, parem räägi otse arstiga.“
+- **Järgmine samm:** „Kui sümptom püsib või kordub ja sa ei tea, mis seda põhjustab, **lepi lähiajal oma perearstiga aeg kokku** ja räägi sellest. Kiiret paanikat pole — aga kui sul on sümptom, ei ole peitveretest ega sõeluuring praegu õige tee, parem räägi otse arstiga.“
 - **Turvavõrk:** „Kui sümptomid on tugevad — rohke verejooks, äge või talumatu kõhuvalu, järsk halvenemine —, pöördu kohe EMO-sse või helista 112.“
 
 <details><summary>„Miks“ tekst</summary>
@@ -214,4 +214,4 @@ Me keskendume selle küsimustikuga eelkõige neile, kes pole veel sõeluuringus 
 
 ---
 
-Lehe jaluses on kõigil lehtedel tekst: „See küsimustik ei pane diagnoosi ega asenda arsti hinnangut. Kui sul on muresid tervisega, räägi perearstiga.“
+Lehe jaluses on kõigil lehtedel tekst: „Meie küsimustik ei diagnoosi ega asenda arsti konsultatsiooni. Tervisemurede korral võta ühendust perearstiga.“

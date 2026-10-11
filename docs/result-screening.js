@@ -79,7 +79,7 @@ const verdictNo = () => el("p", "verdict no",
   `Sinu sünniaasta ei kuulu ${SCREENING_YEAR}. aasta jämesoolevähi sõeluuringu sihtrühma.`);
 
 const PAGES = {
-  // Option 2-le jõuavad sümptomite või kõrge riskiga inimesed, seega sõeluuringust (peitvere testist) siin ei räägi.
+  // Option 2-le jõuavad sümptomite või kõrge riskiga inimesed, seega sõeluuringust (peitveretestist) siin ei räägi.
   colonoscopy(eligible, data) {
     return [
       el("h3", "", "Perearsti saatekirjaga"),
@@ -93,13 +93,13 @@ const PAGES = {
     const labs = list(data.fitLabs, "Vaata lähemalt →");
     if (!eligible) {
       return [verdictNo(),
-        el("p", "", "Peitvere testi saad teha tasulisena:"),
+        el("p", "", "Peitveretesti saad teha tasulisena:"),
         labs,
         el("p", "muted", "Kui tulemus on positiivne, pöördu perearsti poole – ta annab saatekirja koloskoopiale.")];
     }
     return [
       verdictYes(),
-      el("p", "", "Peitvere test on sulle tasuta."),
+      el("p", "", "Peitveretest on sulle tasuta."),
       steps([
         "Pöördu oma perearstikeskuse pereõe poole – saad testikomplekti.",
         "Tee test kodus ja saada proov postiga või pakiautomaadiga laborisse. Vastus tuleb umbes 10 tööpäevaga.",
@@ -107,7 +107,7 @@ const PAGES = {
       ]),
       portal(),
       el("h3", "", "Ei soovi oodata?"),
-      el("p", "", "Peitvere testi saad teha ka tasulisena:"),
+      el("p", "", "Peitveretesti saad teha ka tasulisena:"),
       labs,
     ];
   },

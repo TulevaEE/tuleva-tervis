@@ -22,7 +22,7 @@
 ## Result-message templates (three beats: reassure → what → one action)
 Adapt to Estonian; keep warm and short.
 
-- **Positive screen (peitvere test positive):**
+- **Positive screen (peitveretest positive):**
   > "Positiivne tulemus **ei tähenda**, et sul on vähk. Leiti väike kogus verd, mis vajab täpsustavat uuringut. **Järgmine samm:** pöördu oma perearsti poole koloskoopia (sooleuuringu) saatekirja saamiseks. Enamik positiivseid tulemusi ei ole vähk."
 - **Negative screen (honest, not bare reassurance):**
   > "Verd ei leitud — vähk on **ebatõenäoline**. Harva võib test jääda negatiivseks ka siis, kui midagi on, seega korda uuringut [X aja] pärast. **Kui tekivad sümptomid, pöördu varem perearsti poole.**"
@@ -33,14 +33,14 @@ Adapt to Estonian; keep warm and short.
 
 ## Explain the "why" — per person, with progressive disclosure
 Every outcome page (option 1–5) tells the person, in **one plain sentence**, why this is the right next step **for them**, drawn from what they answered — then offers the fuller reasoning behind an expandable / modal **"Miks see on sinu jaoks õige?"**. This is both our transparency ethos ("never a black box") and established decision-aid practice (IPDAS *layered information*): keep the main message clean, give anyone who wants it the full honest rationale.
-- Headline reason = one sentence, in terms of the person's own answers, no jargon. E.g. *"Kuna lähisugulasel oli soolevähk enne 50. eluaastat, on sinu risk kõrgem — seepärast soovitame koloskoopiat (sooleuuringut), mitte peitvere testi."*
+- Headline reason = one sentence, in terms of the person's own answers, no jargon. E.g. *"Kuna lähisugulasel oli soolevähk enne 50. eluaastat, on sinu risk kõrgem — seepärast soovitame koloskoopiat (sooleuuringut), mitte peitveretesti."*
 - The expandable can also hold: what the step involves, what positive/negative means, the guideline basis in lay terms, and "arutasi seda alati oma perearstiga".
 - Never "because the system said so"; never hide the reasoning.
 
 ## Voice & plain language — Daniel Vaarik, *Sõnumiseadja käsiraamat*
 Use Vaarik's Estonian clear-writing principles as the **voice layer** for all member-facing copy. They sit *on top of* the health-specific structure above (three-beat result scripts, risk framing, safety routing) — the structure comes from the clinical/behavioural evidence; Vaarik governs the voice. The rules that matter most here:
 - **Logic and comprehensibility beat cleverness** — the goal is to be understood, not to impress.
-- **Write for the member, not the clinician** — switch out of medical register (*"peitvere test"*, not "FIT").
+- **Write for the member, not the clinician** — switch out of medical register (*"peitveretest"*, not "FIT").
 - **Short sentences, short words, active voice, strong verbs** — *"Majanduskasv peatus"*, not *"Majanduskasvu negatiivsed väljavaated realiseerusid"*. (~¼ of Estonians have secondary education; long/complex text loses them.)
 - **Go easy on adjectives** — piling on reassuring or dramatic adjectives makes the reader distrust you; let the facts carry it.
 - **No euphemisms, no evasion** — *"Eufemismid külmutavad mõtte"*; *"keerutamisest ei sünni usaldust"*. Don't soften *vähk* into vague filler; say the true thing plainly and kindly. (This is our trust ethos, in his words.)
@@ -53,7 +53,7 @@ Reference: Daniel Vaarik, *Sõnumiseadja käsiraamat* (Memokraat, 2014) — [fre
 - **One question per screen, yes/no.** "Ei" moves on; the first "jah" ends on an outcome page. The one multi-choice question (pain / bowel-habit change / weight loss) uses tick-boxes. The anaemia question (2.1) and the family-history questions (3.1, 3.2, 3.4) also offer **"Ei tea"**: it moves on like "ei", and the outcome page adds a note on where "jah" would have led, asking the member to find out and redo the questionnaire.
 - **Visible progress** ("Samm 2/4" + bar), **back button**, and from every outcome page a link **back to the last question** and one to start over.
 - **Order:** previous koloskoopia → symptoms → family history → age and previous FIT. Known gap: "yes" to a previous koloskoopia skips the symptom questions (flagged for dr Seth, see `../CLAUDE.md`).
-- **Five outcome pages, one next step each:** 1 nothing now, redo in 2 years · 2 koloskoopia · 3 peitvere test (free via the pereõde for the 2026 cohort, otherwise pharmacy or lab) · 4 GP now · 5 follow your treating doctor.
+- **Five outcome pages, one next step each:** 1 nothing now, redo in 2 years · 2 koloskoopia · 3 peitveretest (free via the pereõde for the 2026 cohort, otherwise pharmacy or lab) · 4 GP now · 5 follow your treating doctor.
 - **Option 2 recommends a koloskoopia, softly** ("Sul tasuks kaaluda koloskoopiat"; "Otsus jääb sinule"), following self-determination theory (autonomy, competence, relatedness): talk to the GP for a saatekiri, or book a private self-pay clinic. An "i" button (`info.js`) explains what a koloskoopia involves. Team decision 10.10.2026; differs from the "GP as gatekeeper" finding in `clinical-background.md`.
 - **The member keeps their answers, we don't.** The outcome page shows "Sinu vastused" with **download as .md or PDF** (browser print). Answers live only in the tab's `sessionStorage` and disappear when it closes. No health data is sent anywhere; the only analytics is an anonymous page-view count per outcome page (GoatCounter).
 - **Handoff:** report-and-refer. Deliver any discount code/voucher **on the results screen, paired with the recommended action** (the code and the "what to do next" are the same moment).

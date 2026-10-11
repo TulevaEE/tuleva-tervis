@@ -38,7 +38,7 @@ const QUESTIONS = [
     short: "lähisugulase jämesoolevähk 50. eluaastal või hiljem" },
 
   { id: "4.1", step: 4, text: "Kas oled noorem kui 45 aastat?", yes: 1 },
-  { id: "4.2", step: 4, text: "Kas oled viimase 2 aasta jooksul teinud väljaheite peitvere testi (FIT)?", yes: 1, no: 3 },
+  { id: "4.2", step: 4, text: "Kas oled viimase 2 aasta jooksul teinud väljaheite peitveretesti (FIT)?", yes: 1, no: 3 },
 ];
 
 // Tagastab { option } kui vastus viib tulemuseni, muidu { next } järgmise küsimuse indeksiga.
@@ -61,7 +61,7 @@ function run(answers) {
 }
 
 // Kuhu oleks "jah" viinud: tekst märkuse jaoks.
-const YES_TARGET = { 2: "kohe koloskoopiasse", 3: "peitvere testi juurde" };
+const YES_TARGET = { 2: "kohe koloskoopiasse", 3: "peitveretesti juurde" };
 
 // Kui inimene vastas "Ei tea" ja "jah" oleks viinud teise tulemuseni, tagastab märkuse andmed.
 // rows: [{ id, a, yes, short, findOut }], option: tulemuse number. Mitme puhul valime ettevaatlikuma (väiksema numbri).

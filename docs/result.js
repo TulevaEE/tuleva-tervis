@@ -62,7 +62,7 @@
       "",
       ...data.rows.map(({ q, a }) => `- **${q}** ${a}`),
       "",
-      "_See küsimustik ei pane diagnoosi ega asenda arsti hinnangut. Kui sul on muresid tervisega, räägi perearstiga._",
+      "_Meie küsimustik ei diagnoosi ega asenda arsti konsultatsiooni. Tervisemurede korral võta ühendust perearstiga._",
       "",
     ].join("\n");
     const a = document.createElement("a");
