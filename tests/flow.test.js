@@ -29,8 +29,8 @@ test("ei tea 3.1 → Option 3 juures märkus koloskoopia kohta", () => {
   assert.strictEqual(n.target, "kohe koloskoopiasse");
   assert.deepStrictEqual(n.questions, ["lähisugulase jämesoolevähk enne 50. eluaastat"]);
 });
-test("ei tea 3.4 → Option 1 juures märkus peitvere testi kohta", () =>
-  assert.strictEqual(unsureNote([row("3.4", "Ei tea")], 1).target, "peitvere testi juurde"));
+test("ei tea 3.4 → Option 1 juures märkus peitveretesti kohta", () =>
+  assert.strictEqual(unsureNote([row("3.4", "Ei tea")], 1).target, "peitveretesti juurde"));
 test("ei tea 3.4 → Option 3 juures märkust pole (jah viiks samasse)", () =>
   assert.strictEqual(unsureNote([row("3.4", "Ei tea")], 3), null));
 test("mitu ei tea → ettevaatlikum (koloskoopia)", () =>
