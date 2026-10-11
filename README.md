@@ -20,5 +20,5 @@ Küsimustik asub kaustas `docs/` ja on avaldatud aadressil https://tulevaee.gith
 | `knowledge base/` | Allikad: USPSTF 2021, dr Mari Sethi artikkel jt |
 | `kirjeldus.md` | Häkatoni algne kirjeldus: visioon, teekaart, keda on vaja |
 | `pitch/` | Esitluse näidised (ei ole veebis avaldatud) |
-| `screencast/` | Pitchi videod; uuesti salvestamiseks `scripts/record-screencast.js` |
+| `screencast/` | Pitchi video (`tuleva-tervis-screencast.mp4`, 45 s): näide 1 kiirendatult, küsimus 3.1 → Medicumi mock-leht. Toorsalvestused tehti `scripts/record-screencast.js`-iga ja lõigati ffmpeg-iga kokku |
 | `tests/` | `flow.test.js` (suunamine), `screening.test.js` (sihtrühm, pakkujad), `consistency.test.js` (versioonid ja `kusimustik.md`) |
